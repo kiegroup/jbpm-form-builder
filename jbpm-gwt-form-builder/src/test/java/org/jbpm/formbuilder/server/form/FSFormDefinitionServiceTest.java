@@ -138,8 +138,16 @@ public class FSFormDefinitionServiceTest extends TestCase {
        
         List<FormRepresentation> forms = service.getForms("somePackage");
         assertEquals(2, forms.size());
-        assertEquals("form1AutoForm", forms.get(0).getName());
-        assertEquals("form2AutoForm", forms.get(1).getName());
+        boolean form1ok = false;
+        boolean form2ok = false;
+        if("form1AutoForm".equals(forms.get(0).getName()) || "form1AutoForm".equals(forms.get(1).getName())){
+            form1ok = true;
+        }
+        if("form2AutoForm".equals(forms.get(0).getName()) || "form2AutoForm".equals(forms.get(1).getName())){
+            form2ok = true;
+        }
+        assertTrue(form1ok);
+        assertTrue(form2ok);
         
     }
 
