@@ -10,8 +10,20 @@
 
     <!-- Select configuration strategy -->
     <bean id="strategy" class="java.lang.String">
+      <!-- Guvnor Strategy -->
       <constructor-arg type="java.lang.String" value="guvnor"/>
+      
+      <!-- FileSystem Strategy
+      <constructor-arg type="java.lang.String" value="fs"/>
+      -->
     </bean>
+    
+    <!-- File System Configuration 
+    <bean id="fsUrl" class="java.lang.String">
+      <constructor-arg type="java.lang.String" value="/tmp"/>
+    </bean>
+    -->
+
 
     <!-- Guvnor configuration -->
     
@@ -26,10 +38,11 @@
     <bean id="guvnorPass" class="java.lang.String">
       <constructor-arg type="java.lang.String" value="admin"/>
     </bean>
-
+    
+    
     <bean id="serviceFactory" class="org.jbpm.formbuilder.server.ServiceFactory" factory-method="getInstance"/>
 
-    <!-- Guvnor services -->
+    <!-- Guvnor services  -->
 
     <bean id="guvnorFileService" class="org.jbpm.formbuilder.server.file.GuvnorFileService">
       <property name="baseUrl" ref="guvnorUrl"/>
@@ -51,5 +64,25 @@
     
     <bean id="guvnorMenuService" class="org.jbpm.formbuilder.server.menu.GuvnorMenuService">
     </bean>
+   
     
+    <!-- File System Configuration 
+    <bean id="fsFileService" class="org.jbpm.formbuilder.server.file.FSFileService">
+        <property name="baseUrl" ref="fsUrl"/>
+      
+    </bean>
+    
+    <bean id="fsFormService" class="org.jbpm.formbuilder.server.form.FSFormDefinitionService">
+        <property name="baseUrl" ref="fsUrl"/>
+        <property name="fileService" ref="fsFileService"/>
+    </bean>
+
+    <bean id="fsTaskService" class="org.jbpm.formbuilder.server.task.FSTaskDefinitionService">
+        <property name="baseUrl" ref="fsUrl"/>
+      
+    </bean>
+    
+    <bean id="fsMenuService" class="org.jbpm.formbuilder.server.menu.GuvnorMenuService">
+    </bean>
+    -->
 </beans>
