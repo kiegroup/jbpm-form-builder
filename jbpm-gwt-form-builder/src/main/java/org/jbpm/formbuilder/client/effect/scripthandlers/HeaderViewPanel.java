@@ -30,10 +30,11 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class HeaderViewPanel extends SimplePanel {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     
     private final Grid headerView = new Grid(0, 3);
     private final Label noHeaders = new Label(i18n.NoHeadersLoadedLabel());

@@ -37,12 +37,13 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class ValidationTablePanel extends VerticalPanel implements HasSelectionHandlers<FBValidationItem> {
 
     private List<SelectionHandler<FBValidationItem>> tableHandlers = new ArrayList<SelectionHandler<FBValidationItem>>();
     
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final Grid validationsTable = new Grid(1,4);
     private final List<FBValidationItem> currentValidations = new ArrayList<FBValidationItem>();
     

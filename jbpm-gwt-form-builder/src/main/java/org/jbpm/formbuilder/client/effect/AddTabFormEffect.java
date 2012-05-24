@@ -35,7 +35,7 @@ public class AddTabFormEffect extends FBFormEffect {
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public AddTabFormEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().AddTabEffectLabel(), false);
+        super(CommonGlobals.getInstance().getI18n().AddTabEffectLabel(), false);
     }    
     
     @Override

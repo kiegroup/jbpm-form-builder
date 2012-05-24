@@ -35,7 +35,7 @@ public class AddColumnFormEffect extends FBFormEffect {
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public AddColumnFormEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().AddColumnEffectLabel(), false);
+        super(CommonGlobals.getInstance().getI18n().AddColumnEffectLabel(), false);
     }
     
     @Override

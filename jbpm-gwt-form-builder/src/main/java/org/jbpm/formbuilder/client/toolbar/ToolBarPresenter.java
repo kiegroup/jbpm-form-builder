@@ -48,7 +48,7 @@ public class ToolBarPresenter {
     
     private final ToolBarView view;
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final FormBuilderResources resources = FormBuilderGlobals.getInstance().getResources();
     private final UndoRedoManager mgr = UndoRedoManager.getInstance();
 

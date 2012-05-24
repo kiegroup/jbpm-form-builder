@@ -79,7 +79,7 @@ public class TreeElement extends FocusPanel {
             }
         } else {
             throw new IllegalArgumentException(
-                FormBuilderGlobals.getInstance().getI18n().FormItemShouldntBeNull());
+                CommonGlobals.getInstance().getI18n().FormItemShouldntBeNull());
         }
         panel.add(this.img);
         panel.add(this.itemName);

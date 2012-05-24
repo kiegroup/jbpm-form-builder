@@ -38,7 +38,7 @@ public class L10NFormEffect extends FBFormEffect {
     private String savedFormat = null;
     
     public L10NFormEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().ApplyLocaleFormattingLabel(), true);
+        super(CommonGlobals.getInstance().getI18n().ApplyLocaleFormattingLabel(), true);
     }
     
     @Override

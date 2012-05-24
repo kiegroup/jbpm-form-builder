@@ -26,6 +26,7 @@ import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * IO associations view. Represents a search string to 
@@ -37,7 +38,7 @@ public class IoAssociationViewImpl extends AbsolutePanel implements IoAssociatio
 
     private VerticalPanel panel = new VerticalPanel();
     
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final Presenter presenter;
     private final SearchFilterView filterView;
     private final SearchResultsView resultsView;

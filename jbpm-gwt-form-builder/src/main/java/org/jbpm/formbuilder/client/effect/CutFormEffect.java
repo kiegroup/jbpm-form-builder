@@ -28,7 +28,7 @@ import com.gwtent.reflection.client.Reflectable;
 public class CutFormEffect extends FBFormEffect {
 
     public CutFormEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().CutFormEffectLabel(), false);
+        super(CommonGlobals.getInstance().getI18n().CutFormEffectLabel(), false);
     }
     
     @Override

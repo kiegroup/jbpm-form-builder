@@ -52,7 +52,7 @@ public class ValidationsEffect extends FBFormEffect {
     private final ValidationsEffectView effectView = new ValidationsEffectView();
     
     public ValidationsEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().ValidationsEffectLabel(), true);
+        super(CommonGlobals.getInstance().getI18n().ValidationsEffectLabel(), true);
         bus.addHandler(ValidationSavedEvent.TYPE, new ValidationSavedHandler() {
             @Override
             public void onEvent(ValidationSavedEvent event) {
@@ -85,7 +85,7 @@ public class ValidationsEffect extends FBFormEffect {
             server.getExistingValidations();
         } catch (FormBuilderException e) {
             bus.fireEvent(new NotificationEvent(Level.WARN, 
-                FormBuilderGlobals.getInstance().getI18n().CouldntConnectServer(), e));
+                CommonGlobals.getInstance().getI18n().CouldntConnectServer(), e));
         }
         return popup;
     }

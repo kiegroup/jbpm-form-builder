@@ -56,7 +56,7 @@ public class ToolBarPresenterTest extends TestCase {
         res = EasyMock.createMock(FormBuilderResources.class);
         cg.registerEventBus(bus);
         fbg.registerResources(res);
-        fbg.registerI18n(i18n);
+        cg.registerI18n(i18n);
         toolreg = EasyMock.createMock(ToolRegistration.class);
         
         view = EasyMock.createMock(ToolBarView.class);
@@ -90,7 +90,7 @@ public class ToolBarPresenterTest extends TestCase {
         this.i18n = null;
         cg.registerEventBus(null);
         fbg.registerResources(null);
-        fbg.registerI18n(null);
+        cg.registerI18n(null);
         cg = null;
         fbg = null;
     }

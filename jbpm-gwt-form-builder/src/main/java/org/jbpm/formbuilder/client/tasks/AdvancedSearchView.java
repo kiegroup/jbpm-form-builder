@@ -47,7 +47,7 @@ public class AdvancedSearchView extends Grid {
     private static final String BPMN2_TYPE = "bpmn2";
     
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
 
     private final Map<String, List<TaskRef>> processes = new HashMap<String, List<TaskRef>>();
     

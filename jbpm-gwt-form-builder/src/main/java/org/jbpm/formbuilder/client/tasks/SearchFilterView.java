@@ -24,10 +24,11 @@ import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class SearchFilterView extends VerticalPanel {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final SimpleSearchView simple = new SimpleSearchView();
     private final AdvancedSearchView advanced = new AdvancedSearchView();
     

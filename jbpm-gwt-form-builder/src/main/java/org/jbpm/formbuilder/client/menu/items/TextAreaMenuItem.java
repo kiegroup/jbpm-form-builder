@@ -27,6 +27,7 @@ import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Label;
 import com.gwtent.reflection.client.Reflectable;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class TextAreaMenuItem extends FBMenuItem {
@@ -46,7 +47,7 @@ public class TextAreaMenuItem extends FBMenuItem {
 
     @Override
     public Label getDescription() {
-        return new Label(FormBuilderGlobals.getInstance().getI18n().MenuItemTextArea());
+        return new Label(CommonGlobals.getInstance().getI18n().MenuItemTextArea());
     }
 
     @Override

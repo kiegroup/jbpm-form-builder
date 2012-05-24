@@ -66,7 +66,7 @@ public class IoAssociationPresenterTest extends TestCase {
         service = EasyMock.createMock(FormBuilderService.class);
         i18n = EasyMock.createMock(I18NConstants.class);
         fbg.registerService(service);
-        fbg.registerI18n(i18n);
+        cg.registerI18n(i18n);
         cg.registerEventBus(bus);
     }
 
@@ -80,7 +80,7 @@ public class IoAssociationPresenterTest extends TestCase {
         service = null;
         i18n = null;
         fbg.registerService(null);
-        fbg.registerI18n(null);
+        cg.registerI18n(null);
         cg.registerEventBus(null);
         cg = null;
         fbg = null;

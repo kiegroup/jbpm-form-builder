@@ -8,10 +8,11 @@ import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class ToggleScriptHelperView extends FlexTable {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final TextBox idField = new TextBox();
     private final ListBox actionOnEvent = new ListBox();
     private final ListBox hidingStrategy = new ListBox();

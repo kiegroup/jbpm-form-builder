@@ -39,7 +39,7 @@ public class UploadFormEffect extends FBFormEffect {
     private String srcUrl;
     
     public UploadFormEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().UploadEffectLabel(), true);
+        super(CommonGlobals.getInstance().getI18n().UploadEffectLabel(), true);
     }
 
     @Override

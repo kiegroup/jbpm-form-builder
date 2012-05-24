@@ -35,7 +35,7 @@ public class FormExporter {
 
     private static final String EXPORT_TYPE = FormExporter.class.getName();
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public FormExporter() {

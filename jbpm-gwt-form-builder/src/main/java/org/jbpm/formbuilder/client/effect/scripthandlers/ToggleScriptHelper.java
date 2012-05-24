@@ -24,6 +24,7 @@ import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class ToggleScriptHelper extends AbstractScriptHelper {
@@ -34,7 +35,7 @@ public class ToggleScriptHelper extends AbstractScriptHelper {
     public static final String HIDING_STRATEGY_COLLAPSE = "collapse";
     public static final String HIDING_STRATEGY_HIDDEN = "hidden";
     
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
 
     private String idField = "";
     private String actionOnEvent = TOGGLE;

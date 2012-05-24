@@ -33,10 +33,11 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class SubValidationsList extends VerticalPanel {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final List<FBValidationItem> items = new ArrayList<FBValidationItem>();
     private final String concatText;
     private final HorizontalPanel buttonPanel = new HorizontalPanel();

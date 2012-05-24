@@ -38,11 +38,11 @@ import com.gwtent.reflection.client.Reflectable;
 @Reflectable
 public class RemoveTabFormEffect extends FBFormEffect {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public RemoveTabFormEffect() {
-        super(FormBuilderGlobals.getInstance().getI18n().RemoveTabEffectLabel(), true);
+        super(CommonGlobals.getInstance().getI18n().RemoveTabEffectLabel(), true);
     }
     
     @Override

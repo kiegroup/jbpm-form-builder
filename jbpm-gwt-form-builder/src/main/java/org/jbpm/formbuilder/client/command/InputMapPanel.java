@@ -37,10 +37,11 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class InputMapPanel extends PopupPanel {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final Button okButton = new Button(i18n.OkButton());
     private final Button cancelButton = new Button(i18n.CancelButton());
     private final Map<String, InputData> inputs;

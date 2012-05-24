@@ -27,6 +27,7 @@ import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Label;
 import com.gwtent.reflection.client.Reflectable;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class HorizontalLayoutMenuItem extends FBMenuItem {
@@ -51,7 +52,7 @@ public class HorizontalLayoutMenuItem extends FBMenuItem {
 
     @Override
     public Label getDescription() {
-        return new Label(FormBuilderGlobals.getInstance().getI18n().MenuItemHorizontalLayout());
+        return new Label(CommonGlobals.getInstance().getI18n().MenuItemHorizontalLayout());
     }
 
     @Override

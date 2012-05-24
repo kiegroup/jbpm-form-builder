@@ -28,11 +28,12 @@ import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class IsIntegerValidationItem extends FBValidationItem {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
 
     @Override
     public String getName() {

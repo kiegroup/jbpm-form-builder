@@ -24,10 +24,11 @@ import org.jbpm.formbuilder.shared.task.TaskRef;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class SearchResultsView extends VerticalPanel {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private final IoAssociationView.Presenter presenter;
     
     public SearchResultsView(IoAssociationView.Presenter presenter) {

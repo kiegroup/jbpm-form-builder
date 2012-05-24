@@ -46,6 +46,7 @@ import com.google.gwt.xml.client.Element;
 import com.google.gwt.xml.client.Node;
 import com.google.gwt.xml.client.NodeList;
 import com.google.gwt.xml.client.XMLParser;
+import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * This class is to help {@link FormBuilderModel} to parse response messages
@@ -53,7 +54,7 @@ import com.google.gwt.xml.client.XMLParser;
  */
 public class XmlParseHelper {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     
     /**
      * Method to output xml from a form item and is name with the following format:

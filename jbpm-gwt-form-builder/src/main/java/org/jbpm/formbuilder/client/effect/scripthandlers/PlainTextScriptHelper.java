@@ -24,6 +24,7 @@ import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
+import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * 
@@ -31,7 +32,7 @@ import com.gwtent.reflection.client.Reflectable;
 @Reflectable
 public class PlainTextScriptHelper extends AbstractScriptHelper {
 
-    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     private String scriptPanel = "";
     
     private PlainTextScriptHelperView view;

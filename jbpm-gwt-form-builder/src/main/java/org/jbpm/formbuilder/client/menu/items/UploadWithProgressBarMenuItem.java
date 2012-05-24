@@ -28,6 +28,7 @@ import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Label;
 import com.gwtent.reflection.client.Reflectable;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class UploadWithProgressBarMenuItem extends FBMenuItem {
@@ -47,7 +48,7 @@ public class UploadWithProgressBarMenuItem extends FBMenuItem {
 
     @Override
     public Label getDescription() {
-        return new Label(FormBuilderGlobals.getInstance().getI18n().MenuItemUploadWithProgressBar());
+        return new Label(CommonGlobals.getInstance().getI18n().MenuItemUploadWithProgressBar());
     }
 
     @Override
