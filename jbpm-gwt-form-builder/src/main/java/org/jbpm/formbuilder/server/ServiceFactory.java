@@ -1,5 +1,8 @@
 package org.jbpm.formbuilder.server;
 
+
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.Settings;
 import org.jbpm.formbuilder.server.file.FileService;
 import org.jbpm.formbuilder.shared.form.FormDefinitionService;
 import org.jbpm.formbuilder.shared.menu.MenuService;
@@ -17,6 +20,7 @@ public class ServiceFactory implements BeanFactoryAware {
     }
     
     private ServiceFactory() {
+        
     }
     
     private BeanFactory beanFactory;
@@ -43,7 +47,12 @@ public class ServiceFactory implements BeanFactoryAware {
     }
     
     private Object getService(String name) {
-        String strategy = (String) this.beanFactory.getBean("strategy");
-        return this.beanFactory.getBean(strategy + name);
+        Settings settings = CommonGlobals.getInstance().getSettings();
+        String strategy = "guvnor";
+        if(settings != null){
+            strategy = settings.getEntry("storage").getValue();
+        }
+        System.out.println("Getting service using strategy ="+strategy);
+        return this.beanFactory.getBean( strategy + name);
     }
 }

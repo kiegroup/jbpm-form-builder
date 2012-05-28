@@ -10,7 +10,7 @@
     <Set name="userRealm"> 
       <New class="org.mortbay.jetty.security.HashUserRealm"> 
         <Set name="name">jbpm-form-builder</Set>
-        <Set name="config"><SystemProperty name="jetty.home" default="."/>/WEB-INF/jetty-realm.properties</Set> 
+        <Set name="config"><SystemProperty name="jetty.home" default="."/>/src/main/webapp/WEB-INF/jetty-realm.properties</Set> 
       </New> 
     </Set> 
     <Set name="authenticator"> 
