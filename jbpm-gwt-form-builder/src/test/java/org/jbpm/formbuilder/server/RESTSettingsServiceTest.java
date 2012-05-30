@@ -37,7 +37,13 @@ public class RESTSettingsServiceTest extends RESTAbstractTest {
 
     public void testNothing() throws JAXBException{
         Settings settings = new Settings("salaboy");
-        settings.addEntry(new SettingsEntry("storage", "fs"));
+        settings.setId(1L);
+        SettingsEntry settingsEntry = new SettingsEntry("storage", "fs");
+        settingsEntry.setId(1L);
+        settings.addEntry(settingsEntry);
+        SettingsEntry settingsEntry2 = new SettingsEntry("anotherprop", "othervalue");
+        settingsEntry2.setId(2L);
+        settings.addEntry(settingsEntry2);
         
         JAXBContext context = JAXBContext.newInstance(Settings.class);
         Marshaller createMarshaller = context.createMarshaller();
@@ -47,7 +53,7 @@ public class RESTSettingsServiceTest extends RESTAbstractTest {
         
     }
     //test happy path of RESTaddUserSettings
-    public void fix_testaddUserSettingsEntryOK() throws Exception {
+    public void testaddUserSettingsEntryOK() throws Exception {
         RESTSettingsService restService = new RESTSettingsService();
         List<Object> requestMocks = createRequestMocks();
         
@@ -55,8 +61,7 @@ public class RESTSettingsServiceTest extends RESTAbstractTest {
         
         Response resp = restService.applySettings("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><settings><entries><key>storage</key><value>fs</value></entries><userId>salaboy</userId></settings>", 
                                                     "salaboy", (HttpServletRequest)mocks[0]);
-        
-        
+
         assertNotNull("resp shouldn't be null", resp);
         assertStatus(resp.getStatus(), Status.OK);
         

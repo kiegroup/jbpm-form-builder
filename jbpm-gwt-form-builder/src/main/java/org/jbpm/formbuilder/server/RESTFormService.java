@@ -64,9 +64,9 @@ import org.jbpm.formbuilder.shared.form.FormServiceException;
 public class RESTFormService extends RESTBaseService {
 
     private FormDefinitionService formService = null;
-    
+    private boolean dynamicService = true;
     public void setContext(@Context ServletContext context) {
-        if (formService == null) {
+        if (dynamicService) {
             this.formService = ServiceFactory.getInstance().getFormDefinitionService();
         }
     }
@@ -329,4 +329,14 @@ public class RESTFormService extends RESTBaseService {
     public FormDefinitionService getFormService() {
         return this.formService;
     }
+
+    public boolean isDynamicService() {
+        return dynamicService;
+    }
+
+    public void setDynamicService(boolean dynamicService) {
+        this.dynamicService = dynamicService;
+    }
+    
+    
 }

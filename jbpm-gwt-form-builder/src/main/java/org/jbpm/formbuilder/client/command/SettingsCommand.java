@@ -55,6 +55,7 @@ public class SettingsCommand implements BaseCommand {
         bus.addHandler(LoadSettingsResponseEvent.TYPE, new LoadSettingsResponseHandler() {
 
             public void onEvent(LoadSettingsResponseEvent event) {
+                System.out.println("Settings response = "+event.getSettings());
                 showSettingsPanel(event.getUserId(), event.getSettings());
             }
         });
@@ -80,20 +81,6 @@ public class SettingsCommand implements BaseCommand {
 
     public void applySettings(SettingsPopupPanel panel) {
         System.out.println(">>>> Applying Settings");
-//        String formName = panel.getFormName();
-//        if (formName != null && !"".equals(formName)) {
-//            try {
-//                form.populate(panel.getFormName(), panel.getTaskId(), panel.getProcessId(),
-//                        panel.getAction(), panel.getMethod(), panel.getEnctype(), 
-//                        panel.getDocumentation());
-//                service.saveForm(form);
-//                bus.fireEvent(new NotificationEvent(Level.INFO, i18n.FormSavedSuccessfully(form.getName())));
-//            } catch (FormBuilderException e) {
-//                bus.fireEvent(new NotificationEvent(Level.ERROR, i18n.ProblemSavingForm(form.getName()), e));
-//            }
-//        } else {
-//            bus.fireEvent(new NotificationEvent(Level.WARN, i18n.DefineFormNameFirst()));
-//        }
     }
 
     @Override

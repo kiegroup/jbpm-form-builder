@@ -37,9 +37,9 @@ import org.jbpm.formbuilder.shared.task.TaskServiceException;
 public class RESTIoService extends RESTBaseService {
 
     private TaskDefinitionService taskService = null;
-    
+    private boolean dynamicService = true;
     public void setContext(@Context ServletContext context) {
-        if (taskService == null) {
+        if (dynamicService) {
             taskService = ServiceFactory.getInstance().getTaskDefinitionService();
         }
     }
@@ -96,4 +96,14 @@ public class RESTIoService extends RESTBaseService {
     public TaskDefinitionService getTaskService() {
         return this.taskService;
     }
+
+    public boolean isDynamicService() {
+        return dynamicService;
+    }
+
+    public void setDynamicService(boolean dynamicService) {
+        this.dynamicService = dynamicService;
+    }
+    
+    
 }
