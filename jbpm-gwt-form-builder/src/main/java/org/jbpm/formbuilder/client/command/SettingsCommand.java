@@ -55,15 +55,14 @@ public class SettingsCommand implements BaseCommand {
         bus.addHandler(LoadSettingsResponseEvent.TYPE, new LoadSettingsResponseHandler() {
 
             public void onEvent(LoadSettingsResponseEvent event) {
-                System.out.println("Settings response = "+event.getSettings());
-                showSettingsPanel(event.getUserId(), event.getSettings());
+                showSettingsPanel(event.getSettings());
             }
         });
     }
 
-    private void showSettingsPanel(String userId, Settings settings) {
+    private void showSettingsPanel(Settings settings) {
 
-        final SettingsPopupPanel panel = new SettingsPopupPanel(userId, settings);
+        final SettingsPopupPanel panel = new SettingsPopupPanel(settings);
         panel.setModal(true);
         panel.setPopupPosition(
                 RootPanel.getBodyElement().getClientWidth() / 2 - 150,
@@ -73,15 +72,13 @@ public class SettingsCommand implements BaseCommand {
 
             @Override
             public void onClose(CloseEvent<PopupPanel> event) {
-                applySettings(panel);
+                // Send notification??? 
             }
         });
 
     }
 
-    public void applySettings(SettingsPopupPanel panel) {
-        System.out.println(">>>> Applying Settings");
-    }
+    
 
     @Override
     public void execute() {

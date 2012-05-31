@@ -73,11 +73,6 @@ public class URLBuilder {
         return new StringBuilder(getFormsURL(contextPath, packageName)).append("/id/").append(encode(formName)).toString();
     }
     
-    public static String getUserSettings(String contextPath, String userId) {
-        return new StringBuilder(getBaseUrl()).append(contextPath).
-            append("/settings/").append(userId).toString();
-    }
-    
     public static String getFormsURL(String contextPath, String packageName) {
         return new StringBuilder(getBaseUrl()).append(contextPath).
             append("/form/definitions/package/").append(packageName).toString();
@@ -140,8 +135,8 @@ public class URLBuilder {
             append(params.toString()).toString();
     }
 
-    static String applySettingsURL(String contextPath, String userId) {
+    static String applySettingsURL(String contextPath) {
         return new StringBuilder(getBaseUrl()).append(contextPath).
-            append("/settings/").append(userId).toString();
+            append("/user/current/settings").toString();
     }
 }

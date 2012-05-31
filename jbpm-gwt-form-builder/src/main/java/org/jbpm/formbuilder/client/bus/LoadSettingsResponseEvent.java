@@ -27,10 +27,8 @@ public class LoadSettingsResponseEvent extends
 
     public static final Type<LoadSettingsResponseHandler> TYPE = new Type<LoadSettingsResponseHandler>();
     private final Settings settings;
-    private final String userId;
-    public LoadSettingsResponseEvent(String userId, Settings settings) {
+    public LoadSettingsResponseEvent(Settings settings) {
         super();
-        this.userId = userId;
         this.settings = settings;
     }
 
@@ -48,12 +46,5 @@ public class LoadSettingsResponseEvent extends
         return settings;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-   
     
-    
-
 }

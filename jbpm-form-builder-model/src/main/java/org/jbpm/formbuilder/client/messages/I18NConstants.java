@@ -322,4 +322,6 @@ public interface I18NConstants extends Messages {
     
     String CouldntGetUserSettings();
     
+    String SettingsAppliedSuccessfully();
+    String CouldntApplySettings();
 }
