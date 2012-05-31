@@ -53,6 +53,7 @@
     <module>jbpm-gwt-form-exporter-freemarker</module>
     <module>jbpm-gwt-form-exporter-gwt</module>
     <module>jbpm-gwt-form-builder</module>
+    <module>jbpm-form-services</module>
   </modules>
 
   <build>

@@ -43,7 +43,7 @@ import org.jbpm.formbuilder.client.effect.DoneEffect;
 import org.jbpm.formbuilder.client.effect.RemoveEffect;
 import org.jbpm.formbuilder.client.menu.items.CustomMenuItem;
 import org.jbpm.formbuilder.server.RESTAbstractTest;
-import org.jbpm.formbuilder.shared.menu.MenuServiceException;
+import org.jbpm.formapi.shared.menu.MenuServiceException;
 import org.jbpm.formbuilder.shared.menu.MockMenuService;
 
 public class GuvnorMenuServiceTest extends TestCase {

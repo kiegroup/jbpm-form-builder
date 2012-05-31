@@ -23,8 +23,8 @@ import org.jbpm.formbuilder.server.mock.MockDeleteMethod;
 import org.jbpm.formbuilder.server.mock.MockGetMethod;
 import org.jbpm.formbuilder.server.mock.MockPostMethod;
 import org.jbpm.formbuilder.server.mock.MockPutMethod;
-import org.jbpm.formbuilder.shared.task.TaskRef;
-import org.jbpm.formbuilder.shared.task.TaskServiceException;
+import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formapi.shared.task.TaskServiceException;
 
 public class GuvnorTaskDefinitionServiceTest extends TestCase {
 

@@ -36,8 +36,8 @@ import org.jbpm.formbuilder.client.menu.items.ErrorMenuItem;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formbuilder.client.options.MainMenuOption;
 import org.jbpm.formbuilder.client.validation.OtherValidationsAware;
-import org.jbpm.formbuilder.shared.task.TaskPropertyRef;
-import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formapi.shared.task.TaskPropertyRef;
+import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.TextBox;

@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.client.bus.ui;
 
-import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.event.shared.GwtEvent;
 

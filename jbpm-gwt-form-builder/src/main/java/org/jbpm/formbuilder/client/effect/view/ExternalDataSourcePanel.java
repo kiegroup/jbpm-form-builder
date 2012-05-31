@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.client.effect.view;
 
-import org.jbpm.formbuilder.shared.task.ExternalDataRef;
+import org.jbpm.formapi.shared.task.ExternalDataRef;
 
 import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.Label;

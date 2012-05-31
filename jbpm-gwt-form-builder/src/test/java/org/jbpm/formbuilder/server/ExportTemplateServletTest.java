@@ -25,9 +25,9 @@ import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
 import org.jbpm.formapi.shared.api.FormRepresentation;
-import org.jbpm.formbuilder.shared.form.FormDefinitionService;
-import org.jbpm.formbuilder.shared.task.TaskDefinitionService;
-import org.jbpm.formbuilder.shared.task.TaskServiceException;
+import org.jbpm.formapi.shared.form.FormDefinitionService;
+import org.jbpm.formapi.shared.task.TaskDefinitionService;
+import org.jbpm.formapi.shared.task.TaskServiceException;
 
 public class ExportTemplateServletTest extends TestCase {
 

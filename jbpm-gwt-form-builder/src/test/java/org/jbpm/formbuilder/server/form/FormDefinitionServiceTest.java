@@ -6,10 +6,10 @@ import junit.framework.TestCase;
 
 import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formbuilder.server.RESTAbstractTest;
-import org.jbpm.formbuilder.shared.form.FormDefinitionService;
-import org.jbpm.formbuilder.shared.form.FormServiceException;
-import org.jbpm.formbuilder.shared.form.MockFormDefinitionService;
-import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formapi.shared.form.FormDefinitionService;
+import org.jbpm.formapi.shared.form.FormServiceException;
+import org.jbpm.formapi.shared.form.MockFormDefinitionService;
+import org.jbpm.formapi.shared.task.TaskRef;
 
 public class FormDefinitionServiceTest extends TestCase {
 

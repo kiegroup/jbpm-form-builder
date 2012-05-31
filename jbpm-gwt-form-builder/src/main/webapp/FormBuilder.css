@@ -150,6 +150,11 @@
     height: 25px;
 }
 
+#formBuilder{
+   height: 100%; 
+   width: 100%; 
+}
+
 .notificationsView DIV {
     width: 100%;
     background-color: #EFEFEF;
@@ -173,20 +178,19 @@
     border-top: none;
 }
 
-.toolView {
-    
-}
 
 .toolView .gwt-TabLayoutPanelTabs {
-    
+    margin-top: 2px;
 }
 
 .toolView .gwt-TabLayoutPanelContent {
     border-color: #bcbcbc;
     border-style: solid;
     border-width: 1px;
-    overflow: hidden;
+    overflow: visible;
+    margin-top: 2px;
     padding: 6px;
+    height: 98%;
 }
 
 .toolView .gwt-TabLayoutPanelTab {
@@ -201,6 +205,8 @@
     color: grey;
     font-weight: bold;
     text-align: center;
+    margin-top: 2px;
+    
 }
 
 .toolView .gwt-TabLayoutPanelTab-selected {
@@ -214,6 +220,13 @@
     color: black;
     font-weight: bold;
     text-align: center;
+    margin-top: 2px;
+}
+
+.gwt-TabLayoutPanelContentContainer {
+    left: 150px;
+    top: 0px;
+    height: 98%;
 }
 
 .fbStackPanel .gwt-StackPanelItem {

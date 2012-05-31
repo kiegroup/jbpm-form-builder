@@ -7,7 +7,7 @@ import junit.framework.TestCase;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.tika.io.IOUtils;
-import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formapi.shared.task.TaskRef;
 
 public class FSTaskDefinitionServiceTest extends TestCase {
 

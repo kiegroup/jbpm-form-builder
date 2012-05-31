@@ -6,25 +6,27 @@
         <td colspan="2"><g:SimplePanel styleName="optionsViewWrapper" height="25px" width="100%" ui:field="optionsView"/></td>
       </tr>
       <tr id="mainRowWrapper">
-        <td width="230" class="toolViewWrapper">
-          <g:TabLayoutPanel width="230px" height="100%" barHeight="25" barUnit="PX" stylePrimaryName="toolView">
-            <g:tab selected="true">
-              <g:header>Menu</g:header>
-              <g:ScrollPanel height="100%" width="220px" ui:field="menuView"/>
-            </g:tab>
-            <g:tab>
-              <g:header>Tree</g:header>
-              <g:ScrollPanel height="100%" width="220px" ui:field="treeView"/>
-            </g:tab>
-            <g:tab>
-              <g:header>Edition</g:header>
-              <g:ScrollPanel height="100%" width="220px" ui:field="editionView"/>
-            </g:tab>
-            <g:tab>
-              <g:header>IO Data</g:header>
-              <g:Panel height="100%" width="220px" ui:field="ioAssociationView"/>
-            </g:tab>
-          </g:TabLayoutPanel>
+        <td width="230" class="toolViewWrapper" valign="top" height="600px">
+            <!-- We are setting 43dragdrop-dropTarget gwt-TabLayoutPanelContent0px for safari/chrome, toolView is causing problems -->
+            <g:TabLayoutPanel width="230px" height="100%"   barHeight="25" barUnit="PX" stylePrimaryName="toolView">
+                <g:tab selected="true">
+                <g:header>Menu</g:header>
+                <g:ScrollPanel width="220px" ui:field="menuView"/>
+                </g:tab>
+                <g:tab>
+                <g:header>Tree</g:header>
+                <g:ScrollPanel width="220px" ui:field="treeView"/>
+                </g:tab>
+                <g:tab>
+                <g:header>Edition</g:header>
+                <g:ScrollPanel  width="220px" ui:field="editionView"/>
+                </g:tab>
+                <g:tab>
+                <g:header>IO Data</g:header>
+                <g:Panel  width="220px" ui:field="ioAssociationView"/>
+                </g:tab>
+            </g:TabLayoutPanel>
+          
         </td>
         <td width="760">
           <table cellpadding="0" cellspacing="0">

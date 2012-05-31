@@ -32,7 +32,7 @@ import org.jbpm.formbuilder.client.bus.ui.TaskNameFilterHandler;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedHandler;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.Command;

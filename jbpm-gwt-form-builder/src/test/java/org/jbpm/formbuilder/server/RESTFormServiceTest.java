@@ -49,9 +49,9 @@ import org.jbpm.formbuilder.server.xml.FormPreviewDTO;
 import org.jbpm.formbuilder.server.xml.FormPreviewParameterDTO;
 import org.jbpm.formbuilder.server.xml.ListFormsDTO;
 import org.jbpm.formbuilder.server.xml.ListFormsItemsDTO;
-import org.jbpm.formbuilder.shared.form.FormDefinitionService;
-import org.jbpm.formbuilder.shared.form.FormServiceException;
-import org.jbpm.formbuilder.shared.form.MockFormDefinitionService;
+import org.jbpm.formapi.shared.form.FormDefinitionService;
+import org.jbpm.formapi.shared.form.FormServiceException;
+import org.jbpm.formapi.shared.form.MockFormDefinitionService;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class RESTFormServiceTest extends RESTAbstractTest {

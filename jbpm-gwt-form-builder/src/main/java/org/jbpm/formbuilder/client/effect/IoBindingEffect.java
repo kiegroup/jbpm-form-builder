@@ -29,9 +29,9 @@ import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedHandler;
 import org.jbpm.formbuilder.client.effect.view.IoBindingEffectView;
-import org.jbpm.formbuilder.shared.task.ExternalDataRef;
-import org.jbpm.formbuilder.shared.task.TaskPropertyRef;
-import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formapi.shared.task.ExternalDataRef;
+import org.jbpm.formapi.shared.task.TaskPropertyRef;
+import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.PopupPanel;
