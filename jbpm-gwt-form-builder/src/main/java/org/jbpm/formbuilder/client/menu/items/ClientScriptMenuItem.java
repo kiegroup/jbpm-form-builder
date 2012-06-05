@@ -21,7 +21,7 @@ import java.util.List;
 import org.jbpm.model.formapi.client.effect.FBFormEffect;
 import org.jbpm.model.formapi.client.form.FBFormItem;
 import org.jbpm.formapi.client.menu.FBMenuItem;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.form.items.ClientScriptFormItem;
 import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
 

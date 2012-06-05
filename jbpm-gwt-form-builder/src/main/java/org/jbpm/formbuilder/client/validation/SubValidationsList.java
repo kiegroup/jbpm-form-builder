@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jbpm.model.formapi.client.validation.FBValidationItem;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ChangeEvent;

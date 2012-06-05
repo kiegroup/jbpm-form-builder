@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.jbpm.model.formapi.shared.api.InputData;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ChangeEvent;

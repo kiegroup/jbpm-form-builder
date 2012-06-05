@@ -15,9 +15,11 @@
  */
 package org.jbpm.formdisplay.client;
 
-import org.jbpm.formbuilder.client.FBBaseEntryPoint;
+
 
 import com.google.gwt.user.client.ui.RootPanel;
+import org.jbpm.formbuilder.parent.client.FBBaseEntryPoint;
+
 
 /**
  * Main entry point for form display in GWT

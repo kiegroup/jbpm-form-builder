@@ -20,9 +20,9 @@ import java.util.List;
 
 import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.FormBuilderService;
-import org.jbpm.formbuilder.client.bus.ui.UpdateFormViewEvent;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderService;
+import org.jbpm.formbuilder.parent.client.bus.ui.UpdateFormViewEvent;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formapi.shared.task.TaskPropertyRef;
 import org.jbpm.formapi.shared.task.TaskRef;

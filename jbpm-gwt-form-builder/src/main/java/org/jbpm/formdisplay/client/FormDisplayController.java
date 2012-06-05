@@ -20,11 +20,11 @@ import org.jbpm.model.formapi.client.FormBuilderException;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
 import org.jbpm.model.formapi.shared.form.FormEncodingException;
 import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.FormBuilderService;
-import org.jbpm.formbuilder.client.JsonLoadInput;
-import org.jbpm.formbuilder.client.bus.ui.RepresentationFactoryPopulatedEvent;
-import org.jbpm.formbuilder.client.bus.ui.RepresentationFactoryPopulatedHandler;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderService;
+import org.jbpm.formbuilder.parent.client.JsonLoadInput;
+import org.jbpm.formbuilder.parent.client.bus.ui.RepresentationFactoryPopulatedEvent;
+import org.jbpm.formbuilder.parent.client.bus.ui.RepresentationFactoryPopulatedHandler;
 import org.jbpm.model.formbuilder.client.form.FBForm;
 
 import com.google.gwt.core.client.GWT;
@@ -32,11 +32,6 @@ import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.Node;
-import com.google.gwt.xml.client.NodeList;
-import com.google.gwt.xml.client.XMLParser;
-import org.jbpm.formbuilder.server.xml.ListFormsDTO;
 
 /**
  *
@@ -63,13 +58,13 @@ public class FormDisplayController {
                             formDisplay.add(formUI.asFormPanel(input.getFormData()));
                         } 
                     } catch (FormEncodingException e) {
-                        Window.alert("Couldn't interpretate form: " + e.getMessage());
+                        Window.alert("Couldn't interpretate form: " + e.getMessage() + " - " +e.getStackTrace().toString());
                         GWT.log("Couldn't interpretate form", e);
                     } catch (FormBuilderException e) {
-                        Window.alert("Couldn't populate display: " + e.getMessage());
+                        Window.alert("Couldn't populate display: " + e.getMessage() +" - " +e.getStackTrace().toString());
                         GWT.log("Couldn't populate display", e);
                     } catch (Exception e) {
-                        Window.alert("Couldn't populate display: " + e.getMessage());
+                        Window.alert("Couldn't populate display: " + e.getMessage()+" - " + e.getStackTrace().toString());
                         GWT.log("Couldn't populate display", e);
                     }
                 }

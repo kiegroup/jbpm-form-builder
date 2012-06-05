@@ -25,7 +25,7 @@ import org.jbpm.model.formapi.client.form.FBFormItem;
 import org.jbpm.model.formapi.client.menu.EffectsPopupPanel;
 import org.jbpm.model.formapi.common.handler.RightClickEvent;
 import org.jbpm.model.formapi.common.handler.RightClickHandler;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.event.dom.client.ClickEvent;

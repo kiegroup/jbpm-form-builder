@@ -19,13 +19,13 @@
       "cssId": null,
       "cssName": null,
       "itemValidations": [],
-      "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-        "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-        "org.jbpm.formbuilder.client.effect.CutFormEffect",
-        "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-        "org.jbpm.formbuilder.client.effect.DoneEffect",
-        "org.jbpm.formbuilder.client.effect.ResizeEffect",
-        "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+      "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+        "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+        "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+        "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+        "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+        "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+        "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
       ]
     }, 
     {
@@ -35,13 +35,13 @@
       "output": null,
       "itemValidations": [],
       "columns": 2,
-      "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-        "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-        "org.jbpm.formbuilder.client.effect.CutFormEffect",
-        "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-        "org.jbpm.formbuilder.client.effect.DoneEffect",
-        "org.jbpm.formbuilder.client.effect.ResizeEffect",
-        "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+      "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+        "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+        "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+        "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+        "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+        "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+        "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
       ],
       "@className": "org.jbpm.formbuilder.shared.rep.items.TableRepresentation",
       "typeId": "table",
@@ -62,13 +62,13 @@
             "cssName": null,
             "itemValidations": [],
             "id": null,
-            "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-              "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-              "org.jbpm.formbuilder.client.effect.CutFormEffect",
-              "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-              "org.jbpm.formbuilder.client.effect.DoneEffect",
-              "org.jbpm.formbuilder.client.effect.ResizeEffect",
-              "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+            "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+              "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+              "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
             ]
           },
           {
@@ -83,13 +83,13 @@
             "itemValidations": [],
             "name": "usr",
             "id": null,
-            "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-              "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-              "org.jbpm.formbuilder.client.effect.CutFormEffect",
-              "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-              "org.jbpm.formbuilder.client.effect.DoneEffect",
-              "org.jbpm.formbuilder.client.effect.ResizeEffect",
-              "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+            "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+              "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+              "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
             ]
           }
         ],
@@ -105,13 +105,13 @@
             "cssName": null,
             "itemValidations": [],
             "id": null,
-            "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-              "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-              "org.jbpm.formbuilder.client.effect.CutFormEffect",
-              "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-              "org.jbpm.formbuilder.client.effect.DoneEffect",
-              "org.jbpm.formbuilder.client.effect.ResizeEffect",
-              "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+            "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+              "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+              "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
             ]
           },
           {
@@ -126,13 +126,13 @@
             "itemValidations": [],
             "name": "pwd",
             "id": null,
-            "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-              "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-              "org.jbpm.formbuilder.client.effect.CutFormEffect",
-              "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-              "org.jbpm.formbuilder.client.effect.DoneEffect",
-              "org.jbpm.formbuilder.client.effect.ResizeEffect",
-              "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+            "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+              "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+              "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
             ]
           }
         ],
@@ -158,13 +158,13 @@
             "itemValidations": [],
             "name": null,
             "id": null,
-            "effectClasses": ["org.jbpm.formbuilder.client.effect.RemoveEffect",
-              "org.jbpm.formbuilder.client.effect.CopyFormEffect",
-              "org.jbpm.formbuilder.client.effect.CutFormEffect",
-              "org.jbpm.formbuilder.client.effect.PasteFormEffect",
-              "org.jbpm.formbuilder.client.effect.DoneEffect",
-              "org.jbpm.formbuilder.client.effect.ResizeEffect",
-              "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
+            "effectClasses": ["org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.CutFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect",
+              "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
+              "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
+              "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
             ]
           }
         ]

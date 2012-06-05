@@ -15,6 +15,7 @@
  */
 package org.jbpm.formbuilder.client.command;
 
+import org.jbpm.formbuilder.parent.client.command.BaseCommand;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,13 +25,13 @@ import org.jbpm.model.formapi.client.FormBuilderException;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
 import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.FormBuilderService;
-import org.jbpm.formbuilder.client.bus.LoadServerFormEvent;
-import org.jbpm.formbuilder.client.bus.LoadServerFormHandler;
-import org.jbpm.formbuilder.client.bus.LoadServerFormResponseEvent;
-import org.jbpm.formbuilder.client.bus.LoadServerFormResponseHandler;
-import org.jbpm.formbuilder.client.bus.ui.UpdateFormViewEvent;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderService;
+import org.jbpm.formbuilder.parent.client.bus.LoadServerFormEvent;
+import org.jbpm.formbuilder.parent.client.bus.LoadServerFormHandler;
+import org.jbpm.formbuilder.parent.client.bus.LoadServerFormResponseEvent;
+import org.jbpm.formbuilder.parent.client.bus.LoadServerFormResponseHandler;
+import org.jbpm.formbuilder.parent.client.bus.ui.UpdateFormViewEvent;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;

@@ -58,6 +58,7 @@
                     <noServer>false</noServer>
           <!-- inplace>true</inplace -->
                     <modules>
+                        <module>org.jbpm.formbuilder.parent.AbstractFormBuilder</module>
                         <module>org.jbpm.formbuilder.FormBuilder</module>
                         <module>org.jbpm.formdisplay.FormDisplay</module>
                     </modules>
@@ -70,7 +71,7 @@
                     <gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath><!-- The GWT compiler must the correct JDT version -->
                     <localWorkers>2</localWorkers><!-- Using all workers can temporarily hang the mouse and isn't much faster -->
                     <extraJvmArgs>-Xmx1024m</extraJvmArgs>
-                    <draftCompile>true</draftCompile>
+                    <!--draftCompile>true</draftCompile-->
                     
                 </configuration>
                 <executions>

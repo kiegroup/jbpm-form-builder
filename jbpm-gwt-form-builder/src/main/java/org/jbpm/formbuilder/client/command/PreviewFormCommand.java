@@ -15,6 +15,7 @@
  */
 package org.jbpm.formbuilder.client.command;
 
+import org.jbpm.formbuilder.parent.client.command.BaseCommand;
 import java.util.Map;
 
 import org.gwt.mosaic.ui.client.WindowPanel;
@@ -24,14 +25,14 @@ import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
 import org.jbpm.model.formapi.shared.api.FormRepresentation;
 import org.jbpm.model.formapi.shared.api.InputData;
-import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.FormBuilderService;
-import org.jbpm.formbuilder.client.UIUtils;
-import org.jbpm.formbuilder.client.bus.GetFormRepresentationEvent;
-import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseEvent;
-import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseHandler;
-import org.jbpm.formbuilder.client.bus.PreviewFormResponseEvent;
-import org.jbpm.formbuilder.client.bus.PreviewFormResponseHandler;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.FormBuilderService;
+import org.jbpm.formbuilder.parent.client.UIUtils;
+import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationEvent;
+import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationResponseEvent;
+import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationResponseHandler;
+import org.jbpm.formbuilder.parent.client.bus.PreviewFormResponseEvent;
+import org.jbpm.formbuilder.parent.client.bus.PreviewFormResponseHandler;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;

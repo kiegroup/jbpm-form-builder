@@ -39,11 +39,11 @@ import org.jbpm.model.formapi.shared.menu.FormEffectDescription;
 import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
 import org.jbpm.model.formapi.shared.menu.MenuOptionDescription;
 import org.jbpm.model.formapi.shared.menu.ValidationDescription;
-import org.jbpm.formbuilder.client.effect.DoneEffect;
-import org.jbpm.formbuilder.client.effect.RemoveEffect;
-import org.jbpm.formbuilder.client.menu.items.CustomMenuItem;
+import org.jbpm.formbuilder.parent.client.effect.DoneEffect;
+import org.jbpm.formbuilder.parent.client.effect.RemoveEffect;
 import org.jbpm.formbuilder.server.RESTAbstractTest;
 import org.jbpm.formapi.shared.menu.MenuServiceException;
+import org.jbpm.formbuilder.parent.client.menu.items.CustomMenuItem;
 import org.jbpm.formbuilder.shared.menu.MockMenuService;
 
 public class GuvnorMenuServiceTest extends TestCase {

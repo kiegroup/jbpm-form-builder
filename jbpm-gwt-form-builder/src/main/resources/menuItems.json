@@ -4,15 +4,15 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.FieldSetLayoutMenuItem",
@@ -20,19 +20,19 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.L10NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveTabFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddTabFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.L10NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveTabFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddTabFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.MenuLayoutMenuItem",
@@ -40,17 +40,17 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveTabFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddTabFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveTabFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddTabFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.TabbedLayoutMenuItem",
@@ -58,17 +58,17 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveTabFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddTabFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveTabFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddTabFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.HorizontalLayoutMenuItem",
@@ -76,15 +76,15 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.BorderLayoutMenuItem",
@@ -92,15 +92,15 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.CSSLayoutMenuItem",
@@ -108,16 +108,16 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.UploadFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.UploadFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.FlowLayoutMenuItem",
@@ -125,15 +125,15 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.TableLayoutMenuItem",
@@ -141,19 +141,19 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddRowFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddColumnFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveRowFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveColumnFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddRowFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddColumnFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveRowFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveColumnFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.MIGLayoutMenuItem",
@@ -161,15 +161,15 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.AbsoluteLayoutMenuItem",
@@ -177,15 +177,15 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         }
      ],
@@ -196,19 +196,19 @@
                 "onkeydown", "onkeypress", "onkeyup" 
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DeleteItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DeleteItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.RangeFieldMenuItem",
@@ -217,17 +217,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },        
         {   "className": "org.jbpm.formbuilder.client.menu.items.NumberFieldMenuItem",
@@ -236,17 +236,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.TextFieldMenuItem",
@@ -255,17 +255,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.PasswordFieldMenuItem",
@@ -274,17 +274,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.CompleteButtonMenuItem",
@@ -293,19 +293,19 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.L10NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.L10NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.TextAreaMenuItem",
@@ -314,17 +314,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.HiddenMenuItem",
@@ -333,17 +333,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.FileInputMenuItem",
@@ -352,17 +352,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.CheckBoxMenuItem",
@@ -371,17 +371,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.RadioButtonMenuItem",
@@ -390,17 +390,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         }
      ],
@@ -410,17 +410,17 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.L10NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.L10NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.SummaryMenuItem",
@@ -428,18 +428,18 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.L10NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.L10NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.LabelMenuItem",
@@ -447,18 +447,18 @@
                 "onmouseover", "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.L10NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.L10NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.ImageMenuItem",
@@ -467,17 +467,17 @@
                 "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.UploadFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.UploadFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.AudioMenuItem",
@@ -486,16 +486,16 @@
                 "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.UploadFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.UploadFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.VideoMenuItem",
@@ -504,16 +504,16 @@
                 "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.UploadFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.UploadFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.CanvasMenuItem",
@@ -522,16 +522,16 @@
                 "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.UploadFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.UploadFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.HTMLMenuItem",
@@ -540,29 +540,29 @@
                 "onmouseup", "onkeydown", "onkeypress", "onkeyup"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.LineGraphMenuItem",
             "allowedEvents": [ "onclick", "onfocus", "onblur" ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ]
         }
      ],
@@ -570,43 +570,43 @@
         {   "className": "org.jbpm.formbuilder.client.menu.items.LoopBlockMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.ConditionalBlockMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                 { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                 { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
              ]
          },
          {  "className": "org.jbpm.formbuilder.client.menu.items.ServerTransformationMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
              ]
          }
      ],
@@ -614,59 +614,59 @@
         {   "className": "org.jbpm.formbuilder.client.menu.items.RichTextEditorMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.ClientScriptMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.UploadFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.UploadFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.CalendarMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.ImageRolodexMenuItem",
             "allowedEvents": [ ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DeleteItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DeleteItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
         {   "className": "org.jbpm.formbuilder.client.menu.items.UploadWithProgressBarMenuItem",
@@ -675,17 +675,17 @@
                 "onkeydown", "onkeypress", "onkeyup", "onselect"
             ],
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.IoBindingEffect" }            
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }            
             ]
         }
      ],
@@ -696,19 +696,19 @@
             ],
              "name": "Login template",
             "effects": [
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddRowFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.AddColumnFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveRowFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.RemoveColumnFormEffect" },
-                { "className": "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"}
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddRowFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.AddColumnFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveRowFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveColumnFormEffect" },
+                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"}
             ],
             "itemRepresentation": {
                 "width": "100%",
