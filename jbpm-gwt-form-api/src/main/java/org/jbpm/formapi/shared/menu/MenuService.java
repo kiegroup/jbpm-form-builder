@@ -18,9 +18,9 @@ package org.jbpm.formapi.shared.menu;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.formapi.shared.menu.MenuItemDescription;
-import org.jbpm.formapi.shared.menu.MenuOptionDescription;
-import org.jbpm.formapi.shared.menu.ValidationDescription;
+import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.model.formapi.shared.menu.MenuOptionDescription;
+import org.jbpm.model.formapi.shared.menu.ValidationDescription;
 
 public interface MenuService {
 

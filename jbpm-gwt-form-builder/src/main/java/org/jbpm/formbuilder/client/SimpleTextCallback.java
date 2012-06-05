@@ -17,9 +17,9 @@ package org.jbpm.formbuilder.client;
 
 import org.fusesource.restygwt.client.Method;
 import org.fusesource.restygwt.client.TextCallback;
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
 
 import com.google.gwt.event.shared.EventBus;
 

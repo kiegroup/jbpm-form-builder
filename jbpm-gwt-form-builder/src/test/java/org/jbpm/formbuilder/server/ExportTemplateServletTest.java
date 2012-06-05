@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
-import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.model.formapi.shared.api.FormRepresentation;
 import org.jbpm.formapi.shared.form.FormDefinitionService;
 import org.jbpm.formapi.shared.task.TaskDefinitionService;
 import org.jbpm.formapi.shared.task.TaskServiceException;

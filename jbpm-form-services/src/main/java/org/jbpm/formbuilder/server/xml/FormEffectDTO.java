@@ -17,7 +17,7 @@ package org.jbpm.formbuilder.server.xml;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
-import org.jbpm.formapi.shared.menu.FormEffectDescription;
+import org.jbpm.model.formapi.shared.menu.FormEffectDescription;
 
 public class FormEffectDTO {
 

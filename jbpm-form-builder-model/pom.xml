@@ -146,8 +146,8 @@
               <gwtVersion>${gwt.version}</gwtVersion>
               <style>DETAILED</style>
               <noServer>false</noServer>
-              <module>org.jbpm.formapi.Commons</module>
-              <module>org.jbpm.formbuilder.FormBuilder</module>
+              <module>org.jbpm.model.formapi.ModelApi</module>
+              <module>org.jbpm.model.formbuilder.ModelFormBuilder</module>
               <!-- inplace>true</inplace>
               <modules>
                 <module>org.jbpm.formapi.Commons</module>

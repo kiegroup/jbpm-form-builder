@@ -3,11 +3,11 @@ package org.jbpm.formbuilder.client;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.FormBuilderException;
-import org.jbpm.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.formapi.client.bus.ui.NotificationEvent.Level;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.FormBuilderException;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.shared.EventBus;
 

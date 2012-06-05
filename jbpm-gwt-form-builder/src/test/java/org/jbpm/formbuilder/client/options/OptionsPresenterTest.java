@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.formbuilder.client.bus.MenuOptionAddedEvent;
 import org.jbpm.formbuilder.client.bus.ui.EmbededIOReferenceEvent;
 import org.jbpm.formbuilder.client.command.BaseCommand;

@@ -18,7 +18,7 @@ package org.jbpm.formapi.shared.api.validation;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.formapi.shared.api.FBValidation;
+import org.jbpm.model.formapi.shared.api.FBValidation;
 
 import com.gwtent.reflection.client.Reflectable;
 

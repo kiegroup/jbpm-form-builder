@@ -15,9 +15,9 @@
  */
 package org.jbpm.formbuilder.client.notification;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.formapi.client.bus.ui.NotificationHandler;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.model.formapi.client.bus.ui.NotificationHandler;
 
 import com.google.gwt.event.shared.EventBus;
 

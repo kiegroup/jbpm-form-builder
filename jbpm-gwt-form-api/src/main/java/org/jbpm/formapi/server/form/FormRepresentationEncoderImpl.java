@@ -19,8 +19,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-import org.jbpm.formapi.shared.api.Mappable;
-import org.jbpm.formapi.shared.form.AbstractFormRepresentationEncoder;
+import org.jbpm.model.formapi.shared.api.Mappable;
+import org.jbpm.model.formapi.shared.form.AbstractFormRepresentationEncoder;
 
 public class FormRepresentationEncoderImpl extends
         AbstractFormRepresentationEncoder {

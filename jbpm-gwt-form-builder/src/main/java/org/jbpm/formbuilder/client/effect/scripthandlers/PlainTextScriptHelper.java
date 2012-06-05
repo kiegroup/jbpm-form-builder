@@ -18,13 +18,13 @@ package org.jbpm.formbuilder.client.effect.scripthandlers;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.formapi.shared.api.FBScript;
+import org.jbpm.model.formapi.shared.api.FBScript;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 
 /**
  * 

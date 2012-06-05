@@ -15,8 +15,8 @@
  */
 package org.jbpm.formbuilder.client.tree;
 
-import org.jbpm.formapi.client.form.FBCompositeItem;
-import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.model.formapi.client.form.FBCompositeItem;
+import org.jbpm.model.formapi.client.form.FBFormItem;
 
 public interface TreeView {
 

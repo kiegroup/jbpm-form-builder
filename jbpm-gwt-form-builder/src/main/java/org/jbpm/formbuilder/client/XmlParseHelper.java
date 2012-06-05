@@ -20,20 +20,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.formapi.client.effect.FBFormEffect;
+import org.jbpm.model.formapi.client.effect.FBFormEffect;
 import org.jbpm.formapi.client.menu.FBMenuItem;
-import org.jbpm.formapi.client.validation.FBValidationItem;
-import org.jbpm.formapi.common.reflect.ReflectionHelper;
-import org.jbpm.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.formapi.shared.api.FormRepresentation;
-import org.jbpm.formapi.shared.form.FormEncodingException;
-import org.jbpm.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.model.formapi.client.validation.FBValidationItem;
+import org.jbpm.model.formapi.common.reflect.ReflectionHelper;
+import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.model.formapi.shared.form.FormEncodingException;
+import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
 import org.jbpm.formbuilder.client.command.BaseCommand;
 import org.jbpm.formbuilder.client.menu.items.CustomMenuItem;
 import org.jbpm.formbuilder.client.menu.items.ErrorMenuItem;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formbuilder.client.options.MainMenuOption;
 import org.jbpm.formbuilder.client.validation.OtherValidationsAware;
 import org.jbpm.formapi.shared.task.TaskPropertyRef;
@@ -46,9 +46,9 @@ import com.google.gwt.xml.client.Element;
 import com.google.gwt.xml.client.Node;
 import com.google.gwt.xml.client.NodeList;
 import com.google.gwt.xml.client.XMLParser;
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.Settings;
-import org.jbpm.formapi.client.SettingsEntry;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.Settings;
+import org.jbpm.model.formapi.client.SettingsEntry;
 
 /**
  * This class is to help {@link FormBuilderModel} to parse response messages and

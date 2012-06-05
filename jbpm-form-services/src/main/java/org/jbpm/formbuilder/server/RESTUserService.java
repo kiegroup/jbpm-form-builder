@@ -22,32 +22,33 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import org.jboss.resteasy.annotations.providers.jaxb.DoNotUseJAXBProvider;
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.Settings;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.Settings;
 import org.jbpm.formbuilder.server.settings.SettingsService;
 
 @Path("/user")
 public class RESTUserService extends RESTBaseService {
+
     private SettingsService settingsService;
-    
-    private static final String[] AVAILABLE_ROLES = new String[] { 
-        "admin", "webdesigner", "functionalanalyst" 
+    private static final String[] AVAILABLE_ROLES = new String[]{
+        "admin", "webdesigner", "functionalanalyst", "client"
     };
-    
-    private void init(){
-        if(this.settingsService == null){
+
+    private void init() {
+        if (this.settingsService == null) {
             this.settingsService = ServiceFactory.getInstance().getSettingsService();
         }
     }
-    
-    @GET @Path("/current/roles")
+
+    @GET
+    @Path("/current/roles")
     @Consumes("*/*")
     @Produces("text/plain")
     @DoNotUseJAXBProvider
     public Response getCurrentRoles(@Context HttpServletRequest request) {
         List<String> roles = getRoles(request);
         StringBuilder txtRoles = new StringBuilder();
-        for (Iterator<String> iter = roles.iterator(); iter.hasNext(); ) {
+        for (Iterator<String> iter = roles.iterator(); iter.hasNext();) {
             txtRoles.append(iter.next());
             if (iter.hasNext()) {
                 txtRoles.append(",");
@@ -56,12 +57,13 @@ public class RESTUserService extends RESTBaseService {
         return Response.ok(txtRoles.toString()).build();
     }
 
-    @POST @Path("/current/logout")
+    @POST
+    @Path("/current/logout")
     public Response logout(@Context HttpServletRequest request) {
         request.getSession().invalidate();
         return Response.ok().build();
     }
-    
+
     public static List<String> getRoles(HttpServletRequest request) {
         List<String> roles = new ArrayList<String>();
         for (String role : AVAILABLE_ROLES) {
@@ -76,34 +78,24 @@ public class RESTUserService extends RESTBaseService {
         List<String> roles = getRoles(request);
         return roles.contains("admin") || roles.contains("webdesigner");
     }
-    
+
     @GET
     @Path("/current/settings")
     public Response getUserSettings(@Context HttpServletRequest request) {
         init();
-        String userName = request.getUserPrincipal().getName(); 
+        String userName = request.getUserPrincipal().getName();
         Settings settings = settingsService.getSettingsByUserId(userName);
         return Response.ok(settings, MediaType.APPLICATION_XML).build();
     }
-
-   
 
     @POST
     @Consumes("application/xml")
     @Path("/current/settings")
     public Response applySettings(Settings settings, @Context HttpServletRequest request) {
-        String userName = request.getUserPrincipal().getName(); 
+        String userName = request.getUserPrincipal().getName();
         init();
- //       try {
-//            JAXBContext context = JAXBContext.newInstance(Settings.class);
-//            Unmarshaller unmarshaller = context.createUnmarshaller();
-//            Settings settings = (Settings) unmarshaller.unmarshal(new ByteArrayInputStream(settingsXml.getBytes()));
-            settingsService.applySettings(settings, userName);
-            CommonGlobals.getInstance().setSettings(settings);
-//        } catch (JAXBException ex) {
-//            Logger.getLogger(RESTSettingsService.class.getName()).log(Level.SEVERE, null, ex);
-//            return Response.serverError().build();
-//        }
+        settingsService.applySettings(settings, userName);
+        CommonGlobals.getInstance().setSettings(settings);
         return Response.ok().build();
     }
 }

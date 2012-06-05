@@ -18,8 +18,8 @@ package org.jbpm.formapi.client.form;
 import java.util.Date;
 import java.util.Map;
 
-import org.jbpm.formapi.common.reflect.ReflectionHelper;
-import org.jbpm.formapi.shared.form.AbstractFormRepresentationEncoder;
+import org.jbpm.model.formapi.common.reflect.ReflectionHelper;
+import org.jbpm.model.formapi.shared.form.AbstractFormRepresentationEncoder;
 
 import com.google.gwt.i18n.client.DateTimeFormat;
 

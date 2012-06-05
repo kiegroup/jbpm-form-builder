@@ -15,8 +15,8 @@
  */
 package org.jbpm.formapi.server.form;
 
-import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
 
 public class FormEncodingServerFactory {
 

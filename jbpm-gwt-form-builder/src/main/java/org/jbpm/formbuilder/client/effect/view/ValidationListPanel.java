@@ -19,16 +19,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.formapi.client.validation.FBValidationItem;
+import org.jbpm.model.formapi.client.validation.FBValidationItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 
 public class ValidationListPanel extends HorizontalPanel {
 

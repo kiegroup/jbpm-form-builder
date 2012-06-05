@@ -18,14 +18,14 @@ package org.jbpm.formbuilder.client.toolbar;
 import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseEvent;
 import org.jbpm.formbuilder.client.bus.ui.EmbededIOReferenceEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedEvent;
 import org.jbpm.formbuilder.client.command.LoadFormCommand;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
 import org.jbpm.formapi.shared.task.TaskRef;
 import org.junit.After;
 import org.junit.Before;

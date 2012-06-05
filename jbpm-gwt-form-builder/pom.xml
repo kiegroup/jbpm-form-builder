@@ -167,7 +167,7 @@
             <version>1.0.0</version>
       <!-- temporal fix. Should change soon enough -->
             <scope>system</scope>
-            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/gwtent.jar</systemPath>
+            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/gwtent-1.0.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.yesmail</groupId>
@@ -273,7 +273,8 @@
         <dependency>
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
-            <scope>provided</scope>
+            <!-- JBOSS 7.1 provide this, tomcat and old jboss don't -->
+            <!--scope>provided</scope-->
         </dependency>
        
     </dependencies>

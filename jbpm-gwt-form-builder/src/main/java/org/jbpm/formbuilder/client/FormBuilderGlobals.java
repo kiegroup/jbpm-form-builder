@@ -15,8 +15,8 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
 
 /**
  * Base singleton to obtain global variables, like service callers and event buses

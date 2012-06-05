@@ -20,13 +20,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.FormBuilderService;
 import org.jbpm.formbuilder.client.bus.ExistingTasksResponseEvent;
 import org.jbpm.formbuilder.client.bus.ExistingTasksResponseHandler;
 import org.jbpm.formbuilder.client.bus.ui.TaskNameFilterEvent;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.event.dom.client.ChangeEvent;

@@ -15,9 +15,9 @@
  */
 package org.jbpm.formbuilder.client.layout;
 
-import org.jbpm.formapi.client.form.LayoutFormItem;
+import org.jbpm.model.formapi.client.form.LayoutFormItem;
 import org.jbpm.formbuilder.client.command.DropFormItemController;
-import org.jbpm.formbuilder.client.form.FBForm;
+import org.jbpm.model.formbuilder.client.form.FBForm;
 
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.google.gwt.user.client.ui.HasWidgets;

@@ -116,25 +116,32 @@ public class FormBuilderView extends AbsolutePanel {
             String sheight = "" + (fullHeight - 275) + "px";
             String smallerHeight = "" + (fullHeight - 300) + "px";
             this.notificationsView.setHeight("225px");
-            Document.get().getElementById("mainRowWrapper").setPropertyString("height", sheight);
+            
+            //Document.get().getElementById("mainRowWrapper").setPropertyString("height", sheight);
             Document.get().getElementById("notificationsRowWrapper").setPropertyString("height", "225px");
-            treeView.setHeight(sheight);
-            menuView.setHeight(sheight);
-            editionView.setHeight(sheight);
-            ioAssociationView.setHeight(sheight);
-            layoutView.setHeight(smallerHeight);
+            Document.get().getElementById("notificationsRowWrapper").setPropertyString("style", "bottom:225px;");
+            
+            
+            //treeView.setHeight(sheight);
+            //menuView.setHeight(sheight);
+            //editionView.setHeight(sheight);
+            //ioAssociationView.setHeight(sheight);
+            //layoutView.setHeight(smallerHeight);
             visibleNotifications = false;
         } else {
             this.notificationsView.setHeight("25px");
             String sheight = "" + (fullHeight - 80) + "px";
             String smallerHeight = "" + (fullHeight - 105) + "px";
-            Document.get().getElementById("mainRowWrapper").setPropertyString("height", sheight);
+           // Document.get().getElementById("mainRowWrapper").setPropertyString("height", sheight);
             Document.get().getElementById("notificationsRowWrapper").setPropertyString("height", "25px");
-            treeView.setHeight(sheight);
-            menuView.setHeight(sheight);
-            editionView.setHeight(sheight);
-            ioAssociationView.setHeight(sheight);
-            layoutView.setHeight(smallerHeight);
+            Document.get().getElementById("notificationsRowWrapper").setPropertyString("style", "bottom:0px;");
+            
+            //treeView.setHeight(sheight);
+            //menuView.setHeight(sheight);
+            //editionView.setHeight(sheight);
+            //ioAssociationView.setHeight(sheight);
+            //layoutView.setHeight(smallerHeight);
+            
             visibleNotifications = true;
         }
     }

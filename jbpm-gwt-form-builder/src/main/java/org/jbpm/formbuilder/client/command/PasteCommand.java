@@ -18,15 +18,15 @@ package org.jbpm.formbuilder.client.command;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.form.FBFormItem;
-import org.jbpm.formapi.client.form.LayoutFormItem;
-import org.jbpm.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.formbuilder.client.bus.UndoableHandler;
-import org.jbpm.formbuilder.client.bus.ui.FormItemAddedEvent;
-import org.jbpm.formbuilder.client.bus.ui.FormItemRemovedEvent;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.form.FBFormItem;
+import org.jbpm.model.formapi.client.form.LayoutFormItem;
+import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.model.formbuilder.client.bus.ui.FormItemAddedEvent;
+import org.jbpm.model.formbuilder.client.bus.ui.FormItemRemovedEvent;
 import org.jbpm.formbuilder.client.bus.ui.GetFormDisplayEvent;
-import org.jbpm.formbuilder.client.form.FBForm;
+import org.jbpm.model.formbuilder.client.form.FBForm;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.HasOneWidget;

@@ -20,19 +20,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.FormBuilderException;
-import org.jbpm.formapi.client.effect.FBFormEffect;
-import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.FormBuilderException;
+import org.jbpm.model.formapi.client.effect.FBFormEffect;
+import org.jbpm.model.formapi.client.form.FBFormItem;
 import org.jbpm.formapi.client.menu.FBMenuItem;
-import org.jbpm.formapi.common.panels.CommandPopupPanel;
-import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.model.formapi.common.panels.CommandPopupPanel;
+import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.bus.MenuItemAddedEvent;
 import org.jbpm.formbuilder.client.bus.MenuItemRemoveEvent;
-import org.jbpm.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.formbuilder.client.bus.UndoableHandler;
-import org.jbpm.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.shared.EventBus;

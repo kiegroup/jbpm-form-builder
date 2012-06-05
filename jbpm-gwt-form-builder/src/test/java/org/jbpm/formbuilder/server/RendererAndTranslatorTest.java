@@ -33,9 +33,9 @@ import org.jbpm.formapi.server.render.RendererFactory;
 import org.jbpm.formapi.server.trans.Translator;
 import org.jbpm.formapi.server.trans.TranslatorException;
 import org.jbpm.formapi.server.trans.TranslatorFactory;
-import org.jbpm.formapi.shared.api.FormRepresentation;
-import org.jbpm.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
 import org.jbpm.formbuilder.server.menu.GuvnorMenuService;
 
 import com.google.gwt.event.shared.UmbrellaException;

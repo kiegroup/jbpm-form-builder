@@ -26,7 +26,7 @@ import javax.persistence.Query;
 import javax.transaction.NotSupportedException;
 import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
-import org.jbpm.formapi.client.Settings;
+import org.jbpm.model.formapi.client.Settings;
 
 /**
  *

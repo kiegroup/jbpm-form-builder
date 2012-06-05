@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.client.toolbar;
 
-import org.jbpm.formapi.common.panels.ConfirmDialog;
+import org.jbpm.model.formapi.common.panels.ConfirmDialog;
 
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.dom.client.Style.Unit;

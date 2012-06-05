@@ -15,10 +15,10 @@
  */
 package org.jbpm.formbuilder.client.effect.view;
 
-import org.jbpm.formapi.client.form.I18NFormItem;
+import org.jbpm.model.formapi.client.form.I18NFormItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.effect.L10NFormEffect;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -29,7 +29,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 
 public class L10NEffectView extends PopupPanel {
 

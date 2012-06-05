@@ -17,12 +17,12 @@ package org.jbpm.formbuilder.client.command;
 
 import java.util.Map;
 
-import org.jbpm.formapi.client.AbstractFormItemCommand;
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.bus.FormItemSelectionEvent;
-import org.jbpm.formapi.client.bus.FormItemSelectionHandler;
-import org.jbpm.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.model.formapi.client.AbstractFormItemCommand;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.bus.FormItemSelectionEvent;
+import org.jbpm.model.formapi.client.bus.FormItemSelectionHandler;
+import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.MenuItem;

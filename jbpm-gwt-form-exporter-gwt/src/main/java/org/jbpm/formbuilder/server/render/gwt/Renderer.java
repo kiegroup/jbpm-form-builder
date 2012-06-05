@@ -36,6 +36,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
+import java.net.URLConnection;
 
 public class Renderer implements org.jbpm.formapi.server.render.Renderer {
 
@@ -65,6 +66,7 @@ public class Renderer implements org.jbpm.formapi.server.render.Renderer {
         try {
             String formContent = IOUtils.toString(url.openStream());
             JsonObject json = new JsonObject();
+            System.out.println("Content = "+formContent);
             json.addProperty("formjson", formContent);
             String contextPath = (String) inputData.remove(BASE_CONTEXT_PATH);
             json.add("formData", toJsonObject(inputData));
@@ -74,7 +76,9 @@ public class Renderer implements org.jbpm.formapi.server.render.Renderer {
             context.put("formContent", json.toString());
             StringWriter writer = new StringWriter();
             template.merge(context, writer);
-            return writer.toString();
+            String toString = writer.toString();
+            System.out.println("After template = "+toString);
+            return toString;
         } catch (IOException e) {
             throw new RendererException("Problem reading index.vm", e);
         }

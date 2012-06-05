@@ -32,19 +32,19 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.vfs.AllFileSelector;
 import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.VFS;
-import org.drools.repository.utils.IOUtils;
-import org.jbpm.formapi.shared.form.FormEncodingException;
-import org.jbpm.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
-import org.jbpm.formapi.shared.menu.MenuItemDescription;
-import org.jbpm.formapi.shared.menu.MenuOptionDescription;
-import org.jbpm.formapi.shared.menu.ValidationDescription;
+import org.jbpm.model.formapi.shared.form.FormEncodingException;
+import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.model.formapi.shared.menu.MenuOptionDescription;
+import org.jbpm.model.formapi.shared.menu.ValidationDescription;
 import org.jbpm.formapi.shared.menu.AbstractBaseMenuService;
 import org.jbpm.formapi.shared.menu.MenuServiceException;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.io.IOUtils;
 
 public class GuvnorMenuService extends AbstractBaseMenuService {
 

@@ -21,8 +21,8 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.jbpm.formapi.shared.api.FormRepresentation;
-import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.model.formapi.shared.form.FormEncodingException;
 
 @XmlRootElement (name = "listForms") public class ListFormsDTO {
 

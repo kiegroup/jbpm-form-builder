@@ -17,11 +17,11 @@ package org.jbpm.formbuilder.client.effect.view;
 
 import java.util.List;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.validation.FBValidationItem;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.validation.FBValidationItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.bus.ui.ItemValidationsEditedEvent;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

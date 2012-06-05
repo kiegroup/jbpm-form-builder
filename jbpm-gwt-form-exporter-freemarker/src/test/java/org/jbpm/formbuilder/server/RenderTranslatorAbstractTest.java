@@ -18,10 +18,10 @@ package org.jbpm.formbuilder.server;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.formapi.shared.api.FormRepresentation;
-import org.jbpm.formapi.shared.api.items.CheckBoxRepresentation;
-import org.jbpm.formapi.shared.api.items.ComboBoxRepresentation;
-import org.jbpm.formapi.shared.api.items.OptionRepresentation;
+import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.model.formapi.shared.api.items.CheckBoxRepresentation;
+import org.jbpm.model.formapi.shared.api.items.ComboBoxRepresentation;
+import org.jbpm.model.formapi.shared.api.items.OptionRepresentation;
 
 import junit.framework.TestCase;
 

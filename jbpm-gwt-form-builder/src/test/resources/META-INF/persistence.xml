@@ -8,8 +8,8 @@
   <persistence-unit name="form-builder">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <mapping-file>META-INF/Settingsorm.xml</mapping-file>
-    <class>org.jbpm.formapi.client.SettingsEntry</class>
-    <class>org.jbpm.formapi.client.Settings</class>
+    <class>org.jbpm.model.formapi.client.SettingsEntry</class>
+    <class>org.jbpm.model.formapi.client.Settings</class>
   
     <properties>
       <!-- testing with H2 in memory -->

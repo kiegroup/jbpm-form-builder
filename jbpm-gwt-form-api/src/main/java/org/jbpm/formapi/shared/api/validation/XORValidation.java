@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.formapi.shared.api.FBValidation;
-import org.jbpm.formapi.shared.form.FormEncodingException;
-import org.jbpm.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.model.formapi.shared.api.FBValidation;
+import org.jbpm.model.formapi.shared.form.FormEncodingException;
+import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
 
 import com.gwtent.reflection.client.Reflectable;
 

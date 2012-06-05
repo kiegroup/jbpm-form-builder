@@ -18,8 +18,8 @@ package org.jbpm.formbuilder.client.notification;
 import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

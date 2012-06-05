@@ -17,7 +17,7 @@ package org.jbpm.formbuilder.client.bus;
 
 
 import com.google.gwt.event.shared.GwtEvent;
-import org.jbpm.formapi.client.Settings;
+import org.jbpm.model.formapi.client.Settings;
 
 /**
  * Tells whoever asked that the form representation of the current client edition has been loaded

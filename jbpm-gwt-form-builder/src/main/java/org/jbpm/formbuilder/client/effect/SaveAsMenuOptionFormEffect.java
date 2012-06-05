@@ -18,18 +18,18 @@ package org.jbpm.formbuilder.client.effect;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.effect.FBFormEffect;
-import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.effect.FBFormEffect;
+import org.jbpm.model.formapi.client.form.FBFormItem;
 import org.jbpm.formapi.client.menu.FBMenuItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.RoleUtils;
 import org.jbpm.formbuilder.client.bus.MenuItemAddedEvent;
 import org.jbpm.formbuilder.client.bus.MenuItemRemoveEvent;
-import org.jbpm.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
 import org.jbpm.formbuilder.client.menu.items.CustomMenuItem;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

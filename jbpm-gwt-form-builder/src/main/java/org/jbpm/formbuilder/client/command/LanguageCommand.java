@@ -15,9 +15,9 @@
  */
 package org.jbpm.formbuilder.client.command;
 
-import org.jbpm.formapi.common.panels.ConfirmDialog;
+import org.jbpm.model.formapi.common.panels.ConfirmDialog;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -27,7 +27,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.CommonGlobals;
 
 @Reflectable
 public class LanguageCommand implements BaseCommand {

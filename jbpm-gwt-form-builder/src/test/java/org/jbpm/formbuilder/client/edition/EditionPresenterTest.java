@@ -22,11 +22,11 @@ import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
 import org.easymock.IAnswer;
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.bus.FormItemSelectionEvent;
-import org.jbpm.formapi.client.form.FBFormItem;
-import org.jbpm.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.bus.FormItemSelectionEvent;
+import org.jbpm.model.formapi.client.form.FBFormItem;
+import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

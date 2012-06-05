@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.client.bus.ui;
 
-import org.jbpm.formbuilder.client.form.FBForm;
+import org.jbpm.model.formbuilder.client.form.FBForm;
 
 import com.google.gwt.event.shared.GwtEvent;
 

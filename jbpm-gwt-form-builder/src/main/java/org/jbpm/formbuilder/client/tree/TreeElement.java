@@ -18,15 +18,15 @@ package org.jbpm.formbuilder.client.tree;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.bus.FormItemSelectionEvent;
-import org.jbpm.formapi.client.form.FBCompositeItem;
-import org.jbpm.formapi.client.form.FBFormItem;
-import org.jbpm.formapi.client.menu.EffectsPopupPanel;
-import org.jbpm.formapi.common.handler.RightClickEvent;
-import org.jbpm.formapi.common.handler.RightClickHandler;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.bus.FormItemSelectionEvent;
+import org.jbpm.model.formapi.client.form.FBCompositeItem;
+import org.jbpm.model.formapi.client.form.FBFormItem;
+import org.jbpm.model.formapi.client.menu.EffectsPopupPanel;
+import org.jbpm.model.formapi.common.handler.RightClickEvent;
+import org.jbpm.model.formapi.common.handler.RightClickHandler;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
