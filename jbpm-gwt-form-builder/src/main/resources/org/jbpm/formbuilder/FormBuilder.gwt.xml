@@ -17,10 +17,10 @@
 <module>
 
   <!-- Inherit the core Web Toolkit stuff. -->
+  <inherits name="org.jbpm.formbuilder.parent.AbstractFormBuilder" />
   <inherits name="org.jbpm.formapi.Commons" />
   <inherits name="org.jbpm.model.formbuilder.ModelFormBuilder" />
-  <inherits name="org.jbpm.model.formapi.ModelApi" />  
-  <inherits name="org.jbpm.formbuilder.parent.AbstractFormBuilder" />
+  <inherits name="org.jbpm.model.formapi.ModelApi" />
 
   <set-property name="export" value="yes"/>
   <extend-property name="locale" values="es_ES" />

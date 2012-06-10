@@ -29,7 +29,7 @@ import org.jbpm.model.formapi.shared.api.FBScriptHelper;
 import org.jbpm.model.formapi.shared.api.RepresentationFactory;
 import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect;
-import org.jbpm.formbuilder.parent.client.effect.scripthandlers.PlainTextScriptHelper;
+import org.jbpm.model.formbuilder.client.effect.scripthandlers.PlainTextScriptHelper;
 import org.jbpm.formbuilder.parent.client.effect.view.ScriptHelperListPanel.ScriptOrderHandler;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 

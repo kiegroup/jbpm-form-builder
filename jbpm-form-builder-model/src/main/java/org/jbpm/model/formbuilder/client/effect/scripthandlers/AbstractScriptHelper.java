@@ -1,4 +1,4 @@
-package org.jbpm.formbuilder.parent.client.effect.scripthandlers;
+package org.jbpm.model.formbuilder.client.effect.scripthandlers;
 
 import java.util.ArrayList;
 import java.util.List;

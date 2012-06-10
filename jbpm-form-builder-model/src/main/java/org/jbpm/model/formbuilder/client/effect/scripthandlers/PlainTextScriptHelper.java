@@ -13,13 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jbpm.formbuilder.parent.client.effect.scripthandlers;
+package org.jbpm.model.formbuilder.client.effect.scripthandlers;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.jbpm.model.formapi.shared.api.FBScript;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;

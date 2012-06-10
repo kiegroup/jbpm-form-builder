@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jbpm.formbuilder.parent.client.effect.scripthandlers;
+package org.jbpm.model.formbuilder.client.effect.scripthandlers;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.parent.client.effect.scriptviews.RestServiceScriptHelperView;
+import org.jbpm.model.formbuilder.client.effect.scriptviews.PopulateComboBoxScriptHelperView;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;
@@ -31,34 +29,39 @@ import org.jbpm.model.formapi.client.CommonGlobals;
  * 
  */
 @Reflectable
-public class RestServiceScriptHelper extends AbstractScriptHelper {
+public class PopulateComboBoxScriptHelper extends AbstractScriptHelper {
 
     private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
     
-    private RestServiceScriptHelperView view;
-
-    private String method = "";
     private String url = "";
+    private String method = "";
     private String resultStatus = "";
-    private String resultXPath = "";
-    private String exportVariableName = "";
     private String responseLanguage = "";
-    private Map<String, String> headers = new HashMap<String, String>();
+    private String resultXPath = "";
+    private String subPathForKeys = "";
+    private String subPathForValues = "";
+    private String checkBoxId = "";
     
-    public RestServiceScriptHelper() {
+    private Map<String, String> headers = new HashMap<String, String>();
+
+    private PopulateComboBoxScriptHelperView view;
+
+    public PopulateComboBoxScriptHelper() {
         super();
     }
     
     @Override
     public Map<String, Object> getDataMap() {
-        if (view != null) {
-            view.writeDataTo(this);
+        if (this.view != null) {
+            this.view.writeDataTo(this);
         }
         String urlValue = this.url;
         String methodValue = this.method;
         String resultStatusValue = this.resultStatus;
         String resultPathValue = this.resultXPath;
-        String exportVariableNameValue = this.exportVariableName;
+        String subPathForKeysValue = this.subPathForKeys;
+        String subPathForValuesValue = this.subPathForValues;
+        String checkBoxIdValue = this.checkBoxId;
         String responseLanguageValue = this.responseLanguage;
         
         Map<String, Object> map = new HashMap<String, Object>();
@@ -67,7 +70,9 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
         map.put("methodValue", methodValue);
         map.put("resultStatusValue", resultStatusValue);
         map.put("resultPathValue", resultPathValue);
-        map.put("exportVariableNameValue", exportVariableNameValue);
+        map.put("subPathForKeysValue", subPathForKeysValue);
+        map.put("subPathForValuesValue", subPathForValuesValue);
+        map.put("checkBoxIdValue", checkBoxIdValue);
         map.put("responseLanguageValue", responseLanguageValue);
         Map<String, Object> headersMap = new HashMap<String, Object>();
         for (Map.Entry<String, String> entry : headers.entrySet()) {
@@ -78,7 +83,7 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
     }
 
     @Override
-    public void setDataMap(Map<String, Object> dataMap) throws FormEncodingException {
+    public void setDataMap(Map<String, Object> dataMap) {
         String urlValue = (String) dataMap.get("urlValue");
         if (urlValue == null) urlValue = "";
         String methodValue = (String) dataMap.get("methodValue");
@@ -87,8 +92,12 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
         if (resultStatusValue == null) resultStatusValue = "";
         String resultPathValue = (String) dataMap.get("resultPathValue");
         if (resultPathValue == null) resultPathValue = "";
-        String exportVariableNameValue = (String) dataMap.get("exportVariableNameValue");
-        if (exportVariableNameValue == null) exportVariableNameValue = "";
+        String subPathForKeysValue = (String) dataMap.get("subPathForKeysValue");
+        if (subPathForKeysValue == null) subPathForKeysValue = "";
+        String subPathForValuesValue = (String) dataMap.get("subPathForValuesValue");
+        if (subPathForValuesValue == null) subPathForValuesValue = "";
+        String checkBoxIdValue = (String) dataMap.get("checkBoxIdValue");
+        if (checkBoxIdValue == null) checkBoxIdValue = "";
         String responseLanguageValue = (String) dataMap.get("responseLanguageValue");
         if (responseLanguageValue == null) responseLanguageValue = "";
         @SuppressWarnings("unchecked")
@@ -97,15 +106,17 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
         this.url = urlValue;
         this.method = methodValue;
         this.resultStatus = resultStatusValue;
-        this.responseLanguage = responseLanguageValue;
         this.resultXPath = resultPathValue;
-        this.exportVariableName = exportVariableNameValue;
-        headers.clear();
+        this.responseLanguage = responseLanguageValue;
+        this.headers.clear();
         if (headerMap != null) {
             for (Map.Entry<String, Object> entry : headerMap.entrySet()) {
                 headers.put(entry.getKey(), (String) entry.getValue());
             }
         }
+        this.subPathForKeys = subPathForKeysValue;
+        this.subPathForValues = subPathForValuesValue;
+        this.checkBoxId = checkBoxIdValue;
         if (view != null) {
             view.readDataFrom(this);
         }
@@ -115,10 +126,7 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
     public String asScriptContent() {
         long id = System.currentTimeMillis();
         StringBuilder sb = new StringBuilder();
-        if (view != null) {
-            view.writeDataTo(this);
-        }
-        sb.append("var " + exportVariableName + " = null;");
+        sb.append("var checkBoxRef" + id + " = document.getElementById('" + checkBoxId + "');");
         sb.append("var url" + id + " = \"" + url + "\";");
         sb.append("var method" + id + " = \"" + method + "\";");
         sb.append("var xmlhttp" + id + ";");
@@ -140,9 +148,12 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
         sb.append("         alert('Your browser cannot handle this script');");
         sb.append("      }");
         sb.append("      var xmlNodeList" + id + " = xmlDoc" + id + ".selectNodes(\"" + resultXPath + "\");");
-        sb.append("      " + exportVariableName + " = new Array();");
+        sb.append("      checkBoxRef" + id + ".options.length = 0; /*clears combobox*/");
         sb.append("      for (var idx = 0; idx < xmlNodeList" + id + ".length; idx++ ) {");
-        sb.append("         " + exportVariableName + "[idx] = xmlNodeList" + id + ".item(idx).text;");
+        sb.append("         var opt = document.createElement('option');");
+        sb.append("         opt.value = xmlNodeList" + id + ".item(idx).getElementsByTagName('" + subPathForKeys + "')[0].nodeValue;");
+        sb.append("         opt.innerText = xmlNodeList" + id + ".item(idx).getElementsByTagName('" + subPathForValues + "')[0].nodeValue;");
+        sb.append("         checkBoxRef" + id + ".options.add(opt);");
         sb.append("      }");
         sb.append("   }");
         sb.append("}");
@@ -157,22 +168,14 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
     @Override
     public Widget draw() {
         if (view == null) {
-            view = new RestServiceScriptHelperView(this);
+            view = new PopulateComboBoxScriptHelperView(this);
         }
         return view;
     }
-
+    
     @Override
     public String getName() {
-        return i18n.RestServiceScriptHelperName();
-    }
-
-    public String getMethod() {
-        return method;
-    }
-
-    public void setMethod(String method) {
-        this.method = method;
+        return i18n.PopulateComboBoxScriptHelperName();
     }
 
     public String getUrl() {
@@ -183,12 +186,28 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
         this.url = url;
     }
 
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
     public String getResultStatus() {
         return resultStatus;
     }
 
     public void setResultStatus(String resultStatus) {
         this.resultStatus = resultStatus;
+    }
+
+    public String getResponseLanguage() {
+        return responseLanguage;
+    }
+
+    public void setResponseLanguage(String responseLanguage) {
+        this.responseLanguage = responseLanguage;
     }
 
     public String getResultXPath() {
@@ -199,20 +218,28 @@ public class RestServiceScriptHelper extends AbstractScriptHelper {
         this.resultXPath = resultXPath;
     }
 
-    public String getExportVariableName() {
-        return exportVariableName;
+    public String getSubPathForKeys() {
+        return subPathForKeys;
     }
 
-    public void setExportVariableName(String exportVariableName) {
-        this.exportVariableName = exportVariableName;
+    public void setSubPathForKeys(String subPathForKeys) {
+        this.subPathForKeys = subPathForKeys;
     }
 
-    public String getResponseLanguage() {
-        return responseLanguage;
+    public String getSubPathForValues() {
+        return subPathForValues;
     }
 
-    public void setResponseLanguage(String responseLanguage) {
-        this.responseLanguage = responseLanguage;
+    public void setSubPathForValues(String subPathForValues) {
+        this.subPathForValues = subPathForValues;
+    }
+
+    public String getCheckBoxId() {
+        return checkBoxId;
+    }
+
+    public void setCheckBoxId(String checkBoxId) {
+        this.checkBoxId = checkBoxId;
     }
 
     public Map<String, String> getHeaders() {

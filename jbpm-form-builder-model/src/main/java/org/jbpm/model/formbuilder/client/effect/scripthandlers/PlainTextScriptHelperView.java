@@ -1,4 +1,4 @@
-package org.jbpm.formbuilder.parent.client.effect.scripthandlers;
+package org.jbpm.model.formbuilder.client.effect.scripthandlers;
 
 import com.google.gwt.user.client.ui.TextArea;
 

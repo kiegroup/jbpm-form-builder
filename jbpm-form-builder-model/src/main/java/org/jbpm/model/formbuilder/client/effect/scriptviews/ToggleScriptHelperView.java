@@ -1,7 +1,6 @@
-package org.jbpm.formbuilder.parent.client.effect.scriptviews;
+package org.jbpm.model.formbuilder.client.effect.scriptviews;
 
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.parent.client.effect.scripthandlers.ToggleScriptHelper;
+import org.jbpm.model.formbuilder.client.effect.scripthandlers.ToggleScriptHelper;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.FlexTable;

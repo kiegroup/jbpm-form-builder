@@ -31,6 +31,9 @@ public interface FormBuilderResources extends ClientBundle {
     @Source("images/completeButton.png")
     ImageResource completeButton();
     
+    @Source("images/button.png")
+    ImageResource button();
+    
     @Source("images/textField.png")
     ImageResource textField();
     
