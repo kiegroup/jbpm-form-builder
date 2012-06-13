@@ -153,6 +153,9 @@ public abstract class FormItemRepresentation implements Mappable {
                     Map<String, Object> scriptMap = script.getDataMap();
                     eventActionsMap.put(entry.getKey(), scriptMap);
                 }
+                else{
+                    eventActionsMap.put(entry.getKey(), null);
+                }
             }
         }
         data.put("eventActions", eventActionsMap);
@@ -194,7 +197,10 @@ public abstract class FormItemRepresentation implements Mappable {
                     FBScript script = new FBScript();
                     script.setDataMap(scriptMap);
                     this.eventActions.put(entry.getKey(), script);
+                }else{
+                    this.eventActions.put(entry.getKey(), null);
                 }
+                
             }
         }
         this.output = (OutputData) decoder.decode((Map<String, Object>) data

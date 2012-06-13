@@ -321,7 +321,6 @@ public class FBForm extends FlowPanel implements FBCompositeItem {
         }
         for (FormItemRepresentation itemRep : rep.getFormItems()) {
             FBFormItem item = FBFormItem.createItem(itemRep);
-            item.populate(itemRep);
             add(item);
             ensureMinimumSize(item);
             bus.fireEvent(new FormItemAddedEvent(item, this));
