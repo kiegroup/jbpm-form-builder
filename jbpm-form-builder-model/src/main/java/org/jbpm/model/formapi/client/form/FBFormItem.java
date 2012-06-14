@@ -461,8 +461,10 @@ public abstract class FBFormItem extends FocusPanel {
 
     protected void populateActions(Element element) {
         for (Map.Entry<String, FBScript> entry : getEventActions().entrySet()) {
-            element.setPropertyJSO(entry.getKey(), toJsFunction(entry
+            if(entry.getValue() != null){
+                element.setPropertyJSO(entry.getKey(), toJsFunction(entry
                     .getValue().getContent()));
+            }
         }
     }
 

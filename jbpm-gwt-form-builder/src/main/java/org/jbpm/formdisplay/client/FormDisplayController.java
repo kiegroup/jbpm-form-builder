@@ -58,13 +58,28 @@ public class FormDisplayController {
                             formDisplay.add(formUI.asFormPanel(input.getFormData()));
                         } 
                     } catch (FormEncodingException e) {
-                        Window.alert("Couldn't interpretate form: " + e.getMessage() + " - " +e.getStackTrace().toString());
+                        String error = "Couldn't interpretate form: " + e.getMessage();
+                        
+                        for(StackTraceElement element: e.getStackTrace()){
+                            error += " - " +element.getClassName() + element.getMethodName() +":" + element.getLineNumber() +"\n";
+                        }
+                        Window.alert(error);
                         GWT.log("Couldn't interpretate form", e);
                     } catch (FormBuilderException e) {
-                        Window.alert("Couldn't populate display: " + e.getMessage() +" - " +e.getStackTrace().toString());
+                        String error = "Couldn't populate display FormBuilderException: " + e.getMessage();
+                        
+                        for(StackTraceElement element: e.getStackTrace()){
+                            error += " - " +element.getClassName() + element.getMethodName() +":" + element.getLineNumber() +"\n";
+                        }
+                        Window.alert(error);
                         GWT.log("Couldn't populate display", e);
                     } catch (Exception e) {
-                        Window.alert("Couldn't populate display: " + e.getMessage()+" - " + e.getStackTrace().toString());
+                        String error = "Couldn't populate display generic ex: " + e.getMessage();
+                        
+                        for(StackTraceElement element: e.getStackTrace()){
+                            error += " - " +element.getClassName() + element.getMethodName() +":" + element.getLineNumber() +"\n";
+                        }
+                        Window.alert(error);
                         GWT.log("Couldn't populate display", e);
                     }
                 }

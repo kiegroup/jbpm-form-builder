@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>GWT Form</title>
+    <style type="text/css">
+        body {
+            color:black;
+            background-color:white;
+        }
+    </style> 
+  </head>
+  <body>
+    <!-- for google chart apis -->
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {"packages" : ["corechart"] });
+    </script>
+    <!-- END for google chart apis -->
+    <script language="javascript" src="http://localhost:8080/jbpm-gwt-form-builder/org.jbpm.formdisplay.FormDisplay/org.jbpm.formdisplay.FormDisplay.nocache.js"></script>
+    <div id="formInfo" style="visibility: collapse;">{"formjson":"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><listForms><form><json>{\n  \"name\": \"asd\",\n  \"action\": \"complete\",\n  \"processName\": \"\",\n  \"taskId\": \"\",\n  \"documentation\": \"\",\n  \"enctype\": \"multipart/form-data\",\n  \"lastModified\": \"0\",\n  \"method\": \"POST\",\n  \"formItems\": [{\n\"text\": \"Generic Button\",\n\"eventActions\": {\n\"onclick\": {\n\"content\": \"alert($doc.forms[0].action);$doc.forms[0].action='start';$doc.forms[0].target='asd.html';$doc.forms[0].submit();alert($doc.forms[0].target);\",\n\"id\": null,\n\"invokeFunction\": null,\n\"documentation\": null,\n\"src\": null,\n\"type\": \"text/javascript\",\n\"@className\": \"org.jbpm.model.formapi.shared.api.FBScript\",\n\"helpers\": []\n\n}\n\n}\n,\n\"itemValidations\": []\n,\n\"external\": null,\n\"width\": \"100px\",\n\"format\": null,\n\"onClickScript\": null,\n\"effectClasses\": [\"org.jbpm.formbuilder.parent.client.effect.RemoveEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.CopyFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.CutFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.PasteFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.DoneEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.ResizeEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.ValidationsEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.I18NFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.L10NFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.IoBindingEffect\"\n]\n,\n\"id\": \"button1\",\n\"input\": null,\n\"height\": \"27px\",\n\"name\": \"button1\",\n\"i18n\": {\n}\n,\n\"output\": null,\n\"typeId\": \"button\",\n\"@className\": \"org.jbpm.model.formapi.shared.api.items.ButtonRepresentation\"\n}\n, \n{\n\"text\": \"Generic Button\",\n\"eventActions\": {\n\"onclick\": {\n\"content\": \"$doc.forms[0].action='/complete';$doc.forms[0].submit();\",\n\"id\": null,\n\"invokeFunction\": null,\n\"documentation\": null,\n\"src\": null,\n\"type\": \"text/javascript\",\n\"@className\": \"org.jbpm.model.formapi.shared.api.FBScript\",\n\"helpers\": []\n\n}\n\n}\n,\n\"itemValidations\": []\n,\n\"external\": null,\n\"width\": \"100px\",\n\"format\": null,\n\"onClickScript\": null,\n\"effectClasses\": [\"org.jbpm.formbuilder.parent.client.effect.RemoveEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.CopyFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.CutFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.PasteFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.DoneEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.ResizeEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.ValidationsEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.I18NFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.L10NFormEffect\",\n\"org.jbpm.formbuilder.parent.client.effect.IoBindingEffect\"\n]\n,\n\"id\": \"button1\",\n\"input\": null,\n\"height\": \"27px\",\n\"name\": \"button2\",\n\"i18n\": {\n}\n,\n\"output\": null,\n\"typeId\": \"button\",\n\"@className\": \"org.jbpm.model.formapi.shared.api.items.ButtonRepresentation\"\n}\n],\n  \"formValidations\": [],\n  \"inputs\": {},\n  \"outputs\": {},\n  \"onLoadScripts\": [],\n  \"onSubmitScripts\": []\n}\n</json></form></listForms>","formData":{},"contextPath":"http://localhost:8080/jbpm-gwt-form-builder"}</div>
+    <div id="formDisplay" style="width:99%"></div>
+  </body>
+</html>
