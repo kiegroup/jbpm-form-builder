@@ -32,8 +32,8 @@ public class FormBuilderEntryPoint extends FBBaseEntryPoint {
     @Override
     public void loadModule() {
         //start view and controller
-        RootPanel rootPanel = RootPanel.get("formBuilder");
-        FormBuilderView view = new FormBuilderView();
-        new FormBuilderController(rootPanel, view);
+//        RootPanel rootPanel = RootPanel.get("formBuilder");
+//        FormBuilderView view = new FormBuilderView();
+//        new FormBuilderController(rootPanel, view);
     }
 }

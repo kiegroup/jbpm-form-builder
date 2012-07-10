@@ -53,11 +53,16 @@ import com.google.gwt.dom.client.Style.Visibility;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.AbsolutePanel;
+import com.google.gwt.user.client.ui.IsWidget;
+import org.drools.guvnor.client.annotations.OnStart;
+import org.drools.guvnor.client.annotations.WorkbenchPartTitle;
+import org.drools.guvnor.client.annotations.WorkbenchPartView;
+import org.drools.guvnor.client.annotations.WorkbenchScreen;
 import org.jbpm.formbuilder.parent.client.bus.LoadSettingsEvent;
 import org.jbpm.formbuilder.parent.client.bus.LoadSettingsHandler;
-import org.jbpm.formbuilder.server.ServiceFactory;
 
+@WorkbenchScreen(nameToken="formdef")
 public class FormBuilderController {
 
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
@@ -66,13 +71,23 @@ public class FormBuilderController {
     private final FormBuilderView view;
     
     private final FormExporter formExporter;
+
+    public FormBuilderController() {
+        this( new FormBuilderView());
+    }
+
+    public FormBuilderController(FormBuilderView view) {
+        this(view , view);
+    }
     
+    
+
     /**
      * Initiates gwt-dnd drag controller and sub views and presenters
      * @param fbModel
      * @param fbView
      */
-    public FormBuilderController(final RootPanel rootPanel, FormBuilderView fbView) {
+    public FormBuilderController(final AbsolutePanel rootPanel, FormBuilderView fbView) {
         super();
         this.view = fbView;
         GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
@@ -152,7 +167,7 @@ public class FormBuilderController {
         }
     }
     
-    private List<GwtEvent<?>> setDataPanel(RootPanel rootPanel) {
+    private List<GwtEvent<?>> setDataPanel(AbsolutePanel rootPanel) {
         List<GwtEvent<?>> retval = new ArrayList<GwtEvent<?>>();
         String innerHTML = rootPanel.getElement().getInnerHTML();
         if (innerHTML != null && !"".equals(innerHTML)) {
@@ -182,7 +197,7 @@ public class FormBuilderController {
         return notNull && !"".equals(form.getProcessName().trim()) && !"".equals(form.getTaskId().trim());
     }
     
-    private void setViewPanel(RootPanel rootPanel) {
+    private void setViewPanel(AbsolutePanel rootPanel) {
         rootPanel.getElement().setInnerHTML("");
         rootPanel.getElement().getStyle().setVisibility(Visibility.VISIBLE);
         rootPanel.add(view);
@@ -195,4 +210,19 @@ public class FormBuilderController {
             bus.fireEvent(new NotificationEvent(Level.ERROR, i18n.ProblemLoadingRepresentationFactory(), e));
         }
     }
+    
+    @WorkbenchPartTitle
+    public String getTitle() {
+        return "FormBuilder";
+    }
+
+    @WorkbenchPartView
+    public IsWidget getView() {
+        return view;
+    }
+    
+    @OnStart
+    public void onStart() {
+    }    
+   
 }

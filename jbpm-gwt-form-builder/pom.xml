@@ -15,6 +15,7 @@
     <properties>
         <gwt.version>2.4.0</gwt.version>
         <spring.version>3.0.6.RELEASE</spring.version>
+        <errai.version>2.1-SNAPSHOT</errai.version>
     </properties>
   
     <build>
@@ -46,7 +47,7 @@
                 </configuration>
             </plugin>
             <plugin>
-        <!-- use -Dgwt.compiler.skip=true to skip GWT compiler -->
+                <!-- use -Dgwt.compiler.skip=true to skip GWT compiler -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
                 <version>2.4.0</version>
@@ -56,18 +57,18 @@
                     <gwtVersion>${gwt.version}</gwtVersion>
                     <style>DETAILED</style>
                     <noServer>false</noServer>
-          <!-- inplace>true</inplace -->
+                    <!-- inplace>true</inplace -->
                     <modules>
                         <module>org.jbpm.formbuilder.parent.AbstractFormBuilder</module>
                         <module>org.jbpm.formbuilder.FormBuilder</module>
-                        <module>org.jbpm.formdisplay.FormDisplay</module>
+                        <module>org.jbpm.formdisplay.FormDisplay</module> 
                     </modules>
                     <runTarget>FormBuilder.html</runTarget>
-          <!--compileTargets>
-            <value>org.jbpm.formbuilder.FormBuilder</value>
-            <value>org.jbpm.formdisplay.FormDisplay</value>
-          </compileTargets>-->
-          <!--hostedWebapp>${basedir}/src/main/webapp/</hostedWebapp--> 
+                    <!--compileTargets>
+                      <value>org.jbpm.formbuilder.FormBuilder</value>
+                      <value>org.jbpm.formdisplay.FormDisplay</value>
+                    </compileTargets>-->
+                    <!--hostedWebapp>${basedir}/src/main/webapp/</hostedWebapp--> 
                     <gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath><!-- The GWT compiler must the correct JDT version -->
                     <localWorkers>2</localWorkers><!-- Using all workers can temporarily hang the mouse and isn't much faster -->
                     <extraJvmArgs>-Xmx1024m</extraJvmArgs>
@@ -87,6 +88,95 @@
     </build>
     
     <dependencies>
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>guvnorng-annotations</artifactId>
+            <version>5.5.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>guvnorng-core</artifactId>
+            <version>5.5.0-SNAPSHOT</version>
+        </dependency>
+        <!-- Errai Core -->
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-bus</artifactId>
+            <version>${errai.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.inject</groupId>
+                    <artifactId>javax.inject</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.annotation</groupId>
+                    <artifactId>jsr250-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-ioc</artifactId>
+            <version>${errai.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.inject</groupId>
+                    <artifactId>javax.inject</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.annotation</groupId>
+                    <artifactId>jsr250-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-tools</artifactId>
+            <version>${errai.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mvel</groupId>
+            <artifactId>mvel2</artifactId>
+            <version>2.1.Beta8</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>el-api</artifactId>
+            <version>1.2</version>
+        </dependency> 
+
+        <!-- CDI Integration Modules -->
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-cdi-client</artifactId>
+            <version>${errai.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-uibinder</artifactId>
+            <version>${errai.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-javax-enterprise</artifactId>
+            <version>${errai.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-weld-integration</artifactId>
+            <version>${errai.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-cdi-jetty</artifactId>
+            <version>${errai.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
             <artifactId>jbpm-gwt-form-api</artifactId>
@@ -145,10 +235,10 @@
             <artifactId>gwtx</artifactId>
             <version>1.5.3</version>
         </dependency>
-    <!-- dependency>
-      <groupId>org.drools</groupId>
-      <artifactId>droolsjbpm-ide-common</artifactId>
-    </dependency -->
+        <!-- dependency>
+          <groupId>org.drools</groupId>
+          <artifactId>droolsjbpm-ide-common</artifactId>
+        </dependency -->
         <dependency>
             <groupId>com.allen-sauer.gwt.dnd</groupId>
             <artifactId>gwt-dnd</artifactId>
@@ -158,7 +248,7 @@
             <groupId>com.gc.gwt.wysiwyg</groupId>
             <artifactId>gwt-html-editor</artifactId>
             <version>0.1.4</version>
-      <!-- temporal fix. Should change soon enough -->
+            <!-- temporal fix. Should change soon enough -->
             <scope>system</scope>
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/editor-0.1.4.jar</systemPath>
         </dependency>
@@ -166,7 +256,7 @@
             <groupId>com.gwtent</groupId>
             <artifactId>gwtent.parent</artifactId>
             <version>1.0.0</version>
-      <!-- temporal fix. Should change soon enough -->
+            <!-- temporal fix. Should change soon enough -->
             <scope>system</scope>
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/gwtent-1.0.0.jar</systemPath>
         </dependency>
@@ -279,5 +369,5 @@
         </dependency>
        
     </dependencies>
-  
+ 
 </project>
