@@ -62,7 +62,7 @@ import org.drools.guvnor.client.annotations.WorkbenchScreen;
 import org.jbpm.formbuilder.parent.client.bus.LoadSettingsEvent;
 import org.jbpm.formbuilder.parent.client.bus.LoadSettingsHandler;
 
-@WorkbenchScreen(nameToken="formdef")
+@WorkbenchScreen(identifier="formdef")
 public class FormBuilderController {
 
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();

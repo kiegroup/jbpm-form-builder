@@ -20,11 +20,14 @@
   <inherits name="org.jbpm.formbuilder.parent.AbstractFormBuilder" />
   <inherits name="org.jbpm.formapi.Commons" />
   <inherits name="org.jbpm.model.formbuilder.ModelFormBuilder" />
-  <!--inherits name="org.drools.guvnor.GuvnorNGCore"/>
-  <inherits name="org.drools.guvnor.GuvnorNGShowcase"/-->
   <inherits name="org.jbpm.model.formapi.ModelApi" />
   <set-property name="export" value="yes"/>
   
+  <!-- Uberfire inherits -->
+  <inherits name="org.drools.guvnor.GuvnorNGCore"/>
+  
+  <set-property name="user.agent" value="gecko1_8"/>
+  <set-property name="locale" value="default"/>
 
   <entry-point class="org.jbpm.formbuilder.client.FormBuilderEntryPoint" />
 
