@@ -15,18 +15,26 @@
  */
 package org.jbpm.formbuilder.parent.client;
 
-import org.jbpm.model.formbuilder.client.bus.ApplySettingsEvent;
-import org.jbpm.model.formbuilder.client.bus.ApplySettingsHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.FormBuilderException;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
+import org.drools.guvnor.client.annotations.DefaultPosition;
+import org.drools.guvnor.client.annotations.OnStart;
+import org.drools.guvnor.client.annotations.WorkbenchPartTitle;
+import org.drools.guvnor.client.annotations.WorkbenchPartView;
+import org.drools.guvnor.client.annotations.WorkbenchScreen;
+import org.drools.guvnor.client.workbench.Position;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formbuilder.client.command.DisposeDropController;
+import org.jbpm.formbuilder.client.edition.EditionViewImpl;
+import org.jbpm.formbuilder.client.layout.LayoutViewImpl;
+import org.jbpm.formbuilder.client.menu.AnimatedMenuViewImpl;
+import org.jbpm.formbuilder.client.notification.CompactNotificationsViewImpl;
+import org.jbpm.formbuilder.client.tasks.IoAssociationViewImpl;
+import org.jbpm.formbuilder.client.toolbar.ToolBarViewImpl;
+import org.jbpm.formbuilder.client.tree.TreeViewImpl;
+import org.jbpm.formbuilder.parent.client.bus.LoadSettingsEvent;
+import org.jbpm.formbuilder.parent.client.bus.LoadSettingsHandler;
 import org.jbpm.formbuilder.parent.client.bus.ui.EmbededIOReferenceEvent;
 import org.jbpm.formbuilder.parent.client.bus.ui.NotificationsVisibleEvent;
 import org.jbpm.formbuilder.parent.client.bus.ui.NotificationsVisibleHandler;
@@ -35,16 +43,16 @@ import org.jbpm.formbuilder.parent.client.bus.ui.RepresentationFactoryPopulatedH
 import org.jbpm.formbuilder.parent.client.bus.ui.UpdateFormViewEvent;
 import org.jbpm.formbuilder.parent.client.bus.ui.UserIsLoggedOutEvent;
 import org.jbpm.formbuilder.parent.client.bus.ui.UserIsLoggedOutHandler;
-import org.jbpm.formbuilder.client.command.DisposeDropController;
-import org.jbpm.formbuilder.client.edition.EditionViewImpl;
-import org.jbpm.formbuilder.client.layout.LayoutViewImpl;
-import org.jbpm.formbuilder.client.menu.AnimatedMenuViewImpl;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formbuilder.client.notification.CompactNotificationsViewImpl;
 import org.jbpm.formbuilder.parent.client.options.OptionsViewImpl;
-import org.jbpm.formbuilder.client.tasks.IoAssociationViewImpl;
-import org.jbpm.formbuilder.client.toolbar.ToolBarViewImpl;
-import org.jbpm.formbuilder.client.tree.TreeViewImpl;
+import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.model.formapi.client.FormBuilderException;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.model.formbuilder.client.bus.ApplySettingsEvent;
+import org.jbpm.model.formbuilder.client.bus.ApplySettingsHandler;
+import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.google.gwt.core.client.GWT;
@@ -55,138 +63,148 @@ import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.IsWidget;
-import org.drools.guvnor.client.annotations.OnStart;
-import org.drools.guvnor.client.annotations.WorkbenchPartTitle;
-import org.drools.guvnor.client.annotations.WorkbenchPartView;
-import org.drools.guvnor.client.annotations.WorkbenchScreen;
-import org.jbpm.formbuilder.parent.client.bus.LoadSettingsEvent;
-import org.jbpm.formbuilder.parent.client.bus.LoadSettingsHandler;
 
-@WorkbenchScreen(identifier="formdef")
+@WorkbenchScreen(identifier = "FormBuilder")
 public class FormBuilderController {
 
-    private final EventBus bus = CommonGlobals.getInstance().getEventBus();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final EventBus           bus   = CommonGlobals.getInstance().getEventBus();
+    private final I18NConstants      i18n  = CommonGlobals.getInstance().getI18n();
     private final FormBuilderService model = FormBuilderGlobals.getInstance().getService();
-    private final FormBuilderView view;
-    
-    private final FormExporter formExporter;
+
+    private FormBuilderView          view;
+    private FormExporter             formExporter;
 
     public FormBuilderController() {
-        this( new FormBuilderView());
+        this( new FormBuilderView() );
     }
 
-    public FormBuilderController(FormBuilderView view) {
-        this(view , view);
+    public FormBuilderController(final FormBuilderView view) {
+        this( view,
+              view );
     }
-    
-    
 
     /**
      * Initiates gwt-dnd drag controller and sub views and presenters
+     * 
      * @param fbModel
      * @param fbView
      */
-    public FormBuilderController(final AbsolutePanel rootPanel, FormBuilderView fbView) {
+    public FormBuilderController(final AbsolutePanel rootPanel,
+                                 FormBuilderView fbView) {
         super();
         this.view = fbView;
-        GWT.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
+        GWT.setUncaughtExceptionHandler( new UncaughtExceptionHandler() {
             @Override
             public void onUncaughtException(Throwable exception) {
-                bus.fireEvent(new NotificationEvent(Level.ERROR, i18n.ErrorInTheUI(), exception));
+                bus.fireEvent( new NotificationEvent( Level.ERROR,
+                                                      i18n.ErrorInTheUI(),
+                                                      exception ) );
             }
-        });
-        bus.addHandler(UserIsLoggedOutEvent.TYPE, new UserIsLoggedOutHandler() {
-            @Override
-            public void onEvent(UserIsLoggedOutEvent event) {
-                Window.alert("User Session expired!");
-                Window.Location.reload();
-            }
-        });
-        
-        bus.addHandler(LoadSettingsEvent.TYPE, new LoadSettingsHandler() {
-            @Override
-            public void onEvent(LoadSettingsEvent event) {
-                model.loadSettings();
-            }
-        });
-        
-        bus.addHandler(ApplySettingsEvent.TYPE, new ApplySettingsHandler() {
-            @Override
-            public void onEvent(ApplySettingsEvent event) {
-                model.applySettings(event.getSettings());
-            }
-        });
+        } );
+        bus.addHandler( UserIsLoggedOutEvent.TYPE,
+                        new UserIsLoggedOutHandler() {
+                            @Override
+                            public void onEvent(UserIsLoggedOutEvent event) {
+                                Window.alert( "User Session expired!" );
+                                Window.Location.reload();
+                            }
+                        } );
+
+        bus.addHandler( LoadSettingsEvent.TYPE,
+                        new LoadSettingsHandler() {
+                            @Override
+                            public void onEvent(LoadSettingsEvent event) {
+                                model.loadSettings();
+                            }
+                        } );
+
+        bus.addHandler( ApplySettingsEvent.TYPE,
+                        new ApplySettingsHandler() {
+                            @Override
+                            public void onEvent(ApplySettingsEvent event) {
+                                model.applySettings( event.getSettings() );
+                            }
+                        } );
         new HistoryPresenter();
         RoleUtils.getInstance();
-        FormEncodingFactory.register(FormEncodingClientFactory.getEncoder(), FormEncodingClientFactory.getDecoder());
-        PickupDragController dragController = new PickupDragController(view, true);
-        dragController.registerDropController(new DisposeDropController(view));
-        CommonGlobals.getInstance().registerDragController(dragController);
-        
+        FormEncodingFactory.register( FormEncodingClientFactory.getEncoder(),
+                                      FormEncodingClientFactory.getDecoder() );
+        PickupDragController dragController = new PickupDragController( view,
+                                                                        true );
+        dragController.registerDropController( new DisposeDropController( view ) );
+        CommonGlobals.getInstance().registerDragController( dragController );
+
         this.formExporter = new FormExporter();
         this.formExporter.start();
-        
-        view.setNotificationsView(new CompactNotificationsViewImpl());
-        view.setMenuView(new AnimatedMenuViewImpl());
-        view.setEditionView(new EditionViewImpl());
-        view.setTreeView(new TreeViewImpl());
-        view.setLayoutView(new LayoutViewImpl());
-        view.setOptionsView(new OptionsViewImpl());
-        view.setIoAssociationView(new IoAssociationViewImpl());
-        view.setToolBarView(new ToolBarViewImpl());
-        bus.addHandler(RepresentationFactoryPopulatedEvent.TYPE, new RepresentationFactoryPopulatedHandler() {
-            @Override
-            public void onEvent(RepresentationFactoryPopulatedEvent event) {
-                try {
-                    model.getMenuItems();
-                    model.getMenuOptions();
-                } catch (FormBuilderException e) {
-                    //implementation never throws this
-                }
-                List<GwtEvent<?>> events = setDataPanel(rootPanel);
-                setViewPanel(rootPanel);
-                //events are fired deferred since they might need that ui components are already attached
-                fireEvents(events);
-            }
-        });
-        bus.addHandler(NotificationsVisibleEvent.TYPE, new NotificationsVisibleHandler() {
-            @Override
-            public void onEvent(NotificationsVisibleEvent event) {
-                view.toggleNotifications(event.isVisible());
-            }
-        });
-        populateRepresentationFactory(model);
+
+        view.setNotificationsView( new CompactNotificationsViewImpl() );
+        view.setMenuView( new AnimatedMenuViewImpl() );
+        view.setEditionView( new EditionViewImpl() );
+        view.setTreeView( new TreeViewImpl() );
+        view.setLayoutView( new LayoutViewImpl() );
+        view.setOptionsView( new OptionsViewImpl() );
+        view.setIoAssociationView( new IoAssociationViewImpl() );
+        view.setToolBarView( new ToolBarViewImpl() );
+        bus.addHandler( RepresentationFactoryPopulatedEvent.TYPE,
+                        new RepresentationFactoryPopulatedHandler() {
+                            @Override
+                            public void onEvent(RepresentationFactoryPopulatedEvent event) {
+                                try {
+                                    model.getMenuItems();
+                                    model.getMenuOptions();
+                                } catch ( FormBuilderException e ) {
+                                    //implementation never throws this
+                                }
+                                
+                                //TODO This has been commented out as it errors in UberFire and clears the view
+                                //List<GwtEvent< ? >> events = setDataPanel( rootPanel );
+                                //setViewPanel( rootPanel );
+                                //events are fired deferred since they might need that ui components are already attached
+                                //fireEvents( events );
+                            }
+                        } );
+        bus.addHandler( NotificationsVisibleEvent.TYPE,
+                        new NotificationsVisibleHandler() {
+                            @Override
+                            public void onEvent(NotificationsVisibleEvent event) {
+                                view.toggleNotifications( event.isVisible() );
+                            }
+                        } );
+        populateRepresentationFactory( model );
     }
 
-    private void fireEvents(List<GwtEvent<?>> events) {
-        if (events != null) {
-            for (GwtEvent<?> event : events) {
-                bus.fireEvent(event);
+    private void fireEvents(List<GwtEvent< ? >> events) {
+        if ( events != null ) {
+            for ( GwtEvent< ? > event : events ) {
+                bus.fireEvent( event );
             }
         }
     }
-    
-    private List<GwtEvent<?>> setDataPanel(AbsolutePanel rootPanel) {
-        List<GwtEvent<?>> retval = new ArrayList<GwtEvent<?>>();
+
+    private List<GwtEvent< ? >> setDataPanel(AbsolutePanel rootPanel) {
+        List<GwtEvent< ? >> retval = new ArrayList<GwtEvent< ? >>();
         String innerHTML = rootPanel.getElement().getInnerHTML();
-        if (innerHTML != null && !"".equals(innerHTML)) {
+        if ( innerHTML != null && !"".equals( innerHTML ) ) {
             try {
-                JsonLoadInput input = JsonLoadInput.parse(innerHTML);
-                if (input != null) {
-                    if (input.getForm() != null) {
-                        if (input.getPackage() != null && !"".equals(input.getPackage())) {
-                            model.setPackageName(input.getPackage());
+                JsonLoadInput input = JsonLoadInput.parse( innerHTML );
+                if ( input != null ) {
+                    if ( input.getForm() != null ) {
+                        if ( input.getPackage() != null && !"".equals( input.getPackage() ) ) {
+                            model.setPackageName( input.getPackage() );
                         }
-                        retval.add(new UpdateFormViewEvent(input.getForm()));
-                        if (input.getTask() == null && hasTaskAssigned(input.getForm())) {
-                            model.selectIoAssociation(input.getPackage(), input.getForm().getProcessName(), input.getForm().getTaskId());
+                        retval.add( new UpdateFormViewEvent( input.getForm() ) );
+                        if ( input.getTask() == null && hasTaskAssigned( input.getForm() ) ) {
+                            model.selectIoAssociation( input.getPackage(),
+                                                       input.getForm().getProcessName(),
+                                                       input.getForm().getTaskId() );
                         }
                     }
-                    retval.add(new EmbededIOReferenceEvent(input.getTask(), input.getProfile()));
+                    retval.add( new EmbededIOReferenceEvent( input.getTask(),
+                                                             input.getProfile() ) );
                 }
-            } catch (Exception e) {
-                GWT.log("Problem parsing init content", e);
+            } catch ( Exception e ) {
+                GWT.log( "Problem parsing init content",
+                         e );
             }
         }
         return retval;
@@ -194,23 +212,25 @@ public class FormBuilderController {
 
     private boolean hasTaskAssigned(FormRepresentation form) {
         boolean notNull = form != null && form.getProcessName() != null && form.getTaskId() != null;
-        return notNull && !"".equals(form.getProcessName().trim()) && !"".equals(form.getTaskId().trim());
+        return notNull && !"".equals( form.getProcessName().trim() ) && !"".equals( form.getTaskId().trim() );
     }
-    
+
     private void setViewPanel(AbsolutePanel rootPanel) {
-        rootPanel.getElement().setInnerHTML("");
-        rootPanel.getElement().getStyle().setVisibility(Visibility.VISIBLE);
-        rootPanel.add(view);
+        rootPanel.getElement().setInnerHTML( "" );
+        rootPanel.getElement().getStyle().setVisibility( Visibility.VISIBLE );
+        rootPanel.add( view );
     }
-    
+
     private void populateRepresentationFactory(FormBuilderService model) {
         try {
             model.populateRepresentationFactory();
-        } catch (FormBuilderException e) {
-            bus.fireEvent(new NotificationEvent(Level.ERROR, i18n.ProblemLoadingRepresentationFactory(), e));
+        } catch ( FormBuilderException e ) {
+            bus.fireEvent( new NotificationEvent( Level.ERROR,
+                                                  i18n.ProblemLoadingRepresentationFactory(),
+                                                  e ) );
         }
     }
-    
+
     @WorkbenchPartTitle
     public String getTitle() {
         return "FormBuilder";
@@ -218,11 +238,18 @@ public class FormBuilderController {
 
     @WorkbenchPartView
     public IsWidget getView() {
-        return view;
+        return this.view;
     }
-    
+
     @OnStart
     public void onStart() {
-    }    
-   
+    }
+
+    @DefaultPosition
+    //This is a hack (for now) as UberFire doesn't resize the first WorkbenchPart added to ROOT or SELF when 
+    //defining a perspective. Once the Workbench has displayed you can drag the part to wherever you like.
+    public Position getDefault() {
+        return Position.WEST;
+    }
+
 }

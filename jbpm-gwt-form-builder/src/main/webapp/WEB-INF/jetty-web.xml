@@ -6,6 +6,7 @@
       <Item>org.slf4j.</Item> 
     </Array> 
   </Set> 
+  <!-- Disable security 
   <Get name="securityHandler"> 
     <Set name="userRealm"> 
       <New class="org.mortbay.jetty.security.HashUserRealm"> 
@@ -19,5 +20,6 @@
         <Set name="errorPage">/login_fail.html</Set> 
       </New> 
     </Set> 
-  </Get> 
-</Configure>
+  </Get>
+  -->
+ </Configure>
