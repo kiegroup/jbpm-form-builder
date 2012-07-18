@@ -70,7 +70,7 @@ public class FormExporter {
         }
     }
 
-    protected final native void start() /*-{
+    public final native void start() /*-{
         if (typeof($doc.clientExportForm) == 'undefined') {
             $doc.clientExportForm = "";
         } else if ($doc.clientExportForm == null) {

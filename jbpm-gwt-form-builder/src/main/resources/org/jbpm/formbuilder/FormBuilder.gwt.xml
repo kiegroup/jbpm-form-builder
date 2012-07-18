@@ -21,14 +21,19 @@
   <inherits name="org.jbpm.formapi.Commons" />
   <inherits name="org.jbpm.model.formbuilder.ModelFormBuilder" />
   <inherits name="org.jbpm.model.formapi.ModelApi" />
-  <set-property name="export" value="yes"/>
+  
   
   <!-- Uberfire inherits -->
-  <inherits name="org.drools.guvnor.GuvnorNGCore"/>
+  <inherits name="org.jboss.errai.enterprise.CDI"/>
+  <inherits name="org.jboss.errai.uibinder.UIBinderForIOC"/>
+  <inherits name="org.drools.guvnor.client.UberfireWorkbench"/>
+  <inherits name="org.drools.guvnor.client.UberfireWidgetsCore"/>
+  <inherits name="org.drools.guvnor.UberfireBackend"/>
   
   <set-property name="user.agent" value="gecko1_8"/>
   <set-property name="locale" value="default"/>
-
+    <set-property name="export" value="yes"/>
+    
   <entry-point class="org.jbpm.formbuilder.client.FormBuilderEntryPoint" />
 
   <!-- Specify the paths for translatable code                    -->

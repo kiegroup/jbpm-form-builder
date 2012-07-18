@@ -47,7 +47,7 @@ public class FormBuilderPerspective
     @Override
     public void buildWorkbench(final PanelManager panelManager,
                                final WorkbenchPanel root) {
-        placeManager.goTo( new PlaceRequest( "FormBuilder" ) );
+        placeManager.goTo( new PlaceRequest( "FileExplorer" ) );
     }
 
 }

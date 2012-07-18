@@ -22,7 +22,6 @@ import org.drools.guvnor.client.annotations.DefaultPosition;
 import org.drools.guvnor.client.annotations.OnStart;
 import org.drools.guvnor.client.annotations.WorkbenchPartTitle;
 import org.drools.guvnor.client.annotations.WorkbenchPartView;
-import org.drools.guvnor.client.annotations.WorkbenchScreen;
 import org.drools.guvnor.client.workbench.Position;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
 import org.jbpm.formbuilder.client.command.DisposeDropController;
@@ -63,8 +62,9 @@ import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.IsWidget;
+import org.drools.guvnor.client.annotations.WorkbenchEditor;
 
-@WorkbenchScreen(identifier = "FormBuilder")
+@WorkbenchEditor(fileType="formdef")
 public class FormBuilderController {
 
     private final EventBus           bus   = CommonGlobals.getInstance().getEventBus();
@@ -245,11 +245,5 @@ public class FormBuilderController {
     public void onStart() {
     }
 
-    @DefaultPosition
-    //This is a hack (for now) as UberFire doesn't resize the first WorkbenchPart added to ROOT or SELF when 
-    //defining a perspective. Once the Workbench has displayed you can drag the part to wherever you like.
-    public Position getDefault() {
-        return Position.WEST;
-    }
-
+   
 }
