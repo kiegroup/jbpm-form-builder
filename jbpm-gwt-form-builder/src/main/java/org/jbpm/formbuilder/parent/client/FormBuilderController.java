@@ -18,11 +18,11 @@ package org.jbpm.formbuilder.parent.client;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.drools.guvnor.client.annotations.DefaultPosition;
 import org.drools.guvnor.client.annotations.OnStart;
+import org.drools.guvnor.client.annotations.WorkbenchEditor;
 import org.drools.guvnor.client.annotations.WorkbenchPartTitle;
 import org.drools.guvnor.client.annotations.WorkbenchPartView;
-import org.drools.guvnor.client.workbench.Position;
+import org.drools.guvnor.vfs.Path;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
 import org.jbpm.formbuilder.client.command.DisposeDropController;
 import org.jbpm.formbuilder.client.edition.EditionViewImpl;
@@ -62,9 +62,8 @@ import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AbsolutePanel;
 import com.google.gwt.user.client.ui.IsWidget;
-import org.drools.guvnor.client.annotations.WorkbenchEditor;
 
-@WorkbenchEditor(fileType="formdef")
+@WorkbenchEditor(identifier="FormBuilder", fileTypes="formdef")
 public class FormBuilderController {
 
     private final EventBus           bus   = CommonGlobals.getInstance().getEventBus();
@@ -242,7 +241,7 @@ public class FormBuilderController {
     }
 
     @OnStart
-    public void onStart() {
+    public void onStart(final Path path) {
     }
 
    

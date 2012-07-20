@@ -15,16 +15,32 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.formbuilder.parent.client.FormBuilderController;
-import org.jbpm.formbuilder.parent.client.FormBuilderView;
-import com.google.gwt.user.client.ui.RootPanel;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.event.Event;
+import javax.inject.Inject;
+
+import org.drools.guvnor.backend.VFSService;
+import org.drools.guvnor.client.editors.fileexplorer.Root;
+import org.drools.guvnor.client.mvp.PlaceRequest;
+import org.drools.guvnor.vfs.FileSystem;
+import org.jboss.errai.bus.client.api.RemoteCallback;
+import org.jboss.errai.ioc.client.api.AfterInitialization;
+import org.jboss.errai.ioc.client.api.Caller;
 import org.jbpm.formbuilder.parent.client.FBBaseEntryPoint;
 
 /**
  * Main entry point of the form builder application
  */
+@ApplicationScoped
 public class FormBuilderEntryPoint extends FBBaseEntryPoint {
 
+    @Inject private Event<Root> event;
+
+    @Inject private Caller<VFSService> vfsService;
+    
     /**
      * Creates a FormBuilderView instance
      * Creates a FormBuilderController instance that adds all to the main view
@@ -32,8 +48,38 @@ public class FormBuilderEntryPoint extends FBBaseEntryPoint {
     @Override
     public void loadModule() {
         //start view and controller
-//        RootPanel rootPanel = RootPanel.get("formBuilder");
-//        FormBuilderView view = new FormBuilderView();
-//        new FormBuilderController(rootPanel, view);
+//      RootPanel rootPanel = RootPanel.get("formBuilder");
+//      FormBuilderView view = new FormBuilderView();
+//      new FormBuilderController(rootPanel, view);
     }
+    
+    @AfterInitialization
+    public void startApp() {
+        setupGitRepos();
+    }
+    
+    private void setupGitRepos() {
+        //It is the responsibility of the "consuming" application to bootstrap the repositories it needs
+        //This implementation is likely to change - so be prepared to ask porcelli or manstis for what is "current"
+        final String gitURL = "https://github.com/guvnorngtestuser1/guvnorng-playground.git";
+        final String userName = "guvnorngtestuser1";
+        final String password = "test1234";
+        final String fsURI = "jgit:///guvnorng-playground";
+
+        final Map<String, Object> env = new HashMap<String, Object>();
+        env.put("username", userName);
+        env.put("password", password);
+        env.put("giturl", gitURL);
+
+        vfsService.call(new RemoteCallback<FileSystem>() {
+            @Override
+            public void callback(final FileSystem response) {
+                event.fire(new Root(response.getRootDirectories().get(0),
+                        new PlaceRequest("RepositoryEditor")
+                                .addParameter("path:uri", fsURI)
+                                .addParameter("path:name", "guvnorng-playground")));
+            }
+        }).newFileSystem(fsURI, env);
+    }
+
 }

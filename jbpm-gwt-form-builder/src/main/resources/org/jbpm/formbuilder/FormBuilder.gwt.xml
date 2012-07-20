@@ -26,8 +26,8 @@
   <!-- Uberfire inherits -->
   <inherits name="org.jboss.errai.enterprise.CDI"/>
   <inherits name="org.jboss.errai.uibinder.UIBinderForIOC"/>
-  <inherits name="org.drools.guvnor.client.UberfireWorkbench"/>
-  <inherits name="org.drools.guvnor.client.UberfireWidgetsCore"/>
+  <inherits name="org.drools.guvnor.UberfireWorkbench"/>
+  <inherits name="org.drools.guvnor.UberfireWidgetsCore"/>
   <inherits name="org.drools.guvnor.UberfireBackend"/>
   
   <set-property name="user.agent" value="gecko1_8"/>
