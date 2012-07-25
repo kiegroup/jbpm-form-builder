@@ -48,10 +48,10 @@ public class FormHostServlet extends HttpServlet {
         Map<String, Object> params = new HashMap<String, Object>();
         String formName = (String)request.getParameter("formName");
         Object result = null;
-        URL url = new URL("http://localhost:8080/jbpm-gwt-form-builder/rest/form/definitions/package/defaultPackage/id/"+formName);
+        URL url = new URL("http://localhost:8080/jbpm-form-builder/rest/form/definitions/package/defaultPackage/id/"+formName);
 
         try {
-            params.put(Renderer.BASE_CONTEXT_PATH, "http://localhost:8080/jbpm-gwt-form-builder");
+            params.put(Renderer.BASE_CONTEXT_PATH, "http://localhost:8080/jbpm-form-builder");
             result = renderer.render(url, params);
         } catch (RendererException ex) {
             Logger.getLogger(FormHostServlet.class.getName()).log(Level.SEVERE, null, ex);
@@ -60,27 +60,27 @@ public class FormHostServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             out.println(result.toString());
             
-             Enumeration paramNames = request.getParameterNames();
-        while (paramNames.hasMoreElements()) {
-            String paramName = (String) paramNames.nextElement();
-            out.println("<TR><TD>" + paramName + "\n<TD>");
-            String[] paramValues = request.getParameterValues(paramName);
-            if (paramValues.length == 1) {
-                String paramValue = paramValues[0];
-                if (paramValue.length() == 0) {
-                    out.print("<I>No Value</I>");
-                } else {
-                    out.print(paramValue);
-                }
-            } else {
-                out.println("<UL>");
-                for (int i = 0; i < paramValues.length; i++) {
-                    out.println("<LI>" + paramValues[i]);
-                }
-                out.println("</UL>");
-            }
-        }
-        out.println("</TABLE>\n");
+//             Enumeration paramNames = request.getParameterNames();
+//        while (paramNames.hasMoreElements()) {
+//            String paramName = (String) paramNames.nextElement();
+//            out.println("<TR><TD>" + paramName + "\n<TD>");
+//            String[] paramValues = request.getParameterValues(paramName);
+//            if (paramValues.length == 1) {
+//                String paramValue = paramValues[0];
+//                if (paramValue.length() == 0) {
+//                    out.print("<I>No Value</I>");
+//                } else {
+//                    out.print(paramValue);
+//                }
+//            } else {
+//                out.println("<UL>");
+//                for (int i = 0; i < paramValues.length; i++) {
+//                    out.println("<LI>" + paramValues[i]);
+//                }
+//                out.println("</UL>");
+//            }
+//        }
+//        out.println("</TABLE>\n");
         } finally {
             out.close();
         }

@@ -6,6 +6,7 @@ package com.salaboy.example;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -13,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.ServletException;
@@ -30,6 +33,9 @@ import org.jbpm.task.service.TaskService;
 import org.jbpm.task.service.TaskServiceSession;
 import org.jbpm.task.service.local.LocalTaskService;
 import org.drools.SystemEventListenerFactory;
+import org.jbpm.task.Task;
+import org.jbpm.task.service.ContentData;
+import org.jbpm.task.utils.ContentMarshallerHelper;
 
 /**
  *
@@ -44,10 +50,20 @@ public class HumanTaskServlet extends HttpServlet {
     private TaskServiceSession taskSession;
     private Map<String, User> users = new HashMap<String, User>();
     private Map<String, Group> groups = new HashMap<String, Group>();
-
+    private long taskId;
     public HumanTaskServlet() {
         // Create an EntityManagerFactory based on the PU configuration
-        emf = Persistence.createEntityManagerFactory("org.jbpm.task");
+        
+        try {
+                InitialContext ctx = new InitialContext();
+                // For JBOSS 7.x
+                // see: https://docs.jboss.org/author/display/AS71/JPA+Reference+Guide#JPAReferenceGuide-BindingEntityManagerFactorytoJNDI
+                emf = (EntityManagerFactory) ctx.lookup("java:jboss/myTaskEntityManagerFactory");
+            } catch (NamingException ex) {
+                Logger.getLogger(HumanTaskServlet.class.getName()).log(Level.SEVERE, null, ex);
+                ex.printStackTrace();
+            }
+        System.out.println("EMF = "+emf);
         // The Task Service will use the EMF to store our Task Status
         taskService = new TaskService(emf, SystemEventListenerFactory.getSystemEventListener());
         // We can uset the Task Service to get an instance of the Task Session which
@@ -62,11 +78,18 @@ public class HumanTaskServlet extends HttpServlet {
         taskService.setUserinfo(userInfo);
         localTaskService = new LocalTaskService(taskService);
         
-//        String str = "(with (new Task()) { priority = 55, taskData = (with( new TaskData()) { } ), ";
-//        str += "peopleAssignments = (with ( new PeopleAssignments() ) { potentialOwners = [users['salaboy' ], users['bobba'] ], }),";                        
-//        str += "names = [ new I18NText( 'en-UK', 'This is my task name')] })";
-//        
-//        localTaskService.addTask(null, null);
+        String str = "(with (new Task()) { priority = 55, taskData = (with( new TaskData()) { } ), ";
+        str += "peopleAssignments = (with ( new PeopleAssignments() ) { potentialOwners = [users['salaboy' ], users['bobba'] ], }),";                        
+        str += "names = [ new I18NText( 'en-UK', 'This is my task name')] })";
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("users", users);
+        params.put("groups", groups);
+        params.put( "now", new Date() );
+        Task task = (Task)TaskService.eval(str, params);
+        
+        localTaskService.addTask(task, new ContentData());
+        
+        taskId = task.getId();
     }
 
     /**
@@ -87,8 +110,11 @@ public class HumanTaskServlet extends HttpServlet {
         FileItemFactory factory = new DiskFileItemFactory();
         ServletFileUpload upload = new ServletFileUpload(factory);
 
-
+        out.println("Hi There! ");
+        
+        out.println("Task Id = "+taskId);
         // Parse the request
+        Map<String, String> params = new HashMap<String, String>();
         List<FileItem> items = upload.parseRequest(request); 
         Iterator iter = items.iterator();
         while (iter.hasNext()) {
@@ -96,8 +122,18 @@ public class HumanTaskServlet extends HttpServlet {
             if (item.isFormField()) {
                 String name = item.getFieldName();
                 String value = item.getString();
-                out.println("attr Name "+ name + " - value = "+value);
+                params.put(name, value);
             }
+        }
+        if(params.get("action").equals("start")){
+            localTaskService.start(taskId, "salaboy");
+            out.println("Task Started!");
+        }
+        
+        if(params.get("action").equals("complete")){
+            ContentData data = ContentMarshallerHelper.marshal(params, null);
+            localTaskService.complete(taskId, "salaboy", data);
+            out.println("Task Completed!");
         }
         out.close();
     }
