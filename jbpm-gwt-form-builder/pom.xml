@@ -275,9 +275,10 @@
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
             <!-- JBOSS 7.1 provide this, tomcat and old jboss don't -->
-            <!--scope>provided</scope-->
+            <scope>provided</scope>
         </dependency>
        
+        
     </dependencies>
   
 </project>
