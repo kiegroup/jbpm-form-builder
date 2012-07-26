@@ -22,14 +22,14 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 
-import org.drools.guvnor.backend.VFSService;
-import org.drools.guvnor.client.editors.fileexplorer.Root;
-import org.drools.guvnor.client.mvp.PlaceRequest;
-import org.drools.guvnor.vfs.FileSystem;
 import org.jboss.errai.bus.client.api.RemoteCallback;
 import org.jboss.errai.ioc.client.api.AfterInitialization;
 import org.jboss.errai.ioc.client.api.Caller;
 import org.jbpm.formbuilder.parent.client.FBBaseEntryPoint;
+import org.uberfire.backend.Root;
+import org.uberfire.backend.vfs.FileSystem;
+import org.uberfire.backend.vfs.VFSService;
+import org.uberfire.shared.mvp.PlaceRequest;
 
 /**
  * Main entry point of the form builder application

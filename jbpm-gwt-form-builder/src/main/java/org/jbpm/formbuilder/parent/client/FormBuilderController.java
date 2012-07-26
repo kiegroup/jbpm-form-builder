@@ -18,11 +18,6 @@ package org.jbpm.formbuilder.parent.client;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.drools.guvnor.client.annotations.OnStart;
-import org.drools.guvnor.client.annotations.WorkbenchEditor;
-import org.drools.guvnor.client.annotations.WorkbenchPartTitle;
-import org.drools.guvnor.client.annotations.WorkbenchPartView;
-import org.drools.guvnor.vfs.Path;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
 import org.jbpm.formbuilder.client.command.DisposeDropController;
 import org.jbpm.formbuilder.client.edition.EditionViewImpl;
@@ -52,6 +47,11 @@ import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.model.formbuilder.client.bus.ApplySettingsEvent;
 import org.jbpm.model.formbuilder.client.bus.ApplySettingsHandler;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.uberfire.backend.vfs.Path;
+import org.uberfire.client.annotations.OnStart;
+import org.uberfire.client.annotations.WorkbenchEditor;
+import org.uberfire.client.annotations.WorkbenchPartTitle;
+import org.uberfire.client.annotations.WorkbenchPartView;
 
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.google.gwt.core.client.GWT;

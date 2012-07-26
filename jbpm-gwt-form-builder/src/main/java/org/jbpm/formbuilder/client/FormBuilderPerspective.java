@@ -18,12 +18,12 @@ package org.jbpm.formbuilder.client;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import org.drools.guvnor.client.annotations.DefaultPerspective;
-import org.drools.guvnor.client.mvp.PlaceManager;
-import org.drools.guvnor.client.mvp.PlaceRequest;
-import org.drools.guvnor.client.workbench.WorkbenchPanel;
-import org.drools.guvnor.client.workbench.perspectives.IPerspectiveProvider;
-import org.drools.guvnor.client.workbench.widgets.panels.PanelManager;
+import org.uberfire.client.annotations.DefaultPerspective;
+import org.uberfire.client.mvp.PlaceManager;
+import org.uberfire.client.workbench.WorkbenchPanel;
+import org.uberfire.client.workbench.perspectives.IPerspectiveProvider;
+import org.uberfire.client.workbench.widgets.panels.PanelManager;
+import org.uberfire.shared.mvp.PlaceRequest;
 
 /**
  * @author salaboy

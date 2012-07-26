@@ -58,12 +58,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.uberfire</groupId>
-			<artifactId>uberfire-api</artifactId>
-			<version>${uberfire.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
 			<version>1.0-SP4</version>
@@ -184,6 +178,12 @@
 			<groupId>org.jbpm</groupId>
 			<artifactId>jbpm-form-services</artifactId>
 			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.jdt.core.compiler</groupId>
+					<artifactId>ecj</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.jbpm</groupId>
@@ -355,24 +355,24 @@
 	<build>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<finalName>jbpm-form-builder-${project.version}</finalName>
-		
-        <resources>
-            <resource>
-                <directory>${basedir}/src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>${basedir}/src/main/java</directory>
-                <includes>
-                    <include>**/*.java</include>
-                    <include>**/*.gwt.xml</include>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-        </resources>
-        
+
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/java</directory>
+				<includes>
+					<include>**/*.java</include>
+					<include>**/*.gwt.xml</include>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
 		<plugins>
 			<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
 				<configuration> <excludes> <exclude>**/*GwtTest.java</exclude> </excludes> 
@@ -385,7 +385,6 @@
 				<configuration>
 					<deploy>${project.build.directory}/gwt-symbols-deploy</deploy>
 					<logLevel>INFO</logLevel>
-					<gwtVersion>${gwt.version}</gwtVersion>
 					<style>DETAILED</style>
 					<noServer>false</noServer>
 					<!-- inplace>true</inplace -->
@@ -395,10 +394,12 @@
 						<module>org.jbpm.formdisplay.FormDisplay</module>
 					</modules>
 					<compileSourcesArtifacts>
-						<compileSourcesArtifact>org.uberfire:uberfire-api</compileSourcesArtifact>
 						<compileSourcesArtifact>org.uberfire:widgets-core</compileSourcesArtifact>
 						<compileSourcesArtifact>org.uberfire:widgets-commons</compileSourcesArtifact>
 						<compileSourcesArtifact>org.uberfire:uberfire-workbench</compileSourcesArtifact>
+						<compileSourcesArtifact>org.uberfire:backend-api</compileSourcesArtifact>
+						<compileSourcesArtifact>org.uberfire:backend-commons</compileSourcesArtifact>
+						<compileSourcesArtifact>org.uberfire:vfs-model</compileSourcesArtifact>
 					</compileSourcesArtifacts>
 					<runTarget>FormBuilder.html</runTarget>
 					<gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath><!-- The GWT compiler 
@@ -530,10 +531,18 @@
 			<dependencies>
 				<!-- We need this for CDI BeanManager to work in Dev Mode -->
 				<dependency>
-					<groupId>org.mortbay.jetty</groupId>
-					<artifactId>jetty-naming</artifactId>
-					<version>${jetty.version}</version>
-					<scope>compile</scope>
+					<groupId>
+						org.mortbay.jetty
+					</groupId>
+					<artifactId>
+						jetty-naming
+					</artifactId>
+					<version>
+						${jetty.version}
+					</version>
+					<scope>
+						compile
+					</scope>
 				</dependency>
 			</dependencies>
 		</profile>
