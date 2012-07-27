@@ -446,15 +446,16 @@
 
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>2.5.1</version>
 				<configuration>
-					<!-- TODO {manstis} Ensure in porcelli's refactoring -->
+					<source>1.6</source>
+					<target>1.6</target>
 					<!-- The parent-parent.pom (i.e. droolsjbpm-parent) contains <fork>true</fork> 
 						which causes the Java Annotation Processor mechanism to not process annotations 
 						on classes in guvnorng-showcase. Why IDK but this solves the issue -->
 					<fork>false</fork>
-					<source>1.6</source>
-					<target>1.6</target>
+					<meminitial>128m</meminitial>
+					<maxmem>512m</maxmem>
 				</configuration>
 			</plugin>
 
