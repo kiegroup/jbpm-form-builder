@@ -55,6 +55,7 @@
     <module>jbpm-gwt-form-builder</module>
     <module>jbpm-form-services</module>
     <module>jbpm-form-builder-client-example</module>
+    <module>form-builder-services-cdi</module>
   </modules>
 
   <build>
