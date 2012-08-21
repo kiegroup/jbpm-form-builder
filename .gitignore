@@ -24,3 +24,4 @@ bin/
 /jbpm-form-services/target/
 /jbpm-form-builder-client-example/target/
 /form-builder-services-cdi/target/
+/jbpm-form-builder-ng/target/
