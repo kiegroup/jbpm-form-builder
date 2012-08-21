@@ -64,7 +64,7 @@ public class FSFileService implements FileService, InitializingBean {
     }
 
     public List<String> loadFilesByType(String packageName, String fileType) throws FileException {
-        File baseDir = new File(baseUrl);
+        File baseDir = new File(baseUrl+fileSeparator+packageName+fileSeparator);
         Collection<File> listFiles = FileUtils.listFiles(baseDir, new String[]{fileType}, true);
         List<String> files = new ArrayList<String>();
         for (File file : listFiles) {

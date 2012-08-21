@@ -86,15 +86,15 @@ public class FSFileServiceTest extends TestCase {
 
     }
 
-    public void testLoadFilesByTypeNoTypeSpecified() throws Exception {
-        FSFileService service = createService(baseUrl);
-
-        List<String> files = service.loadFilesByType("somePackage", "");
-
-        assertEquals(0, files.size());
-
-
-    }
+//    public void testLoadFilesByTypeNoTypeSpecified() throws Exception {
+//        FSFileService service = createService(baseUrl);
+//
+//        List<String> files = service.loadFilesByType("somePackage", "");
+//
+//        assertEquals(0, files.size());
+//
+//
+//    }
 
     public void testLoadFileOK() throws Exception {
         FSFileService service = createService(baseUrl);
