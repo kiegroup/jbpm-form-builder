@@ -25,7 +25,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="gwt:property" content="locale=<%=request.getLocale().toString()%>">
   
-  <title>JBoss jBPM Console</title>
+  <title>jBPM Form Builder</title>
   <link rel="shortcut icon" href="images/drools.gif" type="image/gif"/>
   <link rel="icon" href="images/drools.gif" type="image/gif"/>
   

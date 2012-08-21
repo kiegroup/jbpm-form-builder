@@ -51,9 +51,9 @@ public class FormBuilderPresenter {
         
        
         
-        PickupDragController dragController = new PickupDragController((AbsolutePanel)view, true);
-        dragController.registerDropController(new DisposeDropController((AbsolutePanel)view));
-        CommonGlobals.getInstance().registerDragController(dragController);
+//        PickupDragController dragController = new PickupDragController((AbsolutePanel)view, true);
+//        dragController.registerDropController(new DisposeDropController((AbsolutePanel)view));
+//        CommonGlobals.getInstance().registerDragController(dragController);
 
         
 //        

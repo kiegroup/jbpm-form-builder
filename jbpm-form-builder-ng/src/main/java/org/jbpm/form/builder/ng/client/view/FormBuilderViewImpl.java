@@ -46,25 +46,24 @@ public class FormBuilderViewImpl extends Composite implements FormBuilderPresent
     @Inject
     private FormBuilderPresenter presenter;
     
-    @UiField SimplePanel optionsView;
-    @UiField ScrollPanel menuView;
-    @UiField ScrollPanel editionView;
-    @UiField ScrollPanel layoutView;
-    @UiField Panel toolBarView;
+    public @UiField SimplePanel optionsView;
+    public @UiField ScrollPanel menuView;
+    public @UiField ScrollPanel layoutView;
+    
 
     
     
     @PostConstruct
     protected final void init() {
         
-            
+            initWidget(uiBinder.createAndBindUi(this));
             
             int fullHeight = Window.getClientHeight();
             String height = "" + (fullHeight - 80) + "px";
             String smallerHeight = "" + (fullHeight - 105) + "px";
             //treeView.setHeight("100%");
             menuView.setHeight("100%");
-            editionView.setHeight("100%");
+//            editionView.setHeight("100%");
             //ioAssociationView.setHeight("100%");
             layoutView.setHeight(smallerHeight);
        

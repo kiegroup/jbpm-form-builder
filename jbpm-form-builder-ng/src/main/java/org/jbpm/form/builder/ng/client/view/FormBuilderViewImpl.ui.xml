@@ -42,11 +42,7 @@
         </td>
         <td width="760">
           <table cellpadding="0" cellspacing="0">
-            <tr>
-              <td height="25" width="760" class="toolBarViewWrapper">
-                <gwt:Panel height="25px" width="760px" ui:field="toolBarView"/>
-              </td>
-            </tr>
+            
             <tr>
               <td height="100%" width="760" class="layoutViewWrapper">
                 <gwt:ScrollPanel height="100%" width="760px" ui:field="layoutView"/>
