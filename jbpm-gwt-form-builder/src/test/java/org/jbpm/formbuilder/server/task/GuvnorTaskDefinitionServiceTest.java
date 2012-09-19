@@ -176,10 +176,10 @@ public class GuvnorTaskDefinitionServiceTest extends TestCase {
         GuvnorTaskDefinitionService service = createService(baseUrl, "", "");
         HttpClient client = EasyMock.createMock(HttpClient.class);
         Map<String, String> responses = new HashMap<String, String>();
-        String xml1 = "<packages><package><title>somePackage</title>" +
+        String xml1 = "<collection><package><title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1</assets>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess2</assets>" +
-                "</package></packages>";
+                "</package></collection>";
         String xml2 = "<asset><sourceLink>" +
                 helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1/source" +
                 "</sourceLink><metadata><format>bpmn2</format></metadata></asset>";
@@ -219,7 +219,7 @@ public class GuvnorTaskDefinitionServiceTest extends TestCase {
         GuvnorTaskDefinitionService service = createService(baseUrl, "", "");
         HttpClient client = EasyMock.createMock(HttpClient.class);
         Map<String, String> responses = new HashMap<String, String>();
-        String xml1 = "<packages><package><title>somePackage</title>" +
+        String xml1 = "<collection><package><title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1</assetsBROKEN_XML>";
         responses.put("GET " + helper.getRestBaseUrl(), xml1);
         EasyMock.expect(client.executeMethod(EasyMock.isA(MockGetMethod.class))).
@@ -289,11 +289,11 @@ public class GuvnorTaskDefinitionServiceTest extends TestCase {
         GuvnorTaskDefinitionService service = createService(baseUrl, "", "");
         HttpClient client = EasyMock.createMock(HttpClient.class);
         Map<String, String> responses = new HashMap<String, String>();
-        String xml1 = "<packages><package><title>somePackage</title>" +
+        String xml1 = "<collection><package><title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1</assets>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess2</assets>" +
                 "<metadata><uuid>" + uuid1 + "</uuid></metadata>" +
-                "</package></packages>";
+                "</package></collection>";
         String xml2 = "<asset><sourceLink>" +
                 helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1/source" +
                 "</sourceLink><metadata><format>bpmn2</format><uuid>somethingelse</uuid></metadata></asset>";
@@ -320,7 +320,7 @@ public class GuvnorTaskDefinitionServiceTest extends TestCase {
         GuvnorTaskDefinitionService service = createService(baseUrl, "", "");
         HttpClient client = EasyMock.createMock(HttpClient.class);
         Map<String, String> responses = new HashMap<String, String>();
-        String xml1 = "<packages><package><title>somePackage</title>" +
+        String xml1 = "<collection><package><title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1</assetsBROKEN_XML>";
         responses.put("GET " + helper.getRestBaseUrl(), xml1);
         EasyMock.expect(client.executeMethod(EasyMock.isA(MockGetMethod.class))).
@@ -383,10 +383,10 @@ public class GuvnorTaskDefinitionServiceTest extends TestCase {
         GuvnorTaskDefinitionService service = createService(baseUrl, "", "");
         HttpClient client = EasyMock.createMock(HttpClient.class);
         Map<String, String> responses = new HashMap<String, String>();
-        String xml1 = "<packages><package><title>somePackage</title>" +
+        String xml1 = "<collection><package><title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1</assets>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess2</assets>" +
-                "</package></packages>";
+                "</package></collection>";
         String xml2 = "<asset><sourceLink>" +
                 helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1/source" +
                 "</sourceLink><metadata><format>bpmn2</format><uuid>somethingelse</uuid></metadata></asset>";
@@ -420,7 +420,7 @@ public class GuvnorTaskDefinitionServiceTest extends TestCase {
         GuvnorTaskDefinitionService service = createService(baseUrl, "", "");
         HttpClient client = EasyMock.createMock(HttpClient.class);
         Map<String, String> responses = new HashMap<String, String>();
-        String xml1 = "<packages><package><title>somePackage</title>" +
+        String xml1 = "<collection><package><title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess1</assets>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/assets/sampleProcess2</assetsBROKEN_XML>";
         responses.put("GET " + helper.getRestBaseUrl(), xml1);

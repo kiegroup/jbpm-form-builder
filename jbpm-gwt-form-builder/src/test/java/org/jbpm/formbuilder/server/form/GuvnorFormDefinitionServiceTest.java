@@ -497,11 +497,11 @@ public class GuvnorFormDefinitionServiceTest extends TestCase {
         HttpClient client = EasyMock.createMock(HttpClient.class);
         String uuid = UUID.randomUUID().toString();
         Map<String, String> responses1 = new HashMap<String, String>();
-        String xml1 = "<packages><package>" +
+        String xml1 = "<collection><package>" +
                 "<title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/asset1</assets>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/asset2</assets>" +
-                "</package></packages>";
+                "</package></collection>";
         String xml2 = "<asset>" +
                 "<sourceLink>" + helper.getRestBaseUrl() + "somePackage/asset1/source</sourceLink>" +
                 "<metadata>" +
@@ -541,11 +541,11 @@ public class GuvnorFormDefinitionServiceTest extends TestCase {
         HttpClient client = EasyMock.createMock(HttpClient.class);
         String uuid = UUID.randomUUID().toString();
         Map<String, String> responses1 = new HashMap<String, String>();
-        String xml1 = "<packages><package>" +
+        String xml1 = "<collection><package>" +
                 "<title>somePackage</title>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/asset1</assets>" +
                 "<assets>" + helper.getRestBaseUrl() + "somePackage/asset2</assets>" +
-                "</package></packages>";
+                "</package></collection>";
         String xml2 = "<asset>" +
                 "<sourceLink>" + helper.getRestBaseUrl() + "somePackage/asset1/source</sourceLink>" +
                 "<metadata>" +
