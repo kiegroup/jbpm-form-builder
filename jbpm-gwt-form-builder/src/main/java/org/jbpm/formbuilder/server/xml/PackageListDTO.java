@@ -21,7 +21,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "packages")
+@XmlRootElement(name = "collection")
 public class PackageListDTO {
     
     public static final Class<?>[] RELATED_CLASSES = new Class<?>[] { PackageListDTO.class, PackageDTO.class, MetaDataDTO.class };
