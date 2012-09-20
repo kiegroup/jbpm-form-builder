@@ -3,8 +3,8 @@ package org.jbpm.formbuilder.client.effect.scripthandlers;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.model.formapi.shared.api.FBScript;
-import org.jbpm.model.formapi.shared.api.FBScriptHelper;
+import org.jbpm.formapi.shared.api.FBScript;
+import org.jbpm.formapi.shared.api.FBScriptHelper;
 
 public abstract class AbstractScriptHelper implements FBScriptHelper {
 

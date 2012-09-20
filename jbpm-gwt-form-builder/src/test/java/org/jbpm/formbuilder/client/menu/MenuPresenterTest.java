@@ -22,7 +22,7 @@ import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
 import org.easymock.IAnswer;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 import org.jbpm.formapi.client.menu.FBMenuItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.FormBuilderService;

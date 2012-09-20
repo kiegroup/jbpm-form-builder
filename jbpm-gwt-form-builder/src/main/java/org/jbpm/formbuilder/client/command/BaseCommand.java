@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.client.command;
 
-import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.formbuilder.client.bus.UndoableEvent;
 
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.MenuItem;

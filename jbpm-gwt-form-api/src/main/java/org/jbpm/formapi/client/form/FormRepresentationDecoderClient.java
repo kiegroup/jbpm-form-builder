@@ -20,17 +20,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.common.reflect.ReflectionHelper;
-import org.jbpm.model.formapi.shared.api.FBScript;
-import org.jbpm.model.formapi.shared.api.FBValidation;
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.api.InputData;
-import org.jbpm.model.formapi.shared.api.Mappable;
-import org.jbpm.model.formapi.shared.api.OutputData;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.formapi.common.reflect.ReflectionHelper;
+import org.jbpm.formapi.shared.api.FBScript;
+import org.jbpm.formapi.shared.api.FBValidation;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.InputData;
+import org.jbpm.formapi.shared.api.Mappable;
+import org.jbpm.formapi.shared.api.OutputData;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.formapi.shared.menu.MenuItemDescription;
 
 import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;

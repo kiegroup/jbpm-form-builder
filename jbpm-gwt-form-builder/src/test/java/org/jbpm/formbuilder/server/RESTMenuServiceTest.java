@@ -27,10 +27,10 @@ import javax.ws.rs.core.Response.Status;
 
 import org.easymock.EasyMock;
 import org.jboss.resteasy.util.HttpHeaderNames;
-import org.jbpm.model.formapi.shared.menu.FormEffectDescription;
-import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
-import org.jbpm.model.formapi.shared.menu.MenuOptionDescription;
-import org.jbpm.model.formapi.shared.menu.ValidationDescription;
+import org.jbpm.formapi.shared.menu.FormEffectDescription;
+import org.jbpm.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.formapi.shared.menu.MenuOptionDescription;
+import org.jbpm.formapi.shared.menu.ValidationDescription;
 import org.jbpm.formbuilder.server.xml.ListMenuItemsDTO;
 import org.jbpm.formbuilder.server.xml.ListOptionsDTO;
 import org.jbpm.formbuilder.server.xml.ListValidationsDTO;
@@ -238,7 +238,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         menuService.saveMenuItem(EasyMock.same("groupName"), EasyMock.anyObject(MenuItemDescription.class));
         EasyMock.expectLastCall().once();
         restService.setMenuService(menuService);
@@ -266,7 +266,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         menuService.saveMenuItem(EasyMock.same("groupName"), EasyMock.anyObject(MenuItemDescription.class));
         MenuServiceException exception = new MenuServiceException("Something went wrong");
         EasyMock.expectLastCall().andThrow(exception).once();
@@ -295,7 +295,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         restService.setDynamicService(false);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(false).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(false).times(3);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -319,7 +319,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         menuService.deleteMenuItem(EasyMock.same("groupName"), EasyMock.anyObject(MenuItemDescription.class));
         EasyMock.expectLastCall().once();
         Map<String, List<MenuItemDescription>> initialMenuItems = new HashMap<String, List<MenuItemDescription>>();
@@ -354,7 +354,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         EasyMock.expect(menuService.listMenuItems()).andReturn(new HashMap<String, List<MenuItemDescription>>()).once();
         restService.setMenuService(menuService);
         restService.setDynamicService(false);
@@ -381,7 +381,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         Map<String, List<MenuItemDescription>> initialMenuItems = new HashMap<String, List<MenuItemDescription>>();
         List<MenuItemDescription> descriptions = new ArrayList<MenuItemDescription>();
         MenuItemDescription description = new MenuItemDescription();
@@ -415,7 +415,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         menuService.deleteMenuItem(EasyMock.same("groupName"), EasyMock.anyObject(MenuItemDescription.class));
         EasyMock.expectLastCall().andThrow(exception).once();
         Map<String, List<MenuItemDescription>> initialMenuItems = new HashMap<String, List<MenuItemDescription>>();
@@ -450,7 +450,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         restService.setDynamicService(false);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
-        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(false).times(4);
+        EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(false).times(3);
         Map<String, List<MenuItemDescription>> initialMenuItems = new HashMap<String, List<MenuItemDescription>>();
         List<MenuItemDescription> descriptions = new ArrayList<MenuItemDescription>();
         MenuItemDescription description = new MenuItemDescription();

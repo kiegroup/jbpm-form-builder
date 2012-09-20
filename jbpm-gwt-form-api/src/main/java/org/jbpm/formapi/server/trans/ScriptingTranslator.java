@@ -29,9 +29,9 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.URLResourceLoader;
-import org.jbpm.model.formapi.shared.api.FBScript;
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.FBScript;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
 
 public class ScriptingTranslator implements Translator {
 

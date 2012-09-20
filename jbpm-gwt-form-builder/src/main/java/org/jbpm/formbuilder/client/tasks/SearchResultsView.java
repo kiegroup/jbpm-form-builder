@@ -18,13 +18,13 @@ package org.jbpm.formbuilder.client.tasks;
 import java.util.List;
 
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class SearchResultsView extends VerticalPanel {
 

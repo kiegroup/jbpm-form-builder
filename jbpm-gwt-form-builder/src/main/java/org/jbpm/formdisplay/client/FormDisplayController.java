@@ -15,31 +15,26 @@
  */
 package org.jbpm.formdisplay.client;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.FormBuilderException;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.FormBuilderException;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.FormBuilderService;
 import org.jbpm.formbuilder.client.JsonLoadInput;
 import org.jbpm.formbuilder.client.bus.ui.RepresentationFactoryPopulatedEvent;
 import org.jbpm.formbuilder.client.bus.ui.RepresentationFactoryPopulatedHandler;
-import org.jbpm.model.formbuilder.client.form.FBForm;
+import org.jbpm.formbuilder.client.form.FBForm;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.Node;
-import com.google.gwt.xml.client.NodeList;
-import com.google.gwt.xml.client.XMLParser;
-import org.jbpm.formbuilder.server.xml.ListFormsDTO;
 
 /**
- *
+ * 
  */
 public class FormDisplayController {
 
@@ -55,20 +50,16 @@ public class FormDisplayController {
                 @Override
                 public void onEvent(RepresentationFactoryPopulatedEvent event) {
                     try {
-                        JsonLoadInput input  = JsonLoadInput.parse(innerJson);
-                        
+                        JsonLoadInput input = JsonLoadInput.parse(innerJson);
                         if (input != null && input.getForm() != null) {
                             FBForm formUI = new FBForm();
                             formUI.populate(input.getForm());
                             formDisplay.add(formUI.asFormPanel(input.getFormData()));
-                        } 
+                        }
                     } catch (FormEncodingException e) {
                         Window.alert("Couldn't interpretate form: " + e.getMessage());
                         GWT.log("Couldn't interpretate form", e);
                     } catch (FormBuilderException e) {
-                        Window.alert("Couldn't populate display: " + e.getMessage());
-                        GWT.log("Couldn't populate display", e);
-                    } catch (Exception e) {
                         Window.alert("Couldn't populate display: " + e.getMessage());
                         GWT.log("Couldn't populate display", e);
                     }
@@ -81,5 +72,4 @@ public class FormDisplayController {
         }
     }
 
-    
 }

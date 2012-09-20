@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 import org.jbpm.formbuilder.client.bus.ui.HistoryStoreEvent;
 import org.jbpm.formbuilder.client.bus.ui.HistoryStoreHandler;
 

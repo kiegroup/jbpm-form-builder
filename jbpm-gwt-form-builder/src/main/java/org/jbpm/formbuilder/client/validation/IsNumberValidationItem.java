@@ -17,18 +17,18 @@ package org.jbpm.formbuilder.client.validation;
 
 import java.util.Map;
 
-import org.jbpm.model.formapi.client.FormBuilderException;
-import org.jbpm.model.formapi.client.validation.FBValidationItem;
-import org.jbpm.model.formapi.shared.api.FBValidation;
+import org.jbpm.formapi.client.FormBuilderException;
+import org.jbpm.formapi.client.validation.FBValidationItem;
+import org.jbpm.formapi.shared.api.FBValidation;
 import org.jbpm.formapi.shared.api.validation.IsNumberValidation;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.HasValue;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class IsNumberValidationItem extends FBValidationItem {

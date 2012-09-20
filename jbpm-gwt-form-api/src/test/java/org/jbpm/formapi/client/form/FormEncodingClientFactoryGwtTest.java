@@ -16,9 +16,9 @@
 package org.jbpm.formapi.client.form;
 
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
 
 import com.google.gwt.junit.client.GWTTestCase;
 

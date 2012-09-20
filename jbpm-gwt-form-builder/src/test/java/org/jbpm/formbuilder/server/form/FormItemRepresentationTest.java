@@ -28,9 +28,9 @@ import junit.framework.TestCase;
 
 import org.jbpm.formapi.server.form.FormRepresentationDecoderImpl;
 import org.jbpm.formapi.server.form.FormRepresentationEncoderImpl;
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formbuilder.server.RESTAbstractTest;
 
 public class FormItemRepresentationTest extends TestCase {

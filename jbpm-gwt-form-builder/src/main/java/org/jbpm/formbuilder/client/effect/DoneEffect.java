@@ -15,12 +15,12 @@
  */
 package org.jbpm.formbuilder.client.effect;
 
-import org.jbpm.model.formapi.client.bus.FormItemSelectionEvent;
-import org.jbpm.model.formapi.client.effect.FBFormEffect;
+import org.jbpm.formapi.client.bus.FormItemSelectionEvent;
+import org.jbpm.formapi.client.effect.FBFormEffect;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * Simple {@link FBFormEffect} implementation, simply deselects 

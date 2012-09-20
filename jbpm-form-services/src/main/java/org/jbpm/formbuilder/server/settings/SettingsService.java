@@ -15,7 +15,7 @@
  */
 package org.jbpm.formbuilder.server.settings;
 
-import org.jbpm.model.formapi.client.Settings;
+import org.jbpm.formapi.client.Settings;
 
 /**
  *

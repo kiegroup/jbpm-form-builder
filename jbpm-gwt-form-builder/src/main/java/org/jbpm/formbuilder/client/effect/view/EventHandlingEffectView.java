@@ -20,18 +20,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
-import org.jbpm.model.formapi.common.reflect.ReflectionHelper;
-import org.jbpm.model.formapi.shared.api.FBScript;
-import org.jbpm.model.formapi.shared.api.FBScriptHelper;
-import org.jbpm.model.formapi.shared.api.RepresentationFactory;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.formapi.common.reflect.ReflectionHelper;
+import org.jbpm.formapi.shared.api.FBScript;
+import org.jbpm.formapi.shared.api.FBScriptHelper;
+import org.jbpm.formapi.shared.api.RepresentationFactory;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.effect.EventHandlingFormEffect;
 import org.jbpm.formbuilder.client.effect.scripthandlers.PlainTextScriptHelper;
 import org.jbpm.formbuilder.client.effect.view.ScriptHelperListPanel.ScriptOrderHandler;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ChangeEvent;
 import com.google.gwt.event.dom.client.ChangeHandler;

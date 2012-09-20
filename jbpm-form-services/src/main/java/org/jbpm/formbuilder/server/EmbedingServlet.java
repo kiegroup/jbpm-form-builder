@@ -27,10 +27,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 import org.jbpm.formapi.server.form.FormEncodingServerFactory;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
 import org.jbpm.formbuilder.server.form.GuvnorFormDefinitionService;
 import org.jbpm.formbuilder.server.task.GuvnorTaskDefinitionService;
 import org.jbpm.formapi.shared.form.FormDefinitionService;

@@ -19,12 +19,12 @@ import java.util.List;
 import java.util.Map;
 
 
-import org.jbpm.model.formapi.client.FormBuilderException;
-import org.jbpm.model.formapi.client.Settings;
+import org.jbpm.formapi.client.FormBuilderException;
+import org.jbpm.formapi.client.Settings;
 import org.jbpm.formapi.client.menu.FBMenuItem;
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.api.RepresentationFactory;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.RepresentationFactory;
 import org.jbpm.formapi.shared.task.TaskRef;
 
 /**

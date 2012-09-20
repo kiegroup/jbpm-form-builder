@@ -1,8 +1,8 @@
 package org.jbpm.formbuilder.server;
 
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.Settings;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.Settings;
 import org.jbpm.formbuilder.server.file.FileService;
 import org.jbpm.formbuilder.server.settings.SettingsService;
 import org.jbpm.formapi.shared.form.FormDefinitionService;

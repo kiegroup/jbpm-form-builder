@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.http.client.URL;
-import org.jbpm.model.formapi.client.Settings;
+import org.jbpm.formapi.client.Settings;
 
 public class URLBuilder {
 

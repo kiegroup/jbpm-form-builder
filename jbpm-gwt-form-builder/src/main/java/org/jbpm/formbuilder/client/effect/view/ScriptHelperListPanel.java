@@ -15,9 +15,9 @@
  */
 package org.jbpm.formbuilder.client.effect.view;
 
-import org.jbpm.model.formapi.shared.api.FBScriptHelper;
+import org.jbpm.formapi.shared.api.FBScriptHelper;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -26,7 +26,7 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class ScriptHelperListPanel extends VerticalPanel {
 

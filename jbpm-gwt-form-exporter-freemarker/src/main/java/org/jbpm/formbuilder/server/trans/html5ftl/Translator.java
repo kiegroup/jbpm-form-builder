@@ -3,7 +3,7 @@ package org.jbpm.formbuilder.server.trans.html5ftl;
 import org.jbpm.formapi.server.trans.ScriptingTranslator;
 import org.jbpm.formapi.server.trans.TranslatorException;
 import org.jbpm.formapi.server.trans.TranslatorFactory;
-import org.jbpm.model.formapi.shared.api.FBScript;
+import org.jbpm.formapi.shared.api.FBScript;
 
 public class Translator extends ScriptingTranslator  {
 

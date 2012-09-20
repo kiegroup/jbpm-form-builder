@@ -58,8 +58,6 @@
     text-align: left;
 }
 
-
-
 .northeastCorner {
     background-image: url(images/resizablePanel/northeastCorner.gif);
     width: 10px;
@@ -134,21 +132,10 @@
 .odd {
     background-color: #FFFFFF;
 }
-#notificationsViewWrapperExpanded{
-    height: 225px;
-    bottom: 225px; 
-    position: absolute; 
-    width:100%;
-    z-index: 200;
-}
-#notificationsViewWrapper {
+
+.notificationsViewWrapper {
     border: 1px solid grey;
     background-color: #BBBBBB;
-    position: absolute; 
-    bottom: 0px; 
-    margin: auto;
-    width:100%;
-    z-index: 200;
 }
 
 .mainWrapper {

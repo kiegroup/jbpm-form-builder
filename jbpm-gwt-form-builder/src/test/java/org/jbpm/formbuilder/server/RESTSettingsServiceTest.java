@@ -17,7 +17,6 @@ package org.jbpm.formbuilder.server;
 
 
 import java.io.StringWriter;
-import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,11 +30,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 import org.easymock.EasyMock;
-import org.jbpm.model.formapi.client.Settings;
-import org.jbpm.model.formapi.client.SettingsEntry;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.jbpm.formapi.client.Settings;
+import org.jbpm.formapi.client.SettingsEntry;
 
 public class RESTSettingsServiceTest extends RESTAbstractTest {
 
@@ -58,33 +54,18 @@ public class RESTSettingsServiceTest extends RESTAbstractTest {
     }
     //test happy path of RESTaddUserSettings
     public void testaddUserSettingsEntryOK() throws Exception {
-        
-        ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/webapp/WEB-INF/springComponents.xml");
-        ServiceFactory.getInstance().setBeanFactory(ctx);
-        
-        RESTUserService restService = new RESTUserService();
+        RESTSettingsService restService = new RESTSettingsService();
         List<Object> requestMocks = createRequestMocks();
         
-        Settings settings = new Settings("admin");
-        settings.setId(1L);
-        SettingsEntry settingsEntry = new SettingsEntry("storage", "fs");
-        settingsEntry.setId(1L);
-        settings.addEntry(settingsEntry);
-        SettingsEntry settingsEntry2 = new SettingsEntry("anotherprop", "othervalue");
-        settingsEntry2.setId(2L);
-        settings.addEntry(settingsEntry2);
-        
         Object[] mocks = requestMocks.toArray();
-        EasyMock.replay(mocks);
-        assertNotNull(((HttpServletRequest)mocks[0]).getSession());
-        assertNotNull(((HttpServletRequest)mocks[0]).getUserPrincipal());
-        assertEquals("admin",((HttpServletRequest)mocks[0]).getUserPrincipal().getName());
-        Response resp = restService.applySettings(settings,(HttpServletRequest)mocks[0]);
-        EasyMock.verify(mocks);
+        
+        Response resp = restService.applySettings("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><settings><entries><key>storage</key><value>fs</value></entries><userId>salaboy</userId></settings>", 
+                                                    "salaboy", (HttpServletRequest)mocks[0]);
+
         assertNotNull("resp shouldn't be null", resp);
         assertStatus(resp.getStatus(), Status.OK);
         
-        Response resp2 = restService.getUserSettings((HttpServletRequest)mocks[0]);
+        Response resp2 = restService.getUserSettings("salaboy", (HttpServletRequest)mocks[0]);
         assertNotNull("resp shouldn't be null", resp2);
         assertStatus(resp2.getStatus(), Status.OK);
         assertTrue(resp2.getEntity() instanceof Settings);
@@ -95,17 +76,13 @@ public class RESTSettingsServiceTest extends RESTAbstractTest {
     private List<Object> createRequestMocks() {
         List<Object> requestMocks = new ArrayList<Object>();
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
-        Principal principal = EasyMock.createMock(Principal.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         ServletContext context = EasyMock.createMock(ServletContext.class);
-        EasyMock.expect(request.getUserPrincipal()).andReturn(principal).anyTimes();
-        EasyMock.expect(principal.getName()).andReturn("admin").anyTimes();
         EasyMock.expect(request.getSession()).andReturn(session).once();
-        
+        EasyMock.expect(session.getServletContext()).andReturn(context).once();
         requestMocks.add(request);
         requestMocks.add(session);
         requestMocks.add(context);
-        requestMocks.add(principal);
         return requestMocks;
     }
 }

@@ -15,18 +15,16 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.model.formbuilder.client.bus.ApplySettingsEvent;
-import org.jbpm.model.formbuilder.client.bus.ApplySettingsHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.FormBuilderException;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.FormBuilderException;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent.Level;
 import org.jbpm.formapi.client.form.FormEncodingClientFactory;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formbuilder.client.bus.ui.EmbededIOReferenceEvent;
 import org.jbpm.formbuilder.client.bus.ui.NotificationsVisibleEvent;
 import org.jbpm.formbuilder.client.bus.ui.NotificationsVisibleHandler;
@@ -39,7 +37,7 @@ import org.jbpm.formbuilder.client.command.DisposeDropController;
 import org.jbpm.formbuilder.client.edition.EditionViewImpl;
 import org.jbpm.formbuilder.client.layout.LayoutViewImpl;
 import org.jbpm.formbuilder.client.menu.AnimatedMenuViewImpl;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formbuilder.client.notification.CompactNotificationsViewImpl;
 import org.jbpm.formbuilder.client.options.OptionsViewImpl;
 import org.jbpm.formbuilder.client.tasks.IoAssociationViewImpl;
@@ -54,8 +52,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
-import org.jbpm.formbuilder.client.bus.LoadSettingsEvent;
-import org.jbpm.formbuilder.client.bus.LoadSettingsHandler;
+import org.jbpm.formbuilder.client.bus.*;
 import org.jbpm.formbuilder.server.ServiceFactory;
 
 public class FormBuilderController {
@@ -84,7 +81,7 @@ public class FormBuilderController {
         bus.addHandler(UserIsLoggedOutEvent.TYPE, new UserIsLoggedOutHandler() {
             @Override
             public void onEvent(UserIsLoggedOutEvent event) {
-                Window.alert("User Session expired!");
+                Window.alert("User is login timeout");
                 Window.Location.reload();
             }
         });

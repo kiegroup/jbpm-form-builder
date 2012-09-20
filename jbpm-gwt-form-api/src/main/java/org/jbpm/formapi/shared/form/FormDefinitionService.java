@@ -18,8 +18,8 @@ package org.jbpm.formapi.shared.form;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formapi.shared.task.TaskRef;
 
 public interface FormDefinitionService {

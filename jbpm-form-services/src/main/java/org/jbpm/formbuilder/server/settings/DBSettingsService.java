@@ -20,7 +20,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import org.jbpm.model.formapi.client.Settings;
+import org.jbpm.formapi.client.Settings;
 
 /**
  *

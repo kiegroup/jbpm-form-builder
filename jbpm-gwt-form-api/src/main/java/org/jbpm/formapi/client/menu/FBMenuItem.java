@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.client.effect.FBFormEffect;
-import org.jbpm.model.formapi.client.form.FBFormItem;
-import org.jbpm.model.formapi.shared.api.FBScript;
+import org.jbpm.formapi.client.effect.FBFormEffect;
+import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.formapi.shared.api.FBScript;
 
 import com.allen_sauer.gwt.dnd.client.HasDragHandle;
 import com.google.gwt.resources.client.ImageResource;

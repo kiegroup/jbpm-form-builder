@@ -20,8 +20,8 @@ import java.util.Map;
 
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.effect.I18NFormEffect;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
-import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -36,7 +36,7 @@ import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class I18NEffectView extends PopupPanel {
 

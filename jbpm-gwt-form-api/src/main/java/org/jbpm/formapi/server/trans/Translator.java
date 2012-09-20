@@ -17,8 +17,8 @@ package org.jbpm.formapi.server.trans;
 
 import java.net.URL;
 
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
 
 /*
  *  form: FormRepresentation

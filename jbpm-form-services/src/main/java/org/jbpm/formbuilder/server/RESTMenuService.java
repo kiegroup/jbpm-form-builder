@@ -30,14 +30,14 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import org.jbpm.formapi.server.form.FormEncodingServerFactory;
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.model.formapi.shared.menu.FormEffectDescription;
-import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
-import org.jbpm.model.formapi.shared.menu.MenuOptionDescription;
-import org.jbpm.model.formapi.shared.menu.ValidationDescription;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.formapi.shared.menu.FormEffectDescription;
+import org.jbpm.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.formapi.shared.menu.MenuOptionDescription;
+import org.jbpm.formapi.shared.menu.ValidationDescription;
 import org.jbpm.formbuilder.server.xml.FormEffectDTO;
 import org.jbpm.formbuilder.server.xml.ListMenuItemsDTO;
 import org.jbpm.formbuilder.server.xml.ListOptionsDTO;
@@ -51,7 +51,7 @@ import org.jbpm.formapi.shared.menu.MenuServiceException;
 public class RESTMenuService extends RESTBaseService {
 
     private MenuService menuService;
-    private boolean dynamicService = false;
+    private boolean dynamicService = true;
     public RESTMenuService() {
         FormEncodingFactory.register(FormEncodingServerFactory.getEncoder(), FormEncodingServerFactory.getDecoder());
     }
@@ -186,7 +186,7 @@ public class RESTMenuService extends RESTBaseService {
     }
     
     private void init() {
-        if(dynamicService || menuService == null){
+        if(dynamicService){
             menuService = ServiceFactory.getInstance().getMenuService();
         }
     }

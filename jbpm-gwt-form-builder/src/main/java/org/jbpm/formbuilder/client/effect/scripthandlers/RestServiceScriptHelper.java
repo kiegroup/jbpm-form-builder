@@ -18,14 +18,14 @@ package org.jbpm.formbuilder.client.effect.scripthandlers;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormEncodingException;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.effect.scriptviews.RestServiceScriptHelperView;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * 

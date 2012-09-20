@@ -15,8 +15,8 @@
  */
 package org.jbpm.formapi.client.form;
 
-import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
 
 public final class FormEncodingClientFactory {
 

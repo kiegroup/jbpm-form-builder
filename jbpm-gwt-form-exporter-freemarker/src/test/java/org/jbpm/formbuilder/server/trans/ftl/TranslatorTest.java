@@ -19,7 +19,7 @@ import java.io.File;
 import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formbuilder.server.RenderTranslatorAbstractTest;
 
 public class TranslatorTest extends RenderTranslatorAbstractTest {

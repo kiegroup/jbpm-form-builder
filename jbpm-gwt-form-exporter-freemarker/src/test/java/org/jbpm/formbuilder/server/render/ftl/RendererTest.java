@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formbuilder.server.RenderTranslatorAbstractTest;
 import org.jbpm.formbuilder.server.trans.ftl.Translator;
 

@@ -15,19 +15,19 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
 import org.jbpm.formbuilder.client.bus.GetFormRepresentationEvent;
 import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseEvent;
 import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseHandler;
-import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.shared.EventBus;
 

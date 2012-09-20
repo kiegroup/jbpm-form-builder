@@ -22,10 +22,10 @@ import java.net.URL;
 import org.apache.commons.io.FileUtils;
 import org.jbpm.formapi.server.form.FormEncodingServerFactory;
 import org.jbpm.formapi.server.trans.TranslatorException;
-import org.jbpm.model.formapi.shared.api.FormItemRepresentation;
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormRepresentationEncoder;
+import org.jbpm.formapi.shared.api.FormItemRepresentation;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
 
 public class Translator implements org.jbpm.formapi.server.trans.Translator {
 

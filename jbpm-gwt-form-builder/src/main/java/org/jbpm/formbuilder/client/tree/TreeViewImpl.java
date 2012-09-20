@@ -17,8 +17,8 @@ package org.jbpm.formbuilder.client.tree;
 
 import java.util.List;
 
-import org.jbpm.model.formapi.client.form.FBCompositeItem;
-import org.jbpm.model.formapi.client.form.FBFormItem;
+import org.jbpm.formapi.client.form.FBCompositeItem;
+import org.jbpm.formapi.client.form.FBFormItem;
 
 import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.Tree;

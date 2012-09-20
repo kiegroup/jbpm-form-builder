@@ -15,10 +15,10 @@
  */
 package org.jbpm.formbuilder.client.effect;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.effect.FBFormEffect;
-import org.jbpm.model.formapi.client.form.FBFormItem;
-import org.jbpm.model.formapi.common.panels.MovablePanel;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.effect.FBFormEffect;
+import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.formapi.common.panels.MovablePanel;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 
 import com.allen_sauer.gwt.dnd.client.DragEndEvent;

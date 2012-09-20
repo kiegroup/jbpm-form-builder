@@ -22,10 +22,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.shared.menu.FormEffectDescription;
-import org.jbpm.model.formapi.shared.menu.MenuItemDescription;
-import org.jbpm.model.formapi.shared.menu.MenuOptionDescription;
-import org.jbpm.model.formapi.shared.menu.ValidationDescription;
+import org.jbpm.formapi.shared.menu.FormEffectDescription;
+import org.jbpm.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.formapi.shared.menu.MenuOptionDescription;
+import org.jbpm.formapi.shared.menu.ValidationDescription;
 import org.jbpm.formbuilder.client.command.EditFormRedoCommand;
 import org.jbpm.formbuilder.client.command.EditFormUndoCommand;
 import org.jbpm.formbuilder.client.command.PreviewFormAsFtlCommand;

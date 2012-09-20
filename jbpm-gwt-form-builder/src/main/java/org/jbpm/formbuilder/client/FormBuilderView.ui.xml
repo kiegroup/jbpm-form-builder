@@ -6,7 +6,7 @@
         <td colspan="2"><g:SimplePanel styleName="optionsViewWrapper" height="25px" width="100%" ui:field="optionsView"/></td>
       </tr>
       <tr id="mainRowWrapper">
-        <td width="230px" class="toolViewWrapper" valign="top" height="430px">
+        <td width="230" class="toolViewWrapper" valign="top" height="600px">
             <!-- We are setting 43dragdrop-dropTarget gwt-TabLayoutPanelContent0px for safari/chrome, toolView is causing problems -->
             <g:TabLayoutPanel width="230px" height="100%"   barHeight="25" barUnit="PX" stylePrimaryName="toolView">
                 <g:tab selected="true">
@@ -43,10 +43,11 @@
           </table>
         </td>
       </tr>
-      
+      <tr id="notificationsRowWrapper" >
+        <td colspan="2" class="notificationsViewWrapper">
+          <g:Panel height="25px" width="100%" ui:field="notificationsView"/>
+        </td>
+      </tr>
     </table>
-    <div id="notificationsRowWrapper" class="notificationsViewWrapper" sytle="bottom: 0px; ">
-          <g:Panel height="25px"  width="100%" stylePrimaryName="notificationsViewWrapper" ui:field="notificationsView"/>
-    </div>
   </g:HTMLPanel>
 </ui:UiBinder>

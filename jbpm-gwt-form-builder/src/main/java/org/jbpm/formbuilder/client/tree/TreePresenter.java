@@ -15,13 +15,13 @@
  */
 package org.jbpm.formbuilder.client.tree;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.form.FBCompositeItem;
-import org.jbpm.model.formapi.client.form.FBFormItem;
-import org.jbpm.model.formbuilder.client.bus.ui.FormItemAddedEvent;
-import org.jbpm.model.formbuilder.client.bus.ui.FormItemAddedHandler;
-import org.jbpm.model.formbuilder.client.bus.ui.FormItemRemovedEvent;
-import org.jbpm.model.formbuilder.client.bus.ui.FormItemRemovedHandler;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.form.FBCompositeItem;
+import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.formbuilder.client.bus.ui.FormItemAddedEvent;
+import org.jbpm.formbuilder.client.bus.ui.FormItemAddedHandler;
+import org.jbpm.formbuilder.client.bus.ui.FormItemRemovedEvent;
+import org.jbpm.formbuilder.client.bus.ui.FormItemRemovedHandler;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.Widget;

@@ -85,29 +85,13 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>resteasy</web-resource-name>
-            <url-pattern>/rest/*</url-pattern>
+            <url-pattern>/*</url-pattern>
             <http-method>GET</http-method>
             <http-method>PUT</http-method>
             <http-method>POST</http-method>
             <http-method>DELETE</http-method>
         </web-resource-collection>
-       
-    </security-constraint>
-    <security-constraint>
         <web-resource-collection>
-            <web-resource-name>js</web-resource-name>
-            <url-pattern>/org.jbpm.formdisplay.FormDisplay/*</url-pattern>
-            <http-method>GET</http-method>
-            <http-method>PUT</http-method>
-            <http-method>POST</http-method>
-            <http-method>DELETE</http-method>
-        </web-resource-collection>
-       
-    </security-constraint>
-    
-    
-    <security-constraint>
-         <web-resource-collection>
             <web-resource-name>embed</web-resource-name>
             <url-pattern>/*</url-pattern>
             <http-method>GET</http-method>
@@ -121,6 +105,7 @@
             <role-name>functionalanalyst</role-name>
         </auth-constraint>
     </security-constraint>
+
     <security-role>
         <role-name>admin</role-name>
     </security-role>

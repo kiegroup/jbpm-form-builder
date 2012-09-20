@@ -27,7 +27,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.jbpm.formapi.server.form.FormEncodingServerFactory;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formbuilder.server.xml.ListTasksDTO;
 import org.jbpm.formapi.shared.task.TaskDefinitionService;
 import org.jbpm.formapi.shared.task.TaskRef;

@@ -20,10 +20,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.model.formapi.shared.form.FormEncodingException;
-import org.jbpm.model.formapi.shared.form.FormEncodingFactory;
-import org.jbpm.model.formapi.shared.form.FormRepresentationDecoder;
+import org.jbpm.formapi.shared.api.FormRepresentation;
+import org.jbpm.formapi.shared.form.FormEncodingException;
+import org.jbpm.formapi.shared.form.FormEncodingFactory;
+import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
 import org.jbpm.formapi.shared.task.TaskPropertyRef;
 import org.jbpm.formapi.shared.task.TaskRef;
 
@@ -31,14 +31,9 @@ import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.json.client.JSONValue;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.Node;
-import com.google.gwt.xml.client.NodeList;
-import com.google.gwt.xml.client.XMLParser;
 
 /**
- *
+ * 
  */
 public class JsonLoadInput {
 
@@ -48,7 +43,7 @@ public class JsonLoadInput {
     private String _package;
     private String contextPath;
     private Map<String, Object> formData = new HashMap<String, Object>();
-
+    
     private JsonLoadInput() {
     }
 
@@ -83,6 +78,7 @@ public class JsonLoadInput {
     public void setPackage(String _package) {
         this._package = _package;
     }
+    
 
     public Map<String, Object> getFormData() {
         if (formData == null) {
@@ -98,11 +94,11 @@ public class JsonLoadInput {
     public void setContextPath(String contextPath) {
         this.contextPath = contextPath;
     }
-
+    
     public String getContextPath() {
         return contextPath;
     }
-
+    
     public static JsonLoadInput parse(String innerHTML) throws FormEncodingException {
         JSONValue json = JSONParser.parseStrict(innerHTML);
         JsonLoadInput input = null;
@@ -132,7 +128,7 @@ public class JsonLoadInput {
         }
         return input;
     }
-
+    
     private static Map<String, Object> toFormData(JSONObject json) {
         Map<String, Object> retval = new HashMap<String, Object>();
         for (String key : json.keySet()) {
@@ -141,7 +137,7 @@ public class JsonLoadInput {
         }
         return retval;
     }
-
+    
     private static Object asActualValue(JSONValue value) {
         if (value.isArray() != null) {
             JSONArray arr = value.isArray();
@@ -164,29 +160,13 @@ public class JsonLoadInput {
         }
         return null;
     }
-
+    
     private static FormRepresentation toForm(String json) throws FormEncodingException {
-        Document xml = XMLParser.parse(json);
-        NodeList list = xml.getElementsByTagName("json");
-        String jsonText = null;
-        if (list != null) {
-            for (int index = 0; index < list.getLength(); index++) {
-                Node node = list.item(index);
-                jsonText = getText(node);
-            }
-        }
         FormRepresentationDecoder decoder = FormEncodingFactory.getDecoder();
-        FormRepresentation form = null;
-        if(jsonText != null){
-            form = decoder.decode(jsonText);
-        }else{
-            form = decoder.decode(json);
-        }
-            
-        
+        FormRepresentation form = decoder.decode(json);
         return form;
     }
-
+    
     private static TaskRef toTask(JSONObject json) {
         TaskRef retval = null;
         if (json != null) {
@@ -230,13 +210,5 @@ public class JsonLoadInput {
             }
         }
         return retval;
-    }
-    private static String getText(Node node) {
-        NodeList list = node.getChildNodes();
-        StringBuilder builder = new StringBuilder();
-        for (int index = 0; index < list.getLength(); index++) {
-            builder.append(list.item(index).getNodeValue());
-        }
-        return builder.toString();
     }
 }

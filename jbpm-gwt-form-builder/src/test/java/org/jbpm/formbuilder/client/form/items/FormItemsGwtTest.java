@@ -15,42 +15,15 @@
  */
 package org.jbpm.formbuilder.client.form.items;
 
-import org.jbpm.model.formbuilder.client.form.items.ImageRolodexFormItem;
-import org.jbpm.model.formbuilder.client.form.items.UploadWithProgressBarFormItem;
-import org.jbpm.model.formbuilder.client.form.items.TableLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.CalendarFormItem;
-import org.jbpm.model.formbuilder.client.form.items.CSSLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.ConditionalBlockFormItem;
-import org.jbpm.model.formbuilder.client.form.items.ClientScriptFormItem;
-import org.jbpm.model.formbuilder.client.form.items.CompleteButtonFormItem;
-import org.jbpm.model.formbuilder.client.form.items.ComboBoxFormItem;
-import org.jbpm.model.formbuilder.client.form.items.CheckBoxFormItem;
-import org.jbpm.model.formbuilder.client.form.items.RadioButtonFormItem;
-import org.jbpm.model.formbuilder.client.form.items.HeaderFormItem;
-import org.jbpm.model.formbuilder.client.form.items.TextAreaFormItem;
-import org.jbpm.model.formbuilder.client.form.items.TabbedLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.AbsoluteLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.LabelFormItem;
-import org.jbpm.model.formbuilder.client.form.items.RichTextEditorFormItem;
-import org.jbpm.model.formbuilder.client.form.items.HorizontalLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.HTMLFormItem;
-import org.jbpm.model.formbuilder.client.form.items.BorderLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.HiddenFormItem;
-import org.jbpm.model.formbuilder.client.form.items.PasswordFieldFormItem;
-import org.jbpm.model.formbuilder.client.form.items.ImageFormItem;
-import org.jbpm.model.formbuilder.client.form.items.TextFieldFormItem;
-import org.jbpm.model.formbuilder.client.form.items.FlowLayoutFormItem;
-import org.jbpm.model.formbuilder.client.form.items.LoopBlockFormItem;
-import org.jbpm.model.formbuilder.client.form.items.FileInputFormItem;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.form.FBFormItem;
-import org.jbpm.model.formapi.common.reflect.ReflectionHelper;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.formapi.common.reflect.ReflectionHelper;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.RestyFormBuilderModel;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.shared.SimpleEventBus;

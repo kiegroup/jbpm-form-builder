@@ -17,7 +17,7 @@ package org.jbpm.formbuilder.client.validation;
 
 import java.util.List;
 
-import org.jbpm.model.formapi.client.validation.FBValidationItem;
+import org.jbpm.formapi.client.validation.FBValidationItem;
 
 public interface OtherValidationsAware {
 

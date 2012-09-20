@@ -15,8 +15,8 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;

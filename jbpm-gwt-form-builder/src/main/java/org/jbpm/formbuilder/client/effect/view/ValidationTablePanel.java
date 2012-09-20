@@ -18,10 +18,10 @@ package org.jbpm.formbuilder.client.effect.view;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jbpm.model.formapi.client.validation.FBValidationItem;
+import org.jbpm.formapi.client.validation.FBValidationItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
-import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.dom.client.Style.Cursor;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -37,7 +37,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 public class ValidationTablePanel extends VerticalPanel implements HasSelectionHandlers<FBValidationItem> {
 

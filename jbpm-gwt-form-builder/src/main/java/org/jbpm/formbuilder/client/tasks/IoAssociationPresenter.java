@@ -15,12 +15,12 @@
  */
 package org.jbpm.formbuilder.client.tasks;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
-import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
-import org.jbpm.model.formapi.common.handler.RightClickEvent;
-import org.jbpm.model.formapi.common.handler.RightClickHandler;
-import org.jbpm.model.formapi.common.panels.CommandPopupPanel;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent;
+import org.jbpm.formapi.client.bus.ui.NotificationEvent.Level;
+import org.jbpm.formapi.common.handler.RightClickEvent;
+import org.jbpm.formapi.common.handler.RightClickHandler;
+import org.jbpm.formapi.common.panels.CommandPopupPanel;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.FormBuilderService;
 import org.jbpm.formbuilder.client.bus.ExistingTasksResponseEvent;
@@ -31,7 +31,7 @@ import org.jbpm.formbuilder.client.bus.ui.TaskNameFilterEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskNameFilterHandler;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedHandler;
-import org.jbpm.model.formbuilder.client.messages.I18NConstants;
+import org.jbpm.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formapi.shared.task.TaskRef;
 
 import com.google.gwt.event.shared.EventBus;

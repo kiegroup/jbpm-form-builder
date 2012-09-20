@@ -17,7 +17,7 @@ package org.jbpm.formbuilder.client.options;
 
 import java.util.List;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 import org.jbpm.formbuilder.client.bus.MenuOptionAddedEvent;
 import org.jbpm.formbuilder.client.bus.MenuOptionAddedHandler;
 import org.jbpm.formbuilder.client.bus.ui.EmbededIOReferenceEvent;

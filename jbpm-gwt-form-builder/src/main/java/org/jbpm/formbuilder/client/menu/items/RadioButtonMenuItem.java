@@ -17,17 +17,17 @@ package org.jbpm.formbuilder.client.menu.items;
 
 import java.util.List;
 
-import org.jbpm.model.formapi.client.effect.FBFormEffect;
-import org.jbpm.model.formapi.client.form.FBFormItem;
+import org.jbpm.formapi.client.effect.FBFormEffect;
+import org.jbpm.formapi.client.form.FBFormItem;
 import org.jbpm.formapi.client.menu.FBMenuItem;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.model.formbuilder.client.form.items.RadioButtonFormItem;
-import org.jbpm.model.formbuilder.client.resources.FormBuilderResources;
+import org.jbpm.formbuilder.client.form.items.RadioButtonFormItem;
+import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Label;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.model.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.CommonGlobals;
 
 @Reflectable
 public class RadioButtonMenuItem extends FBMenuItem {

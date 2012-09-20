@@ -19,13 +19,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.model.formapi.client.effect.FBFormEffect;
-import org.jbpm.model.formapi.client.form.FBFormItem;
-import org.jbpm.model.formapi.client.form.HasSourceReference;
+import org.jbpm.formapi.client.CommonGlobals;
+import org.jbpm.formapi.client.effect.FBFormEffect;
+import org.jbpm.formapi.client.form.FBFormItem;
+import org.jbpm.formapi.client.form.HasSourceReference;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
-import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
-import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
+import org.jbpm.formbuilder.client.bus.UndoableEvent;
+import org.jbpm.formbuilder.client.bus.UndoableHandler;
 import org.jbpm.formbuilder.client.effect.view.UploadFormEffectView;
 
 import com.google.gwt.event.shared.EventBus;
