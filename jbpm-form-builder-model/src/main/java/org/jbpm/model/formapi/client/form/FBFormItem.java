@@ -423,6 +423,9 @@ public abstract class FBFormItem extends FocusPanel {
             }
         }
         if (rep.getEventActions() != null) {
+//            for (String key : eventActions.keySet()) {
+//                eventActions.put(key, null);
+//            }
             for(String key : rep.getEventActions().keySet()){
                 this.eventActions.put(key, rep.getEventActions().get(key));
             }

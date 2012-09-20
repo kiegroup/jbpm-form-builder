@@ -185,23 +185,14 @@ public class EventHandlingEffectView extends PopupPanel {
                 String eventName = eventSelectionCombo.getValue(eventSelectionCombo.getSelectedIndex());
                 String helperClassName = helpersAvailable.get(helperName);
                 try {
+                    FBScriptHelper helper = (FBScriptHelper) ReflectionHelper.newInstance(helperClassName);
                     FBScript fbScript = eventActions.get(eventName);
                     if (fbScript == null) {
                         fbScript = new FBScript();
                         eventActions.put(eventName, fbScript);
                     }
                     List<FBScriptHelper> helpers = getHelpersForEvent(fbScript);
-                    FBScriptHelper helper = (FBScriptHelper) ReflectionHelper.newInstance(helperClassName);
-                    //Looking for empty containers, to not have two empty ones
-                    boolean atLeastOneEmpty = false;
-                    for(int i = 0; i < helpers.size(); i++){
-                        if(helpers.get(i).asScriptContent() == null){
-                            atLeastOneEmpty = true;
-                        }
-                    }
-                    if(!atLeastOneEmpty){
-                        helpers.add(helper);
-                    }
+                    helpers.add(helper);
                     ScriptHelperListPanel editors = new ScriptHelperListPanel();
                     for (FBScriptHelper helper2 : helpers) {
                         editors.addScriptHelper(helper2, newScriptOrderHandler(fbScript));
@@ -291,9 +282,7 @@ public class EventHandlingEffectView extends PopupPanel {
         List<FBScriptHelper> helpers = getHelpersForEvent(script);
         ScriptHelperListPanel editorPanel = new ScriptHelperListPanel();
         for (FBScriptHelper helper : helpers) { 
-            if(helper.asScriptContent() != null && !helper.asScriptContent().equals("") && !helper.asScriptContent().equals("null")){
-                editorPanel.addScriptHelper(helper, newScriptOrderHandler(script));
-            }
+            editorPanel.addScriptHelper(helper, newScriptOrderHandler(script));
         }
         mainPanel.remove(1);
         mainPanel.insert(editorPanel, 1);
@@ -304,11 +293,11 @@ public class EventHandlingEffectView extends PopupPanel {
         if (script != null) {
             helpers = script.getHelpers();
         }
-        if (helpers == null || (helpers.isEmpty() && script != null)) {
+        if (helpers == null) {
             helpers = new ArrayList<FBScriptHelper>();
             FBScriptHelper helper = new PlainTextScriptHelper();
-            helper.setScript(script);
             helpers.add(helper);
+            helper.setScript(script);
             script.setHelpers(helpers);
         }
         return helpers;
