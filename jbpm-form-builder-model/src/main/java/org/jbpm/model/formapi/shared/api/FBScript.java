@@ -143,12 +143,8 @@ public class FBScript implements Mappable {
                     @SuppressWarnings("unchecked")
                     Map<String, Object> helperMap = (Map<String, Object>) obj;
                     String helperClass = (String) helperMap.get("@className");
-//                    FBScriptHelper helper = (FBScriptHelper) ReflectionHelper
-//                            .newInstance(helperClass);
-                    Class<?> clazz = com.google.gwt.user.client.rpc.impl.ReflectionHelper
-                                    .loadClass(helperClass);
-                    FBScriptHelper helper = (FBScriptHelper) com.google.gwt.user.client.rpc.impl.ReflectionHelper
-                                                            .newInstance(clazz);
+                    FBScriptHelper helper = (FBScriptHelper) ReflectionHelper
+                            .newInstance(helperClass);
                     helper.setDataMap(helperMap);
                 } catch (Exception e) {
                     throw new FormEncodingException("Problem creating helper "

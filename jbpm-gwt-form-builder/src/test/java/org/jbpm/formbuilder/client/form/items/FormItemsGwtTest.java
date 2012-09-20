@@ -56,7 +56,6 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.junit.client.GWTTestCase;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.model.formbuilder.client.form.items.ButtonFormItem;
 
 public class FormItemsGwtTest extends GWTTestCase {
 
@@ -77,7 +76,6 @@ public class FormItemsGwtTest extends GWTTestCase {
         testBasicItem(ClientScriptFormItem.class);
         testBasicItem(ComboBoxFormItem.class);
         testBasicItem(CompleteButtonFormItem.class);
-        testBasicItem(ButtonFormItem.class);
         testBasicItem(ConditionalBlockFormItem.class);
         testBasicItem(CSSLayoutFormItem.class);
         testBasicItem(FileInputFormItem.class);

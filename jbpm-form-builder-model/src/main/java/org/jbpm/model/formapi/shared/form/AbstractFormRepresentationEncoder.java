@@ -208,14 +208,13 @@ public abstract class AbstractFormRepresentationEncoder implements FormRepresent
         StringBuilder builder = new StringBuilder();
         if (obj instanceof String) {
             StringBuilder string = new StringBuilder();
-            String inputString = obj.toString().replace("\n", "");
-            for (int index = 0; index < inputString.length(); index++) {
-                if (inputString.charAt(index) == '\"') {
+            for (int index = 0; index < obj.toString().length(); index++) {
+                if (obj.toString().charAt(index) == '\"') {
                     string.append('\\');
                 }
-                string.append(inputString.charAt(index));
+                string.append(obj.toString().charAt(index));
             }
-            builder.append("\"").append(inputString).append("\"");
+            builder.append("\"").append(string.toString()).append("\"");
         } else if (obj instanceof Date) {
             builder.append("\"").append(formatDate((Date) obj)).append("\"");
         } else {

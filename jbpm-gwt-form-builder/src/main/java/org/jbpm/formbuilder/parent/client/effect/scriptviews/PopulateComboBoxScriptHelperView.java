@@ -1,10 +1,11 @@
-package org.jbpm.model.formbuilder.client.effect.scriptviews;
+package org.jbpm.formbuilder.parent.client.effect.scriptviews;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.jbpm.model.formbuilder.client.effect.scripthandlers.HeaderViewPanel;
-import org.jbpm.model.formbuilder.client.effect.scripthandlers.PopulateComboBoxScriptHelper;
+import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.parent.client.effect.scripthandlers.HeaderViewPanel;
+import org.jbpm.formbuilder.parent.client.effect.scripthandlers.PopulateComboBoxScriptHelper;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;

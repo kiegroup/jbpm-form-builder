@@ -29,7 +29,7 @@
             <version>1.0.0</version>
       <!-- temporal fix. Should change soon enough -->
             <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/lib/gwtent-1.0.0.jar</systemPath>
+            <systemPath>${basedir}/src/main/resources/lib/gwtent.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.gc.gwt.wysiwyg</groupId>

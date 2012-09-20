@@ -118,7 +118,6 @@ public interface I18NConstants extends Messages {
     String MenuItemComboBox();
     String MenuItemHorizontalLayout();
     String MenuItemCompleteButton();
-    String MenuItemButton();
     String MenuItemConditionalBlock();
     String MenuItemCSSLayout();
     String MenuItemFileInput();
@@ -186,7 +185,6 @@ public interface I18NConstants extends Messages {
     
     String AddLocaleButton();
     String CompleteButton();
-    String Button();
     String ConfirmButton();
     String CancelButton();
     String CloseButton();

@@ -308,25 +308,6 @@
                 { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
             ]
         },
-        {   "className": "org.jbpm.formbuilder.client.menu.items.ButtonMenuItem",
-            "allowedEvents": [  "onclick"
-            ],
-            "effects": [
-                { "className": "org.jbpm.formbuilder.parent.client.effect.RemoveEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.CopyFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.CutFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.PasteFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.DoneEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.ResizeEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.EventHandlingFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.MoveItemFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.ValidationsEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.I18NFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.L10NFormEffect" },
-                { "className": "org.jbpm.formbuilder.parent.client.effect.IoBindingEffect" }
-            ]
-        },
         {   "className": "org.jbpm.formbuilder.client.menu.items.TextAreaMenuItem",
             "allowedEvents": [ "onblur", "onchange", "onclick", "ondblclick", "onfocus",
                 "onmousedown", "onmousemove", "onmouseout", "onmouseover", "onmouseup",
