@@ -28,9 +28,9 @@ import org.easymock.EasyMock;
 import org.jboss.resteasy.util.HttpHeaderNames;
 import org.jbpm.formbuilder.server.xml.ListTasksDTO;
 import org.jbpm.formbuilder.server.xml.TaskRefDTO;
-import org.jbpm.formapi.shared.task.TaskDefinitionService;
-import org.jbpm.formapi.shared.task.TaskRef;
-import org.jbpm.formapi.shared.task.TaskServiceException;
+import org.jbpm.formbuilder.shared.task.TaskDefinitionService;
+import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskServiceException;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class RESTIoServiceTest extends RESTAbstractTest {

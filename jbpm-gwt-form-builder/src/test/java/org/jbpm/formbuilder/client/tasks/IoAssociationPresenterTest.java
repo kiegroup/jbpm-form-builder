@@ -33,7 +33,7 @@ import org.jbpm.formbuilder.client.bus.ui.TaskNameFilterEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedEvent;
 import org.jbpm.formbuilder.client.bus.ui.TaskSelectedHandler;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

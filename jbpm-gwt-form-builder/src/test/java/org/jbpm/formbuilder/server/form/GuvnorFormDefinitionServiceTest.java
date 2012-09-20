@@ -45,7 +45,7 @@ import org.jbpm.formbuilder.server.mock.MockDeleteMethod;
 import org.jbpm.formbuilder.server.mock.MockGetMethod;
 import org.jbpm.formbuilder.server.mock.MockPostMethod;
 import org.jbpm.formbuilder.server.mock.MockPutMethod;
-import org.jbpm.formapi.shared.form.FormServiceException;
+import org.jbpm.formbuilder.shared.form.FormServiceException;
 
 public class GuvnorFormDefinitionServiceTest extends TestCase {
 

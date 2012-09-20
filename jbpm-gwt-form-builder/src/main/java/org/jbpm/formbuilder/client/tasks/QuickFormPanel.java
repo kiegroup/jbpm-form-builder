@@ -24,8 +24,8 @@ import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.FormBuilderService;
 import org.jbpm.formbuilder.client.bus.ui.UpdateFormViewEvent;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formapi.shared.task.TaskPropertyRef;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskPropertyRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

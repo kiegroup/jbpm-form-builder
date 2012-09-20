@@ -17,7 +17,7 @@ package org.jbpm.formbuilder.client.tasks;
 
 import java.util.List;
 
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 public interface IoAssociationView {
 

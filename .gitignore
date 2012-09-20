@@ -21,4 +21,3 @@ bin/
 /settings*.xml
 /lib-jdbc/
 /jbpm-form-builder-model/target/
-/jbpm-form-services/target/

@@ -24,8 +24,8 @@ import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formapi.shared.form.FormEncodingException;
 import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
-import org.jbpm.formapi.shared.task.TaskPropertyRef;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskPropertyRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;

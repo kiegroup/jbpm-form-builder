@@ -19,7 +19,7 @@ import java.util.List;
 
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;

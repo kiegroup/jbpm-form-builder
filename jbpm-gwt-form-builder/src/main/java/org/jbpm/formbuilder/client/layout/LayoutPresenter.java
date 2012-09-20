@@ -47,7 +47,7 @@ import org.jbpm.formbuilder.client.bus.ui.UpdateFormViewEvent;
 import org.jbpm.formbuilder.client.bus.ui.UpdateFormViewHandler;
 import org.jbpm.formbuilder.client.form.FBForm;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
-import org.jbpm.formapi.shared.task.TaskPropertyRef;
+import org.jbpm.formbuilder.shared.task.TaskPropertyRef;
 
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.google.gwt.event.shared.EventBus;

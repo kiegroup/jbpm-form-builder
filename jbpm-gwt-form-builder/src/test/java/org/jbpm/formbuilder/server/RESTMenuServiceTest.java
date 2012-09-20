@@ -41,8 +41,8 @@ import org.jbpm.formbuilder.server.xml.PropertiesDTO;
 import org.jbpm.formbuilder.server.xml.PropertiesItemDTO;
 import org.jbpm.formbuilder.server.xml.SaveMenuItemDTO;
 import org.jbpm.formbuilder.server.xml.ValidationDTO;
-import org.jbpm.formapi.shared.menu.MenuService;
-import org.jbpm.formapi.shared.menu.MenuServiceException;
+import org.jbpm.formbuilder.shared.menu.MenuService;
+import org.jbpm.formbuilder.shared.menu.MenuServiceException;
 
 public class RESTMenuServiceTest extends RESTAbstractTest {
 

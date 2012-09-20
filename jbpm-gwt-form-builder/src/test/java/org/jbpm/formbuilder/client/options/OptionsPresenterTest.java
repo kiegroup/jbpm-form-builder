@@ -24,7 +24,7 @@ import org.jbpm.formapi.client.CommonGlobals;
 import org.jbpm.formbuilder.client.bus.MenuOptionAddedEvent;
 import org.jbpm.formbuilder.client.bus.ui.EmbededIOReferenceEvent;
 import org.jbpm.formbuilder.client.command.BaseCommand;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

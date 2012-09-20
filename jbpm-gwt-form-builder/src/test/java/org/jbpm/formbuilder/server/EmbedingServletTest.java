@@ -32,11 +32,11 @@ import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formapi.shared.form.FormEncodingException;
 import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formapi.shared.form.FormRepresentationEncoder;
-import org.jbpm.formapi.shared.form.FormDefinitionService;
-import org.jbpm.formapi.shared.form.FormServiceException;
-import org.jbpm.formapi.shared.task.TaskDefinitionService;
-import org.jbpm.formapi.shared.task.TaskRef;
-import org.jbpm.formapi.shared.task.TaskServiceException;
+import org.jbpm.formbuilder.shared.form.FormDefinitionService;
+import org.jbpm.formbuilder.shared.form.FormServiceException;
+import org.jbpm.formbuilder.shared.task.TaskDefinitionService;
+import org.jbpm.formbuilder.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskServiceException;
 
 public class EmbedingServletTest extends TestCase {
 

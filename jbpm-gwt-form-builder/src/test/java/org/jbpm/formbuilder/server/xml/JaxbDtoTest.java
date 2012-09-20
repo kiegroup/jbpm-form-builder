@@ -37,7 +37,7 @@ import org.jbpm.formapi.shared.menu.MenuOptionDescription;
 import org.jbpm.formapi.shared.menu.ValidationDescription;
 import org.jbpm.formbuilder.server.GuvnorHelper;
 import org.jbpm.formbuilder.server.RESTAbstractTest;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 /**
  * test jaxb dto objects to see if they work properly

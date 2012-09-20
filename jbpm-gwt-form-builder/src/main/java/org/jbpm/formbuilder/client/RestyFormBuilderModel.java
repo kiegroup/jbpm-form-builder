@@ -51,8 +51,8 @@ import org.jbpm.formbuilder.client.bus.ui.UserIsLoggedOutEvent;
 import org.jbpm.formbuilder.client.menu.items.CustomMenuItem;
 import org.jbpm.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formbuilder.client.options.MainMenuOption;
-import org.jbpm.formapi.shared.form.MockFormDefinitionService;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.form.MockFormDefinitionService;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.http.client.Request;
@@ -561,16 +561,15 @@ public class RestyFormBuilderModel implements FormBuilderService {
 
     public void applySettings(String userId, Settings settings) {
         System.out.println("Calling the service to persist the new settings, but already changed in runtime");
-        final String url = URLBuilder.applySettingsURL(this.contextPath, userId); //we can get the user from the principal
+        final String url = URLBuilder.applySettingsURL(this.contextPath, userId);
         Resource resource = new Resource(url);
        
             String xml = helper.asXml(settings);
-            
-            resource.post().text(xml).send(new SimpleTextCallback(i18n.CouldntExportTemplate()) {// @TODO
+
+            resource.post().text(xml).send(new SimpleTextCallback(i18n.CouldntExportTemplate()) {
                 @Override
                 public void onSuccess(Method method, String response) {
                     //???
-                    bus.fireEvent(new NotificationEvent(Level.INFO, i18n.CouldntGetUserSettings())); //@TODO
                 }
             });
        

@@ -25,7 +25,7 @@ import org.jbpm.formapi.client.menu.FBMenuItem;
 import org.jbpm.formapi.shared.api.FormItemRepresentation;
 import org.jbpm.formapi.shared.api.FormRepresentation;
 import org.jbpm.formapi.shared.api.RepresentationFactory;
-import org.jbpm.formapi.shared.task.TaskRef;
+import org.jbpm.formbuilder.shared.task.TaskRef;
 
 /**
  * Client's interface with the REST API server.
