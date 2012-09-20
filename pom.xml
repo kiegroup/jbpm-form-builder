@@ -56,8 +56,7 @@
     <module>jbpm-form-services</module>
     <module>jbpm-form-builder-client-example</module>
     <module>form-builder-services-cdi</module>
-    <!-- Commented out at tsurdilo's advice. manstis 13/09/2012 -->
-    <!-- <module>jbpm-form-builder-ng</module> -->
+    <module>jbpm-form-builder-ng</module>
   </modules>
 
   <build>
