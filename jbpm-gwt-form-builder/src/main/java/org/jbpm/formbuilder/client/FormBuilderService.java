@@ -188,7 +188,7 @@ public interface FormBuilderService {
 
     void getFiles(List<String> types, FilesLoadedHandler handler);
     
-    void applySettings(Settings settings);
+    void applySettings(String userId, Settings settings);
     
-    void loadSettings();
+    void loadSettings(String userId);
 }

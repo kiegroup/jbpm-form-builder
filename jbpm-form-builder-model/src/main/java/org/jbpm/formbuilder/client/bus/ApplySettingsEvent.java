@@ -29,9 +29,10 @@ public class ApplySettingsEvent extends
     
     
     private final Settings settings;
-    
-    public ApplySettingsEvent( Settings settings) {
+    private final String userId;
+    public ApplySettingsEvent(String userId, Settings settings) {
         super();
+        this.userId = userId;
         this.settings = settings;
     }
 
@@ -39,6 +40,9 @@ public class ApplySettingsEvent extends
         return settings;
     }
 
+    public String getUserId() {
+        return userId;
+    }
 
     
     @Override

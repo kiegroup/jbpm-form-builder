@@ -89,14 +89,14 @@ public class FormBuilderController {
         bus.addHandler(LoadSettingsEvent.TYPE, new LoadSettingsHandler() {
             @Override
             public void onEvent(LoadSettingsEvent event) {
-                model.loadSettings();
+                model.loadSettings("salaboy");
             }
         });
         
         bus.addHandler(ApplySettingsEvent.TYPE, new ApplySettingsHandler() {
             @Override
             public void onEvent(ApplySettingsEvent event) {
-                model.applySettings(event.getSettings());
+                model.applySettings(event.getUserId(), event.getSettings());
             }
         });
         new HistoryPresenter();

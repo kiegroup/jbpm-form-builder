@@ -49,7 +49,7 @@ public class SettingsPopupPanel extends PopupPanel {
 
   
 
-    public SettingsPopupPanel( final Settings settings) {
+    public SettingsPopupPanel(final String userId, final Settings settings) {
         super(true);
         setStyleName("commandPopupPanel");
         VerticalPanel vPanel = new VerticalPanel();
@@ -58,7 +58,9 @@ public class SettingsPopupPanel extends PopupPanel {
         
         storage.addItem("guvnor");
         storage.addItem("fs");
+        
         SettingsEntry entry = settings.getEntry("storage");
+        
         
         if(entry == null || "guvnor".equals(entry.getValue())){
             storage.setSelectedIndex(0);
@@ -80,12 +82,13 @@ public class SettingsPopupPanel extends PopupPanel {
             @Override
             public void onClick(ClickEvent event) {
                 String storageValue = storage.getItemText(storage.getSelectedIndex());
+                System.out.println("Setting storage strategy to: "+storageValue);
                 if(settings.getEntry("storage") == null){
                     settings.addEntry(new SettingsEntry("storage", storageValue));
                 }else{
                     settings.getEntry("storage").setValue(storageValue);
                 }
-                bus.fireEvent(new ApplySettingsEvent( settings));
+                bus.fireEvent(new ApplySettingsEvent(userId, settings));
                 hide();
             }
         }));
@@ -93,6 +96,7 @@ public class SettingsPopupPanel extends PopupPanel {
 
             @Override
             public void onClick(ClickEvent event) {
+                System.out.println("Cancel was clicked!!!!!");
                 hide();
             }
         }));
