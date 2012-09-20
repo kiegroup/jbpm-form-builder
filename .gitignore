@@ -20,4 +20,3 @@ bin/
 # Test info
 /settings*.xml
 /lib-jdbc/
-/jbpm-form-builder-model/target/

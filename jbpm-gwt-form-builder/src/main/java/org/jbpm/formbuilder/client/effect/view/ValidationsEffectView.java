@@ -36,7 +36,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class ValidationsEffectView extends VerticalPanel {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
 
     private PopupPanel parentPopup = null;

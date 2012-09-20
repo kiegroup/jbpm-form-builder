@@ -47,11 +47,11 @@ import com.gwtent.reflection.client.Reflectable;
 public class DeleteItemFormEffect extends FBFormEffect {
 
     private String dropItemLabel;
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public DeleteItemFormEffect() {
-        super(CommonGlobals.getInstance().getI18n().DeleteItemFormEffectLabel(), true);
+        super(FormBuilderGlobals.getInstance().getI18n().DeleteItemFormEffectLabel(), true);
     }
 
     public void setDropItemLabel(String dropItemLabel) {
@@ -89,7 +89,7 @@ public class DeleteItemFormEffect extends FBFormEffect {
         panel.setSize("150px", "66px");
         VerticalPanel vPanel = new VerticalPanel();
         HorizontalPanel hPanel1 = new HorizontalPanel();
-        hPanel1.add(new Label(CommonGlobals.getInstance().getI18n().LabelToDelete()));
+        hPanel1.add(new Label(FormBuilderGlobals.getInstance().getI18n().LabelToDelete()));
         final TextBox labelBox = new TextBox();
         labelBox.addChangeHandler(new ChangeHandler() {
             @Override

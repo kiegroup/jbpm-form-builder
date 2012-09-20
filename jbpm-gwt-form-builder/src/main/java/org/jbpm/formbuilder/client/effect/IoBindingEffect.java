@@ -51,7 +51,7 @@ public class IoBindingEffect extends FBFormEffect {
     private ExternalDataRef extData = null;
     
     public IoBindingEffect() {
-        super(CommonGlobals.getInstance().getI18n().IoBindingEffectLabel(), true);
+        super(FormBuilderGlobals.getInstance().getI18n().IoBindingEffectLabel(), true);
         bus.addHandler(TaskSelectedEvent.TYPE, new TaskSelectedHandler() {
             @Override
             public void onSelectedTask(TaskSelectedEvent event) {

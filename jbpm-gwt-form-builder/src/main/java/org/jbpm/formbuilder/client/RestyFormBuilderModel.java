@@ -70,7 +70,7 @@ public class RestyFormBuilderModel implements FormBuilderService {
 
     private static final String DEFAULT_PACKAGE = "defaultPackage";
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final XmlParseHelper helper = new XmlParseHelper();
     private final MockFormDefinitionService mockFormService = new MockFormDefinitionService();
     private final String contextPath;

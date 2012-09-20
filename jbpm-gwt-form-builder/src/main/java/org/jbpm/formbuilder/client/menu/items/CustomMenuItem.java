@@ -91,7 +91,7 @@ public class CustomMenuItem extends FBMenuItem {
               super.onBrowserEvent(event);
           } else if (DOM.eventGetButton(event) == Event.BUTTON_RIGHT) {
               final CommandPopupPanel removePanel = new CommandPopupPanel(true);
-              MenuItem removeItem = new MenuItem(CommonGlobals.getInstance().getI18n().RemoveMenuItem(), new Command() {
+              MenuItem removeItem = new MenuItem(FormBuilderGlobals.getInstance().getI18n().RemoveMenuItem(), new Command() {
                   @Override
                   public void execute() {
                       Map<String, Object> dataSnapshot = new HashMap<String, Object>();

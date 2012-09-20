@@ -29,11 +29,10 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class L10NEffectView extends PopupPanel {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final L10NFormEffect effect;
     private final ListBox formatBox = new ListBox();
     

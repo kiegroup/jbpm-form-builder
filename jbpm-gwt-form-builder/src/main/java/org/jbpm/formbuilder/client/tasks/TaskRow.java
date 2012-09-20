@@ -37,11 +37,10 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class TaskRow extends FocusPanel {
     
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final List<HandlerRegistration> rclickRegs = new ArrayList<HandlerRegistration>();
 
     private final TaskRef ioRef;

@@ -28,12 +28,11 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class ValidationListPanel extends HorizontalPanel {
 
     private static final String NULL_VALIDATION = "...";
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final Button addValidationButton = new Button(i18n.AddValidationButton());
     private final ListBox validationsAvailableList = new ListBox();
     

@@ -28,7 +28,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class FilesDataPanel extends ScrollPanel {
 
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final FormBuilderService server = FormBuilderGlobals.getInstance().getService();
     private boolean isEmpty = true;
     

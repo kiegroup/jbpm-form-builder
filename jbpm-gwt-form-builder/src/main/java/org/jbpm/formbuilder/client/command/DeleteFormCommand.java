@@ -52,7 +52,7 @@ public class DeleteFormCommand implements BaseCommand {
 
     private static final String DELETE_TYPE = DeleteFormCommand.class.getName();
     
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     private final FormBuilderService service = FormBuilderGlobals.getInstance().getService();
     

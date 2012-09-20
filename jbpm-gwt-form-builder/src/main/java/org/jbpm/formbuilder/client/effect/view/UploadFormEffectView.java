@@ -36,11 +36,10 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class UploadFormEffectView extends PopupPanel {
     
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final FormBuilderService server = FormBuilderGlobals.getInstance().getService();
     
     private final UploadFormEffect effect;
@@ -124,7 +123,7 @@ public class UploadFormEffectView extends PopupPanel {
     private final FormPanel form = new FormPanel();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     private final FormBuilderService server = FormBuilderGlobals.getInstance().getService();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     
     public UploadFormEffectView(UploadFormEffect formEffect) {
         this.effect = formEffect;

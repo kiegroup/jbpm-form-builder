@@ -40,7 +40,7 @@ public abstract class FBBaseEntryPoint implements EntryPoint {
         CommonGlobals.getInstance().registerEventBus(new SimpleEventBus());
         //register i18n module
         I18NConstants constants = GWT.create(I18NConstants.class);
-        CommonGlobals.getInstance().registerI18n(constants);
+        FormBuilderGlobals.getInstance().registerI18n(constants);
         //start model
         RestyFormBuilderModel server = new RestyFormBuilderModel("rest");
         FormBuilderGlobals.getInstance().registerService(server);

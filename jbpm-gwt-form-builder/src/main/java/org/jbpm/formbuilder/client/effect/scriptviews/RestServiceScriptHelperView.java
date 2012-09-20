@@ -14,7 +14,6 @@ import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextBox;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class RestServiceScriptHelperView extends FlexTable {
 
@@ -27,7 +26,7 @@ public class RestServiceScriptHelperView extends FlexTable {
     
     private final HeaderViewPanel headerViewPanel = new HeaderViewPanel();
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
 
     public RestServiceScriptHelperView(RestServiceScriptHelper helper) {
         populateMethodList();

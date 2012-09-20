@@ -42,7 +42,7 @@ public class ResizeEffect extends FBFormEffect {
     private int widgetHeight;
     
     public ResizeEffect() {
-        super(CommonGlobals.getInstance().getI18n().ResizeEffectLabel(), false);
+        super(FormBuilderGlobals.getInstance().getI18n().ResizeEffectLabel(), false);
     }
     
     @Override

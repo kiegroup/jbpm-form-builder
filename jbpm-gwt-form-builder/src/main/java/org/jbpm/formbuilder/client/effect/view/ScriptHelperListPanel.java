@@ -26,11 +26,10 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class ScriptHelperListPanel extends VerticalPanel {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     
     public interface ScriptOrderHandler {
         void onRemove(int index);

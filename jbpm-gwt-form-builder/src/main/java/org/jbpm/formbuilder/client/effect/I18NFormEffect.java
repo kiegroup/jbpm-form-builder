@@ -38,7 +38,7 @@ public class I18NFormEffect extends FBFormEffect {
     private Map<String, String> savedMap = null;
     
     public I18NFormEffect() {
-        super(CommonGlobals.getInstance().getI18n().InternationalizeEffectLabel(), true);
+        super(FormBuilderGlobals.getInstance().getI18n().InternationalizeEffectLabel(), true);
     }
     
     @Override

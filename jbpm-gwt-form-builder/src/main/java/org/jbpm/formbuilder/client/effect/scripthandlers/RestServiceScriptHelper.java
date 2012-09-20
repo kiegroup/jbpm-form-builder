@@ -25,7 +25,6 @@ import org.jbpm.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * 
@@ -33,7 +32,7 @@ import org.jbpm.formapi.client.CommonGlobals;
 @Reflectable
 public class RestServiceScriptHelper extends AbstractScriptHelper {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     
     private RestServiceScriptHelperView view;
 

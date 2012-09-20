@@ -20,7 +20,6 @@ import org.jbpm.formapi.client.effect.FBFormEffect;
 import org.jbpm.formbuilder.client.FormBuilderGlobals;
 
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * Simple {@link FBFormEffect} implementation, simply deselects 
@@ -30,7 +29,7 @@ import org.jbpm.formapi.client.CommonGlobals;
 public class DoneEffect extends FBFormEffect {
 
     public DoneEffect() {
-        super(CommonGlobals.getInstance().getI18n().DoneEffectLabel(), false);
+        super(FormBuilderGlobals.getInstance().getI18n().DoneEffectLabel(), false);
     }
     
     @Override

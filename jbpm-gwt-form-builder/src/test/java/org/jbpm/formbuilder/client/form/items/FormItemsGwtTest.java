@@ -38,7 +38,7 @@ public class FormItemsGwtTest extends GWTTestCase {
     }
 
     public void testItems() throws Exception {
-        CommonGlobals.getInstance().registerI18n((I18NConstants) GWT.create(I18NConstants.class));
+        FormBuilderGlobals.getInstance().registerI18n((I18NConstants) GWT.create(I18NConstants.class));
         CommonGlobals.getInstance().registerEventBus(new SimpleEventBus());
         FormBuilderGlobals.getInstance().registerService(new RestyFormBuilderModel("rest"));
         

@@ -13,7 +13,7 @@ import com.google.gwt.event.shared.EventBus;
 
 public class RoleUtils {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     private final List<String> roles = new ArrayList<String>();
     

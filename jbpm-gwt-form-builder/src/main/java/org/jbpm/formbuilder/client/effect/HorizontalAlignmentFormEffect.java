@@ -49,11 +49,11 @@ import com.gwtent.reflection.client.Reflectable;
 public class HorizontalAlignmentFormEffect extends FBFormEffect {
 
     private ListBox alignmentBox = new ListBox();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public HorizontalAlignmentFormEffect() {
-        super(CommonGlobals.getInstance().getI18n().HorizontalAlignment(), true);
+        super(FormBuilderGlobals.getInstance().getI18n().HorizontalAlignment(), true);
         alignmentBox.addItem(i18n.AlignLeft(), i18n.AlignLeft());
         alignmentBox.addItem(i18n.AlignRight(), i18n.AlignRight());
         alignmentBox.addItem(i18n.AlignCenter(), i18n.AlignCenter());

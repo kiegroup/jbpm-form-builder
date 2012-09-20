@@ -24,13 +24,13 @@ import org.jbpm.formapi.client.form.FBFormItem;
 import org.jbpm.formapi.client.menu.FBMenuItem;
 import org.jbpm.formapi.shared.api.FormItemRepresentation;
 import org.jbpm.formapi.shared.menu.MenuItemDescription;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.resources.FormBuilderResources;
 
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.formapi.client.CommonGlobals;
 
 /**
  * This class is used to represent an error when transforming {@link MenuItemDescription}s
@@ -58,7 +58,7 @@ public class ErrorMenuItem extends FBMenuItem {
 
     @Override
     public Label getDescription() {
-        return new Label(CommonGlobals.getInstance().getI18n().Error(errMsg));
+        return new Label(FormBuilderGlobals.getInstance().getI18n().Error(errMsg));
     }
 
     @Override

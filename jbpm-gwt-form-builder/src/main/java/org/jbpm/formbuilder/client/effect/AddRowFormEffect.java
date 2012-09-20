@@ -35,7 +35,7 @@ public class AddRowFormEffect extends FBFormEffect {
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public AddRowFormEffect() {
-        super(CommonGlobals.getInstance().getI18n().AddRowEffectLabel(), false);
+        super(FormBuilderGlobals.getInstance().getI18n().AddRowEffectLabel(), false);
     }
     
     @Override

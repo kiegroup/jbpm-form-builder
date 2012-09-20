@@ -46,7 +46,7 @@ public class IoAssociationPresenter implements IoAssociationView.Presenter {
     private final IoAssociationView view;
     
     private final FormBuilderService model = FormBuilderGlobals.getInstance().getService();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public IoAssociationPresenter(IoAssociationView tasksView) {

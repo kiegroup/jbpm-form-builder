@@ -56,7 +56,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 public class FormBuilderController {
 
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final FormBuilderService model = FormBuilderGlobals.getInstance().getService();
     private final FormBuilderView view;
     

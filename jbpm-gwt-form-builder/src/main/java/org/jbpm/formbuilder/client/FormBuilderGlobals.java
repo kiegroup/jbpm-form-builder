@@ -28,7 +28,7 @@ public class FormBuilderGlobals {
     
     private static final FormBuilderGlobals INSTANCE = new FormBuilderGlobals();
     
-    
+    private I18NConstants i18n;
     private FormBuilderService service;
     private FormBuilderResources resources = FormBuilderResources.INSTANCE;
     
@@ -37,6 +37,14 @@ public class FormBuilderGlobals {
     
     public static FormBuilderGlobals getInstance() {
         return INSTANCE;
+    }
+
+    public I18NConstants getI18n() {
+        return i18n;
+    }
+
+    public void registerI18n(I18NConstants i18n) {
+        this.i18n = i18n;
     }
 
     public void registerService(FormBuilderService service) {

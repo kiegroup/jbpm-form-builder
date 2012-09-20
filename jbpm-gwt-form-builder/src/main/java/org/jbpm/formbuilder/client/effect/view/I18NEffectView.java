@@ -36,11 +36,10 @@ import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import org.jbpm.formapi.client.CommonGlobals;
 
 public class I18NEffectView extends PopupPanel {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final Grid grid = new Grid(2, 3);
     private final TextBox defaultText;
     private final I18NFormEffect effect;

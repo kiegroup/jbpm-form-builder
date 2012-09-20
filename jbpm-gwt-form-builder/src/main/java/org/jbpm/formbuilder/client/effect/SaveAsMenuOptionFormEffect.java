@@ -50,7 +50,7 @@ public class SaveAsMenuOptionFormEffect extends FBFormEffect {
 
     private String newMenuOptionName;
     private String groupName;
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     private final EventBus bus = CommonGlobals.getInstance().getEventBus();
     
     public SaveAsMenuOptionFormEffect() {

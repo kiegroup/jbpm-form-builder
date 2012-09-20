@@ -33,7 +33,7 @@ public class MoveItemFormEffect extends FBFormEffect {
     private final PickupDragController dragController = CommonGlobals.getInstance().getDragController();
     
     public MoveItemFormEffect() {
-        super(CommonGlobals.getInstance().getI18n().MoveItemEffectLabel(), false);
+        super(FormBuilderGlobals.getInstance().getI18n().MoveItemEffectLabel(), false);
     }
 
     @Override

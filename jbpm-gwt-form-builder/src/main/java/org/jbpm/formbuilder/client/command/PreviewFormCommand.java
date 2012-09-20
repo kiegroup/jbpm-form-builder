@@ -46,7 +46,7 @@ import com.google.gwt.user.client.ui.RootPanel;
  */
 public abstract class PreviewFormCommand implements BaseCommand {
 
-    private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
+    private final I18NConstants i18n = FormBuilderGlobals.getInstance().getI18n();
     protected final EventBus bus = CommonGlobals.getInstance().getEventBus();
     private final FormBuilderService server = FormBuilderGlobals.getInstance().getService();
     private final String saveType;
