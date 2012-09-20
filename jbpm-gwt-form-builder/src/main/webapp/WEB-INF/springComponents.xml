@@ -85,11 +85,11 @@
     </bean>
     
     <!-- Settings Service Configuraiton -->
-    <!-- Tomcat / Jetty
+    
     <bean id="SettingsService" class="org.jbpm.formbuilder.server.settings.DBSettingsService">
-    </bean> -->
-    <!-- JTA JBoss DBSettings Service-->
-    <bean id="SettingsService" class="org.jbpm.formbuilder.server.settings.JTADBSettingsService">
     </bean>
+    <!-- JTA JBoss DBSettings Service
+    <bean id="SettingsService" class="org.jbpm.formbuilder.server.settings.JTADBSettingsService">
+    </bean>-->
     
 </beans>
