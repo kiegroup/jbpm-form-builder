@@ -59,10 +59,10 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         allowedEvents.add("onfocus");
         List<FormEffectDescription> effects = new ArrayList<FormEffectDescription>();
         FormEffectDescription effect1 = new FormEffectDescription();
-        effect1.setClassName("org.jbpm.formbuilder.parent.client.effect.ResizeEffect");
+        effect1.setClassName("org.jbpm.formbuilder.client.effect.ResizeEffect");
         effects.add(effect1);
         FormEffectDescription effect2 = new FormEffectDescription();
-        effect2.setClassName("org.jbpm.formbuilder.parent.client.effect.RemoveEffect");
+        effect2.setClassName("org.jbpm.formbuilder.client.effect.RemoveEffect");
         effects.add(effect2);
         menuItem1.setAllowedEvents(allowedEvents);
         menuItem1.setClassName("org.jbpm.formbuilder.client.menu.items.ClientScriptMenuItem");

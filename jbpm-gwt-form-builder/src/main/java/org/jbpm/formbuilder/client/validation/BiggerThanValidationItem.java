@@ -21,7 +21,7 @@ import org.jbpm.model.formapi.client.FormBuilderException;
 import org.jbpm.model.formapi.client.validation.FBValidationItem;
 import org.jbpm.model.formapi.shared.api.FBValidation;
 import org.jbpm.formapi.shared.api.validation.BiggerThanValidation;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.user.client.ui.HasValue;

@@ -15,7 +15,6 @@
  */
 package org.jbpm.formbuilder.client.command;
 
-import org.jbpm.formbuilder.parent.client.command.BaseCommand;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,11 +23,11 @@ import org.jbpm.model.formapi.client.FormBuilderException;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
 import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.parent.client.FormBuilderService;
-import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationEvent;
-import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationResponseEvent;
-import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationResponseHandler;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.FormBuilderService;
+import org.jbpm.formbuilder.client.bus.GetFormRepresentationEvent;
+import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseEvent;
+import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseHandler;
 import org.jbpm.model.formbuilder.client.bus.UndoableEvent;
 import org.jbpm.model.formbuilder.client.bus.UndoableHandler;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;

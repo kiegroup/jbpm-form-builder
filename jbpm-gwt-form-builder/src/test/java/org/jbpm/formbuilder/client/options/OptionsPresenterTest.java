@@ -15,18 +15,15 @@
  */
 package org.jbpm.formbuilder.client.options;
 
-import org.jbpm.formbuilder.parent.client.options.OptionsPresenter;
-import org.jbpm.formbuilder.parent.client.options.OptionsView;
-import org.jbpm.formbuilder.parent.client.options.MainMenuOption;
 import java.util.ArrayList;
 
 import junit.framework.TestCase;
 
 import org.easymock.EasyMock;
 import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.formbuilder.parent.client.bus.MenuOptionAddedEvent;
-import org.jbpm.formbuilder.parent.client.bus.ui.EmbededIOReferenceEvent;
-import org.jbpm.formbuilder.parent.client.command.BaseCommand;
+import org.jbpm.formbuilder.client.bus.MenuOptionAddedEvent;
+import org.jbpm.formbuilder.client.bus.ui.EmbededIOReferenceEvent;
+import org.jbpm.formbuilder.client.command.BaseCommand;
 import org.jbpm.formapi.shared.task.TaskRef;
 import org.junit.After;
 import org.junit.Before;

@@ -1,8 +1,7 @@
 package org.jbpm.formbuilder.client.command;
 
-import org.jbpm.formbuilder.parent.client.command.BaseCommand;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.parent.client.FormBuilderService;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.FormBuilderService;
 
 import com.google.gwt.user.client.ui.MenuItem;
 import com.gwtent.reflection.client.Reflectable;

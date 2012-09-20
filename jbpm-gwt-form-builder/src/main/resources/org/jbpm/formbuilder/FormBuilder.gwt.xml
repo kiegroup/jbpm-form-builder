@@ -17,10 +17,19 @@
 <module>
 
   <!-- Inherit the core Web Toolkit stuff. -->
+
   <inherits name="org.jbpm.formapi.Commons" />
   <inherits name="org.jbpm.model.formbuilder.ModelFormBuilder" />
-  <inherits name="org.jbpm.model.formapi.ModelApi" />  
-  <inherits name="org.jbpm.formbuilder.parent.AbstractFormBuilder" />
+  <inherits name="org.jbpm.model.formapi.ModelApi" />
+  <inherits name="com.google.gwt.visualization.Visualization"/>
+  <inherits name="org.fusesource.restygwt.RestyGWT" />
+  <inherits name="org.gwt.beansbinding.BeansBinding" />
+  <inherits name="org.gwt.mosaic.core.Core" />
+  <inherits name="org.gwt.mosaic.ui.UI" />
+  <inherits name="com.google.gwt.junit.JUnit" />
+  <inherits name="com.gwtent.GwtEnt" />
+  <inherits name="gwtupload.GWTUpload" />
+  <inherits name="org.timepedia.exporter.Exporter" />
 
   <set-property name="export" value="yes"/>
   <extend-property name="locale" values="es_ES" />

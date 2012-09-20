@@ -15,7 +15,6 @@
  */
 package org.jbpm.formbuilder.client.command;
 
-import org.jbpm.formbuilder.parent.client.command.BaseCommand;
 import java.util.Map;
 
 import org.jbpm.model.formapi.client.AbstractFormItemCommand;

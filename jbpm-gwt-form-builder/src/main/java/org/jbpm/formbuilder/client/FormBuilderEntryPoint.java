@@ -15,10 +15,7 @@
  */
 package org.jbpm.formbuilder.client;
 
-import org.jbpm.formbuilder.parent.client.FormBuilderController;
-import org.jbpm.formbuilder.parent.client.FormBuilderView;
 import com.google.gwt.user.client.ui.RootPanel;
-import org.jbpm.formbuilder.parent.client.FBBaseEntryPoint;
 
 /**
  * Main entry point of the form builder application

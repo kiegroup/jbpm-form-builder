@@ -17,17 +17,17 @@ package org.jbpm.formbuilder.client.menu;
 
 import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.formapi.client.menu.FBMenuItem;
-import org.jbpm.formbuilder.parent.client.RoleUtils;
-import org.jbpm.formbuilder.parent.client.bus.MenuItemAddedEvent;
-import org.jbpm.formbuilder.parent.client.bus.MenuItemAddedHandler;
-import org.jbpm.formbuilder.parent.client.bus.MenuItemFromServerEvent;
-import org.jbpm.formbuilder.parent.client.bus.MenuItemFromServerHandler;
-import org.jbpm.formbuilder.parent.client.bus.MenuItemRemoveEvent;
-import org.jbpm.formbuilder.parent.client.bus.MenuItemRemoveHandler;
+import org.jbpm.formbuilder.client.RoleUtils;
+import org.jbpm.formbuilder.client.bus.MenuItemAddedEvent;
+import org.jbpm.formbuilder.client.bus.MenuItemAddedHandler;
+import org.jbpm.formbuilder.client.bus.MenuItemFromServerEvent;
+import org.jbpm.formbuilder.client.bus.MenuItemFromServerHandler;
+import org.jbpm.formbuilder.client.bus.MenuItemRemoveEvent;
+import org.jbpm.formbuilder.client.bus.MenuItemRemoveHandler;
+import org.jbpm.formbuilder.client.menu.items.CustomMenuItem;
 
 import com.allen_sauer.gwt.dnd.client.PickupDragController;
 import com.google.gwt.event.shared.EventBus;
-import org.jbpm.formbuilder.parent.client.menu.items.CustomMenuItem;
 
 /**
  * Menu presenter. Handles the adding and

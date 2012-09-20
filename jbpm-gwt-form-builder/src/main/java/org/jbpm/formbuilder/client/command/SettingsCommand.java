@@ -15,17 +15,16 @@
  */
 package org.jbpm.formbuilder.client.command;
 
-import org.jbpm.formbuilder.parent.client.command.BaseCommand;
 import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.model.formapi.client.FormBuilderException;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent;
 import org.jbpm.model.formapi.client.bus.ui.NotificationEvent.Level;
 import org.jbpm.model.formapi.shared.api.FormRepresentation;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.parent.client.FormBuilderService;
-import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationEvent;
-import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationResponseEvent;
-import org.jbpm.formbuilder.parent.client.bus.GetFormRepresentationResponseHandler;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.FormBuilderService;
+import org.jbpm.formbuilder.client.bus.GetFormRepresentationEvent;
+import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseEvent;
+import org.jbpm.formbuilder.client.bus.GetFormRepresentationResponseHandler;
 import org.jbpm.model.formbuilder.client.menu.FormDataPopupPanel;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
@@ -36,9 +35,9 @@ import com.google.gwt.user.client.ui.MenuItem;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.gwtent.reflection.client.Reflectable;
-import org.jbpm.formbuilder.parent.client.bus.LoadSettingsEvent;
-import org.jbpm.formbuilder.parent.client.bus.LoadSettingsResponseEvent;
-import org.jbpm.formbuilder.parent.client.bus.LoadSettingsResponseHandler;
+import org.jbpm.formbuilder.client.bus.LoadSettingsEvent;
+import org.jbpm.formbuilder.client.bus.LoadSettingsResponseEvent;
+import org.jbpm.formbuilder.client.bus.LoadSettingsResponseHandler;
 import org.jbpm.model.formapi.client.Settings;
 import org.jbpm.model.formbuilder.client.menu.SettingsPopupPanel;
 

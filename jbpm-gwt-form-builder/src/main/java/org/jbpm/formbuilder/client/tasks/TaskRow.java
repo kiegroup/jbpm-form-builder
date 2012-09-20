@@ -21,7 +21,7 @@ import java.util.Map;
 
 import org.jbpm.model.formapi.common.handler.EventHelper;
 import org.jbpm.model.formapi.common.handler.RightClickHandler;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 import org.jbpm.formapi.shared.task.TaskPropertyRef;
 import org.jbpm.formapi.shared.task.TaskRef;

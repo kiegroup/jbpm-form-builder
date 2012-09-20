@@ -20,7 +20,7 @@ import java.util.Map;
 
 import org.jbpm.model.formapi.client.CommonGlobals;
 import org.jbpm.model.formapi.client.form.FBFormItem;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
 import org.jbpm.formbuilder.client.command.DisposeDropController;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 

@@ -16,8 +16,8 @@
 package org.jbpm.formbuilder.client.tasks;
 
 import org.jbpm.model.formapi.client.CommonGlobals;
-import org.jbpm.formbuilder.parent.client.FormBuilderGlobals;
-import org.jbpm.formbuilder.parent.client.bus.ui.TaskNameFilterEvent;
+import org.jbpm.formbuilder.client.FormBuilderGlobals;
+import org.jbpm.formbuilder.client.bus.ui.TaskNameFilterEvent;
 import org.jbpm.model.formbuilder.client.messages.I18NConstants;
 
 import com.google.gwt.event.dom.client.ClickEvent;

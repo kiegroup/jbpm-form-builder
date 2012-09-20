@@ -2,58 +2,58 @@
 <menuGroups>
   <menuGroup name="Layout Components">
     <menuItem className="org.jbpm.formbuilder.client.menu.items.TableLayoutMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>null</itemJson>
     </menuItem>
   </menuGroup>
   <menuGroup name="Control Components">
     <menuItem className="org.jbpm.formbuilder.client.menu.items.TextFieldMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>null</itemJson>
     </menuItem>
     <menuItem className="org.jbpm.formbuilder.client.menu.items.PasswordFieldMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>null</itemJson>
     </menuItem>
     <menuItem className="org.jbpm.formbuilder.client.menu.items.CompleteButtonMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>null</itemJson>
     </menuItem>
   </menuGroup>
   <menuGroup name="Visual Components">
     <menuItem className="org.jbpm.formbuilder.client.menu.items.LabelMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>null</itemJson>
     </menuItem>
     <menuItem className="org.jbpm.formbuilder.client.menu.items.ImageMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>null</itemJson>
     </menuItem>
   </menuGroup>
   <menuGroup name="My Components">
     <menuItem className="org.jbpm.formbuilder.client.menu.items.CustomMenuItem">
-      <effect className="org.jbpm.formbuilder.parent.client.effect.RemoveEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.DoneEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.ResizeEffect"/>
-      <effect className="org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.RemoveEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.DoneEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.ResizeEffect"/>
+      <effect className="org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"/>
       <itemJson>{
           "name": "myForm",
           "action": "complete",
@@ -75,10 +75,10 @@
                   "cssId": null,
                   "cssName": null,
                   "effectClasses": [
-                      "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                      "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                      "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                      "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                      "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                      "org.jbpm.formbuilder.client.effect.DoneEffect",
+                      "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                      "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                   ],
                   "itemValidations": []
               },
@@ -94,10 +94,10 @@
                   "cellPadding": 0,
                   "height": "200px",
                   "effectClasses": [
-                      "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                      "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                      "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                      "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                      "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                      "org.jbpm.formbuilder.client.effect.DoneEffect",
+                      "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                      "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                   ],
                   "borderWidth": 1,
                   "cellSpacing": 0,
@@ -113,10 +113,10 @@
                               "output": null,
                               "cssName": null,
                               "effectClasses": [
-                                  "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                                  "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                                  "org.jbpm.formbuilder.client.effect.DoneEffect",
+                                  "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                                  "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                               ],
                               "itemValidations": [],
                               "id": null
@@ -131,10 +131,10 @@
                               "height": "21px",
                               "output": null,
                               "effectClasses": [
-                                  "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                                  "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                                  "org.jbpm.formbuilder.client.effect.DoneEffect",
+                                  "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                                  "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                               ],
                               "itemValidations": [],
                               "name": "usr",
@@ -152,10 +152,10 @@
                               "output": null,
                               "cssName": null,
                               "effectClasses": [
-                                  "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                                  "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                                  "org.jbpm.formbuilder.client.effect.DoneEffect",
+                                  "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                                  "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                               ],
                               "itemValidations": [],
                               "id": null
@@ -170,10 +170,10 @@
                               "height": "21px",
                               "output": null,
                               "effectClasses": [
-                                  "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                                  "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                                  "org.jbpm.formbuilder.client.effect.DoneEffect",
+                                  "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                                  "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                               ],
                               "itemValidations": [],
                               "name": "pwd",
@@ -200,10 +200,10 @@
                               "height": "25px",
                               "output": null,
                               "effectClasses": [
-                                  "org.jbpm.formbuilder.parent.client.effect.RemoveEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.DoneEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.ResizeEffect",
-                                  "org.jbpm.formbuilder.parent.client.effect.SaveAsMenuOptionFormEffect"
+                                  "org.jbpm.formbuilder.client.effect.RemoveEffect",
+                                  "org.jbpm.formbuilder.client.effect.DoneEffect",
+                                  "org.jbpm.formbuilder.client.effect.ResizeEffect",
+                                  "org.jbpm.formbuilder.client.effect.SaveAsMenuOptionFormEffect"
                               ],
                               "itemValidations": [],
                               "name": null,
