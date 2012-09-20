@@ -14,7 +14,7 @@
   <groupId>org.jbpm</groupId>
   <artifactId>jbpm-form-builder-parent</artifactId>
   <packaging>pom</packaging>
-  <version>5.4.0.Final</version>
+  <version>5.4.1-SNAPSHOT</version>
 
   <name>jBPM Form Builder project</name>
   <description>jBPM: a Business Process Management (BPM) Suite</description>
