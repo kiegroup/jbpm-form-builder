@@ -26,8 +26,7 @@ public class CommonGlobals {
 
     public static final String FORM_PANEL_KEY = "org.jbpm.formbuilder.FormBuilder.FORM_PANEL";
     public static final String BASE_LOCALE = "org.jbpm.formbuilder.server.render.Renderer.BASE_LOCALE";
-    // result from the module refactoring.. so probably needs to be changed to make the file upload to work
-    public static final String UPLOAD_ACTION_URL = "upload"; 
+    public static final String UPLOAD_ACTION_URL = "upload";
     private static final CommonGlobals INSTANCE = new CommonGlobals();
     
     private EventBus eventBus;
@@ -36,7 +35,6 @@ public class CommonGlobals {
     private AbstractFormItemCommand paste;
     private PickupDragController dragController;
     private I18NConstants i18n;
-    private Settings settings;
     
     private CommonGlobals() {
     }
@@ -92,14 +90,4 @@ public class CommonGlobals {
     public void registerI18n(I18NConstants i18n) {
         this.i18n = i18n;
     }
-
-    public Settings getSettings() {
-        return settings;
-    }
-
-    public void setSettings(Settings settings) {
-        this.settings = settings;
-    }
-    
-    
 }

@@ -18,9 +18,7 @@ package org.jbpm.formbuilder.client;
 import java.util.List;
 import java.util.Map;
 
-
 import org.jbpm.formapi.client.FormBuilderException;
-import org.jbpm.formapi.client.Settings;
 import org.jbpm.formapi.client.menu.FBMenuItem;
 import org.jbpm.formapi.shared.api.FormItemRepresentation;
 import org.jbpm.formapi.shared.api.FormRepresentation;
@@ -187,8 +185,4 @@ public interface FormBuilderService {
     void logout();
 
     void getFiles(List<String> types, FilesLoadedHandler handler);
-    
-    void applySettings(String userId, Settings settings);
-    
-    void loadSettings(String userId);
 }

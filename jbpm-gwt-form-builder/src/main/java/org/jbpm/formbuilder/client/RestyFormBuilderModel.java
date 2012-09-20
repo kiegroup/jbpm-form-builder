@@ -65,13 +65,6 @@ import com.google.gwt.user.client.ui.Hidden;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.xml.client.XMLParser;
-import java.io.StringWriter;
-import java.util.logging.Logger;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import org.jbpm.formapi.client.Settings;
-import org.jbpm.formbuilder.client.bus.*;
 
 public class RestyFormBuilderModel implements FormBuilderService {
 
@@ -557,37 +550,5 @@ public class RestyFormBuilderModel implements FormBuilderService {
             mockFormService.putActionsForItem(className, item.getAllowedEvents());
         }
         mockFormService.putEffectsForItem(className, effectClassNames);
-    }
-
-    public void applySettings(String userId, Settings settings) {
-        System.out.println("Calling the service to persist the new settings, but already changed in runtime");
-        final String url = URLBuilder.applySettingsURL(this.contextPath, userId);
-        Resource resource = new Resource(url);
-       
-            String xml = helper.asXml(settings);
-
-            resource.post().text(xml).send(new SimpleTextCallback(i18n.CouldntExportTemplate()) {
-                @Override
-                public void onSuccess(Method method, String response) {
-                    //???
-                }
-            });
-       
-    }
-
-    public void loadSettings(final String userId) {
-        String url = URLBuilder.getUserSettings(this.contextPath, userId);
-        Resource resource = new Resource(url);
-        resource.get().send(new SimpleTextCallback(i18n.CouldntGetUserSettings()) {
-            @Override
-            public void onSuccess(Method method, String response) {
-                if (method.getResponse().getStatusCode() == Response.SC_OK) {
-                    Settings settings = helper.readSettings(response);
-                    bus.fireEvent(new LoadSettingsResponseEvent(userId, settings));
-                } else {
-                    bus.fireEvent(new NotificationEvent(Level.ERROR, i18n.CouldntGetUserSettings()));
-                }
-            }
-        });
     }
 }

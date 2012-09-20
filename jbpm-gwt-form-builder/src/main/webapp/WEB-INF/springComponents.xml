@@ -8,20 +8,21 @@
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 
-
-    <!-- Select configuration strategy 
-    <bean id="strategy" class="java.lang.String">-->
-      <!-- Guvnor Strategy
-      <constructor-arg type="java.lang.String" value="guvnor"/>-->
-       <!-- FileSystem Strategy
+    <!-- Select configuration strategy -->
+    <bean id="strategy" class="java.lang.String">
+      <!-- Guvnor Strategy -->
+      <constructor-arg type="java.lang.String" value="guvnor"/>
+      
+      <!-- FileSystem Strategy
       <constructor-arg type="java.lang.String" value="fs"/>
-    </bean>-->
+      -->
+    </bean>
     
-    <!-- File System Configuration -->
+    <!-- File System Configuration 
     <bean id="fsUrl" class="java.lang.String">
       <constructor-arg type="java.lang.String" value="/tmp"/>
     </bean>
-    
+    -->
 
 
     <!-- Guvnor configuration -->
@@ -65,7 +66,7 @@
     </bean>
    
     
-    <!-- File System Configuration -->
+    <!-- File System Configuration 
     <bean id="fsFileService" class="org.jbpm.formbuilder.server.file.FSFileService">
         <property name="baseUrl" ref="fsUrl"/>
       
@@ -83,5 +84,5 @@
     
     <bean id="fsMenuService" class="org.jbpm.formbuilder.server.menu.GuvnorMenuService">
     </bean>
-    
+    -->
 </beans>

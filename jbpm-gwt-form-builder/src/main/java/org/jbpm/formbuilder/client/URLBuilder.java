@@ -20,7 +20,6 @@ import java.util.List;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.http.client.URL;
-import org.jbpm.formapi.client.Settings;
 
 public class URLBuilder {
 
@@ -71,11 +70,6 @@ public class URLBuilder {
     
     public static String getFormURL(String contextPath, String packageName, String formName) {
         return new StringBuilder(getFormsURL(contextPath, packageName)).append("/id/").append(encode(formName)).toString();
-    }
-    
-    public static String getUserSettings(String contextPath, String userId) {
-        return new StringBuilder(getBaseUrl()).append(contextPath).
-            append("/settings/").append(userId).toString();
     }
     
     public static String getFormsURL(String contextPath, String packageName) {
@@ -138,10 +132,5 @@ public class URLBuilder {
         return new StringBuilder(getBaseUrl()).append(contextPath).
             append("/files/package/").append(encode(packageName)).append("?").
             append(params.toString()).toString();
-    }
-
-    static String applySettingsURL(String contextPath, String userId) {
-        return new StringBuilder(getBaseUrl()).append(contextPath).
-            append("/settings/").append(userId).toString();
     }
 }

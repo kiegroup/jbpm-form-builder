@@ -52,8 +52,6 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
-import org.jbpm.formbuilder.client.bus.*;
-import org.jbpm.formbuilder.server.ServiceFactory;
 
 public class FormBuilderController {
 
@@ -83,21 +81,6 @@ public class FormBuilderController {
             public void onEvent(UserIsLoggedOutEvent event) {
                 Window.alert("User is login timeout");
                 Window.Location.reload();
-            }
-        });
-        
-        bus.addHandler(LoadSettingsEvent.TYPE, new LoadSettingsHandler() {
-            @Override
-            public void onEvent(LoadSettingsEvent event) {
-                model.loadSettings("salaboy");
-            }
-        });
-        
-        bus.addHandler(ApplySettingsEvent.TYPE, new ApplySettingsHandler() {
-            @Override
-            public void onEvent(ApplySettingsEvent event) {
-                System.out.println("hjkhjkhjkhjkh "+event.getSettings());
-                model.applySettings(event.getUserId(), event.getSettings());
             }
         });
         new HistoryPresenter();

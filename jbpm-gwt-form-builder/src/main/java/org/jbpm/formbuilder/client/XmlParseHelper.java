@@ -47,8 +47,6 @@ import com.google.gwt.xml.client.Node;
 import com.google.gwt.xml.client.NodeList;
 import com.google.gwt.xml.client.XMLParser;
 import org.jbpm.formapi.client.CommonGlobals;
-import org.jbpm.formapi.client.Settings;
-import org.jbpm.formapi.client.SettingsEntry;
 
 /**
  * This class is to help {@link FormBuilderModel} to parse response messages
@@ -76,23 +74,6 @@ public class XmlParseHelper {
         builder.append("<formItem name=\"").append(formItemName).append("\">");
         builder.append("<content><![CDATA[").append(json).append("]]></content>");
         builder.append("</formItem>");
-        return builder.toString();
-    }
-    
-    
-    public String asXml(Settings settings) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
-        builder.append("<settings>")
-                .append("<userId>").append(settings.getUserId()).append("</userId>")
-                .append("<entries>");
-        
-        for(SettingsEntry entry : settings.getEntries()){
-            builder.append("<key>").append(entry.getKey()).append("</key>")
-                   .append("<value>").append(entry.getValue()).append("</value>");
-        }
-        builder.append("</entries>")
-             .append("</settings>");
         return builder.toString();
     }
     
@@ -609,13 +590,6 @@ public class XmlParseHelper {
             }
         }
         return retval;
-    }
-
-    public Settings readSettings(String response) {
-        System.out.println("We have the following response = "+response);
-        Settings settings = new Settings();
-        settings.addEntry(new SettingsEntry("storage", "guvnor"));
-        return settings;
     }
 
 }

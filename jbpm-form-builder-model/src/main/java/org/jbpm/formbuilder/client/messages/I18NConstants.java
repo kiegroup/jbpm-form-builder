@@ -317,9 +317,4 @@ public interface I18NConstants extends Messages {
     String VideoNotSupported();
     String CanvasNotSupported();
     
-    String SettingsLabel();
-    String StorageType();
-    
-    String CouldntGetUserSettings();
-    
 }

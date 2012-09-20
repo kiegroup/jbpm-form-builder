@@ -61,9 +61,6 @@
     {   "html": "Language",
         "commandClass": "org.jbpm.formbuilder.client.command.LanguageCommand"
     },
-    {   "html": "Settings",
-        "commandClass": "org.jbpm.formbuilder.client.command.SettingsCommand"
-    },
     {   "html": "Logout",
         "commandClass": "org.jbpm.formbuilder.client.command.LogoutCommand"
     }
