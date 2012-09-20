@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.naming.NoInitialContextException;
 import javax.persistence.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,27 +32,20 @@ public class RESTSettingsService extends RESTBaseService {
 
     public RESTSettingsService() {
         if (em == null) {
-            EntityManagerFactory emf = null;
             try {
                 InitialContext ctx = new InitialContext();
                 // For JBOSS 7.x
                 // see: https://docs.jboss.org/author/display/AS71/JPA+Reference+Guide#JPAReferenceGuide-BindingEntityManagerFactorytoJNDI
-                System.out.println("before Context lookup...");
-                emf = (EntityManagerFactory) ctx.lookup("java:jboss/myEntityManagerFactory");
-                System.out.println("After Context lookup...");
+                EntityManagerFactory emf = (EntityManagerFactory) ctx.lookup("java:jboss/myEntityManagerFactory");
+                if(emf == null){
+                    // For Tomcat / Jetty
+                    emf = Persistence.createEntityManagerFactory("form-builder");
+                }
+                em = emf.createEntityManager();
             } catch (NamingException ex) {
-                System.out.println(" MY EX: " + ex.getMessage());
+                System.out.println(" MY EX: "+ex.getMessage());
                 ex.printStackTrace();
             }
-            if (emf == null) {
-                // For Tomcat / Jetty
-                System.out.println("Before Direct creation");
-                emf = Persistence.createEntityManagerFactory("form-builder");
-                System.out.println("After Direct creation");
-            }
-            em = emf.createEntityManager();
-            System.out.println("EM = " + em + " - EMF" + emf);
-
         }
 
     }
@@ -75,23 +67,25 @@ public class RESTSettingsService extends RESTBaseService {
         } catch (NoResultException ex) {
             System.out.println("Creating Settings for user =" + userName);
             settings = new Settings(userName);
-
+            
             em.persist(settings);
-
+            
         }
         return settings;
     }
 
+
+    
     @POST
     @Consumes("text/plain")
     @Path("/{userName}")
     public Response applySettings(String settings, @PathParam("userName") String userName, @Context HttpServletRequest request) {
         try {
-            System.out.println("Persisting Settings -> " + settings);
+            System.out.println("Persisting Settings -> "+settings);
             JAXBContext context = JAXBContext.newInstance(Settings.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
             Settings object = (Settings) unmarshaller.unmarshal(new ByteArrayInputStream(settings.getBytes()));
-            System.out.println("Persisting Settings unmarshalled-> " + object);
+            System.out.println("Persisting Settings unmarshalled-> "+object);
             em.persist(object);
             CommonGlobals.getInstance().setSettings(object);
         } catch (JAXBException ex) {
