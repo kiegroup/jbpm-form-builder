@@ -59,7 +59,7 @@ public class RESTSettingsServiceTest extends RESTAbstractTest {
     //test happy path of RESTaddUserSettings
     public void testaddUserSettingsEntryOK() throws Exception {
         
-        ApplicationContext ctx = new FileSystemXmlApplicationContext("src/test/resources/META-INF/springComponents.xml");
+        ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/webapp/WEB-INF/springComponents.xml");
         ServiceFactory.getInstance().setBeanFactory(ctx);
         
         RESTUserService restService = new RESTUserService();
