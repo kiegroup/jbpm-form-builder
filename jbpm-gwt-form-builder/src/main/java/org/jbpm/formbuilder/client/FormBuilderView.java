@@ -54,10 +54,10 @@ public class FormBuilderView extends AbsolutePanel {
             int fullHeight = Window.getClientHeight();
             String height = "" + (fullHeight - 80) + "px";
             String smallerHeight = "" + (fullHeight - 105) + "px";
-            treeView.setHeight(height);
-            menuView.setHeight(height);
-            editionView.setHeight(height);
-            ioAssociationView.setHeight(height);
+            treeView.setHeight("100%");
+            menuView.setHeight("100%");
+            editionView.setHeight("100%");
+            ioAssociationView.setHeight("100%");
             layoutView.setHeight(smallerHeight);
         }
     }
