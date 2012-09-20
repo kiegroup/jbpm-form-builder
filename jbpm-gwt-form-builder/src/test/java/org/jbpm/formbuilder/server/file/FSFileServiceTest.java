@@ -68,17 +68,8 @@ public class FSFileServiceTest extends TestCase {
         List<String> files = service.loadFilesByType("somePackage", "txt");
 
         assertEquals(2, files.size());
-        boolean urlOk = false;
-        boolean url2Ok = false;
-        if(url.equals(files.get(0)) || url.equals(files.get(1))){
-            urlOk = true;
-        }
-        if(url2.equals(files.get(0)) || url2.equals(files.get(1))){
-            url2Ok = true;
-        }
-        
-        assertTrue(urlOk);
-        assertTrue(url2Ok);
+        assertEquals(url, files.get(0));
+        assertEquals(url2, files.get(1));
 
         service.deleteFile(url);
 
