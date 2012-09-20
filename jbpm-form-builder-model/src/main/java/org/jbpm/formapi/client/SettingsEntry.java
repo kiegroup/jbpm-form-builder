@@ -17,7 +17,6 @@ package org.jbpm.formapi.client;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -36,6 +35,10 @@ public class SettingsEntry implements Serializable {
     private String key;
     private String value;
     
+    @ManyToOne
+    @JoinColumn(name="settings_Id")  
+    private Settings settings;
+
     public SettingsEntry() {
     }
 
@@ -52,6 +55,13 @@ public class SettingsEntry implements Serializable {
         this.id = id;
     }
 
+    public Settings getSettings() {
+        return settings;
+    }
+
+    public void setSettings(Settings settings) {
+        this.settings = settings;
+    }
 
     public String getKey() {
         return key;

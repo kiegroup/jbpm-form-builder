@@ -96,6 +96,7 @@ public class FormBuilderController {
         bus.addHandler(ApplySettingsEvent.TYPE, new ApplySettingsHandler() {
             @Override
             public void onEvent(ApplySettingsEvent event) {
+                System.out.println("hjkhjkhjkhjkh "+event.getSettings());
                 model.applySettings(event.getUserId(), event.getSettings());
             }
         });

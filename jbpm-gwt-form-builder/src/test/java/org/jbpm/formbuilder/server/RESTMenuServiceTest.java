@@ -75,7 +75,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         retval.put("group", menuList);
         EasyMock.expect(menuService.listMenuItems()).andReturn(retval).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
+        
         EasyMock.replay(menuService);
         Response resp = restService.listMenuItems();
         EasyMock.verify(menuService);
@@ -109,7 +109,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         MenuServiceException exception = new MenuServiceException("Something going wrong");
         EasyMock.expect(menuService.listMenuItems()).andThrow(exception).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
+        
         EasyMock.replay(menuService);
         Response resp = restService.listMenuItems();
         EasyMock.verify(menuService);
@@ -139,7 +139,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         retval.add(option2);
         EasyMock.expect(menuService.listOptions()).andReturn(retval).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
+        
         EasyMock.replay(menuService);
         Response resp = restService.listMenuOptions();
         EasyMock.verify(menuService);
@@ -167,7 +167,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         MenuServiceException exception = new MenuServiceException("Something going wrong");
         EasyMock.expect(menuService.listOptions()).andThrow(exception).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(menuService);
         Response resp = restService.listMenuOptions();
@@ -195,7 +194,7 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         retval.add(validation2);
         EasyMock.expect(menuService.listValidations()).andReturn(retval).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
+        
         EasyMock.replay(menuService);
         Response resp = restService.getValidations();
         EasyMock.verify(menuService);
@@ -218,12 +217,10 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
     
     public void testGetValidationsServiceProblem() throws Exception {
         RESTMenuService restService = new RESTMenuService();
-        
         MenuService menuService = EasyMock.createMock(MenuService.class);
         MenuServiceException exception = new MenuServiceException("Something going wrong");
         EasyMock.expect(menuService.listValidations()).andThrow(exception).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(menuService);
         Response resp = restService.getValidations();
@@ -242,7 +239,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         menuService.saveMenuItem(EasyMock.same("groupName"), EasyMock.anyObject(MenuItemDescription.class));
         EasyMock.expectLastCall().once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -271,7 +267,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         MenuServiceException exception = new MenuServiceException("Something went wrong");
         EasyMock.expectLastCall().andThrow(exception).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -293,7 +288,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
     //test what happens when a functionalanalyst tries to save a menu item
     public void testSaveMenuItemPermissionProblem() throws Exception {
         RESTMenuService restService = new RESTMenuService();
-        restService.setDynamicService(false);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
         EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(false).times(3);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
@@ -330,7 +324,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         initialMenuItems.put("groupName", descriptions);
         EasyMock.expect(menuService.listMenuItems()).andReturn(initialMenuItems).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -357,7 +350,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(true).times(3);
         EasyMock.expect(menuService.listMenuItems()).andReturn(new HashMap<String, List<MenuItemDescription>>()).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -390,7 +382,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         initialMenuItems.put("groupName", descriptions);
         EasyMock.expect(menuService.listMenuItems()).andReturn(initialMenuItems).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -426,7 +417,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         initialMenuItems.put("groupName", descriptions);
         EasyMock.expect(menuService.listMenuItems()).andReturn(initialMenuItems).once();
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         SaveMenuItemDTO dto = new SaveMenuItemDTO();
         List<String> allowedEvents = new ArrayList<String>();
         allowedEvents.add("onclick");
@@ -448,7 +438,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
   //test what happens when a functionalanalyst tries to delete a menu item
     public void testDeleteMenuItemUnauthorized() throws Exception {
         RESTMenuService restService = new RESTMenuService();
-        restService.setDynamicService(false);
         HttpServletRequest mockRequest = EasyMock.createMock(HttpServletRequest.class);
         EasyMock.expect(mockRequest.isUserInRole(EasyMock.anyObject(String.class))).andReturn(false).times(3);
         Map<String, List<MenuItemDescription>> initialMenuItems = new HashMap<String, List<MenuItemDescription>>();
@@ -480,7 +469,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         Map<String, String> retval = new HashMap<String, String>();
         retval.put("aaa", "bbb");
         retval.put("ccc", "ddd");
@@ -511,7 +499,6 @@ public class RESTMenuServiceTest extends RESTAbstractTest {
         RESTMenuService restService = new RESTMenuService();
         MenuService menuService = EasyMock.createMock(MenuService.class);
         restService.setMenuService(menuService);
-        restService.setDynamicService(false);
         MenuServiceException exception = new MenuServiceException("Something going wrong");
         EasyMock.expect(menuService.getFormBuilderProperties()).andThrow(exception).once();
         

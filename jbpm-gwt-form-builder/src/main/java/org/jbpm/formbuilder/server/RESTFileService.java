@@ -48,12 +48,11 @@ import org.jbpm.formbuilder.server.xml.FileListDTO;
 public class RESTFileService extends RESTBaseService {
 
     private FileService fileService = null;
-    private boolean dynamicService = true;
+    
     protected void setContext(ServletContext context) {
-        if(dynamicService){
+        if (fileService == null) {
             this.fileService = ServiceFactory.getInstance().getFileService();
         }
-        
     }
     
     @POST @Path("/package/{pkgName}")
@@ -155,14 +154,4 @@ public class RESTFileService extends RESTBaseService {
     public FileService getFileService() {
         return fileService;
     }
-
-    public boolean isDynamicService() {
-        return dynamicService;
-    }
-
-    public void setDynamicService(boolean dynamicService) {
-        this.dynamicService = dynamicService;
-    }
-    
-    
 }

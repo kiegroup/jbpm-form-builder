@@ -52,7 +52,7 @@ import org.jbpm.formbuilder.shared.menu.MenuServiceException;
 public class RESTMenuService extends RESTBaseService {
 
     private MenuService menuService;
-    private boolean dynamicService = true;
+    
     public RESTMenuService() {
         FormEncodingFactory.register(FormEncodingServerFactory.getEncoder(), FormEncodingServerFactory.getDecoder());
     }
@@ -187,7 +187,7 @@ public class RESTMenuService extends RESTBaseService {
     }
     
     private void init() {
-        if(dynamicService){
+        if (menuService == null) {
             menuService = ServiceFactory.getInstance().getMenuService();
         }
     }
@@ -198,13 +198,4 @@ public class RESTMenuService extends RESTBaseService {
     public void setMenuService(MenuService menuService) {
         this.menuService = menuService;
     }
-
-    public boolean isDynamicService() {
-        return dynamicService;
-    }
-
-    public void setDynamicService(boolean dynamicService) {
-        this.dynamicService = dynamicService;
-    }
-
 }

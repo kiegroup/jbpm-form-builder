@@ -4,7 +4,6 @@ package org.jbpm.formbuilder.server;
 import org.jbpm.formapi.client.CommonGlobals;
 import org.jbpm.formapi.client.Settings;
 import org.jbpm.formbuilder.server.file.FileService;
-import org.jbpm.formbuilder.server.settings.SettingsService;
 import org.jbpm.formbuilder.shared.form.FormDefinitionService;
 import org.jbpm.formbuilder.shared.menu.MenuService;
 import org.jbpm.formbuilder.shared.task.TaskDefinitionService;
@@ -45,11 +44,6 @@ public class ServiceFactory implements BeanFactoryAware {
     
     public MenuService getMenuService() {
         return (MenuService) getService("MenuService");
-    }
-    
-    public SettingsService getSettingsService() {
-        //Static Service Configured By Spring
-        return (SettingsService) this.beanFactory.getBean("SettingsService");
     }
     
     private Object getService(String name) {

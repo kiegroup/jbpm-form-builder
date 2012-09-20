@@ -63,7 +63,6 @@ public class RESTIoServiceTest extends RESTAbstractTest {
         tasks.add(new TaskRef());
         EasyMock.expect(taskService.query(EasyMock.eq("somePackage"), EasyMock.eq("someFilter"))).andReturn(tasks).once();
         restService.setTaskService(taskService);
-        restService.setDynamicService(false);
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(taskService, context);
@@ -94,8 +93,6 @@ public class RESTIoServiceTest extends RESTAbstractTest {
         tasks.add(new TaskRef());
         EasyMock.expect(taskService.query(EasyMock.eq("somePackage"), EasyMock.eq(""))).andReturn(tasks).once();
         restService.setTaskService(taskService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(taskService, context);
@@ -124,8 +121,6 @@ public class RESTIoServiceTest extends RESTAbstractTest {
         TaskServiceException exception = new TaskServiceException("Something going wrong");
         EasyMock.expect(taskService.query(EasyMock.eq("somePackage"), EasyMock.eq(""))).andThrow(exception).once();
         restService.setTaskService(taskService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(taskService, context);
@@ -145,8 +140,6 @@ public class RESTIoServiceTest extends RESTAbstractTest {
         EasyMock.expect(taskService.getTasksByName(
                 EasyMock.eq("somePackage"), EasyMock.eq("someProcess"), EasyMock.eq("someTask"))).andReturn(tasks).once();
         restService.setTaskService(taskService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(taskService, context);
@@ -176,8 +169,6 @@ public class RESTIoServiceTest extends RESTAbstractTest {
         EasyMock.expect(taskService.getTasksByName(
                 EasyMock.eq("somePackage"), EasyMock.eq("someProcess"), EasyMock.eq("someTask"))).andThrow(exception).once();
         restService.setTaskService(taskService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(taskService, context);

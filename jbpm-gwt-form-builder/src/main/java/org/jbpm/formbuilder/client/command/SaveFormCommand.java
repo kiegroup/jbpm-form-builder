@@ -62,7 +62,7 @@ public class SaveFormCommand implements BaseCommand {
     }
     
     private void showSavePanel(final FormRepresentation form) {
-        //if (form.getName() == null || "".equals(form.getName())) {
+        if (form.getName() == null || "".equals(form.getName())) {
             final FormDataPopupPanel panel = new FormDataPopupPanel(true);
             panel.setAction(form.getAction());
             panel.setEnctype(form.getEnctype());
@@ -80,7 +80,7 @@ public class SaveFormCommand implements BaseCommand {
                     saveForm(panel, form);
                 }
             });
-        //}
+        }
     }
     
     public void saveForm(FormDataPopupPanel panel, FormRepresentation form) {

@@ -51,22 +51,21 @@ import org.jbpm.formapi.client.Settings;
 import org.jbpm.formapi.client.SettingsEntry;
 
 /**
- * This class is to help {@link FormBuilderModel} to parse response messages and
- * transform request bodies.
+ * This class is to help {@link FormBuilderModel} to parse response messages
+ * and transform request bodies.
  */
 public class XmlParseHelper {
 
     private final I18NConstants i18n = CommonGlobals.getInstance().getI18n();
-
+    
     /**
-     * Method to output xml from a form item and is name with the following
-     * format:
+     * Method to output xml from a form item and is name with the following format:
      * <code>
      * &lt;formItem name="${formItemName}"&gt;<br>
      * &nbsp;&nbsp;&lt;content&gt;${formItem.asJson()}&lt;/content&gt;<br>
      * &lt;/formItem&gt;<br>
      * </code>
-     *
+     * 
      * @param formItemName name of the form item
      * @param formItem the form item to format
      * @return XML request body
@@ -79,34 +78,26 @@ public class XmlParseHelper {
         builder.append("</formItem>");
         return builder.toString();
     }
-
+    
+    
     public String asXml(Settings settings) {
         StringBuilder builder = new StringBuilder();
         builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
         builder.append("<settings>")
-                .append("<id>")
-                    .append(settings.getId())
-                .append("</id>")
-                .append("<userId>")
-                        .append(settings.getUserId())
-                .append("</userId>");
-                
-                
-
-        for (SettingsEntry entry : settings.getEntries()) {
-            builder.append("<entries>");
-            builder.append("<id>").append(entry.getId()).append("</id>")
-                    .append("<key>").append(entry.getKey()).append("</key>")
-                    .append("<value>").append(entry.getValue()).append("</value>");
-            builder.append("</entries>");
+                .append("<userId>").append(settings.getUserId()).append("</userId>")
+                .append("<entries>");
+        
+        for(SettingsEntry entry : settings.getEntries()){
+            builder.append("<key>").append(entry.getKey()).append("</key>")
+                   .append("<value>").append(entry.getValue()).append("</value>");
         }
-        builder.append("</settings>");
+        builder.append("</entries>")
+             .append("</settings>");
         return builder.toString();
     }
-
+    
     /**
-     * Method to output xml from a menu item and its group's name with the
-     * following format:
+     * Method to output xml from a menu item and its group's name with the following format:
      * <code>
      * &lt;menuItem&gt;<br>
      * &nbsp;&nbsp;&lt;groupName&gt;${groupName}&lt;/groupName&gt;<br>
@@ -118,7 +109,7 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;effect&gt;${item.formEffects[n].class.name}&lt;/effect&gt;<br>
      * &lt;/menuItem&gt;<br>
      * </code>
-     *
+     * 
      * @param groupName the menu item group's name
      * @param item the menu item
      * @return XML request body
@@ -144,7 +135,7 @@ public class XmlParseHelper {
         builder.append("</menuItem>");
         return builder.toString();
     }
-
+    
     /**
      * Ment to parse an XML response with the following format:
      * <code>
@@ -170,7 +161,7 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;...<br>
      * &lt;/tasks&gt;<br>
      * </code>
-     *
+     * 
      * @param responseText The XML response.
      * @return a list of task definition references.
      */
@@ -201,7 +192,7 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+    
     /**
      * Ment to parse an XML response with the following format:
      * <code>
@@ -217,7 +208,7 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;menuOption name="${option[m].html}" commandClass="${option[m].command.class.name}"/&gt;<br>
      * &lt;/menuOptions&gt;<br>
      * </code>
-     *
+     * 
      * @param responseText The XML response.
      * @return a list of menuOptions.
      */
@@ -226,7 +217,7 @@ public class XmlParseHelper {
         NodeList menuOptions = xml.getElementsByTagName("menuOptions").item(0).getChildNodes();
         return readMenuOptions(menuOptions);
     }
-
+    
     /**
      * Ment to parse an XML response with the following format:
      * <code>
@@ -234,7 +225,7 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;form&gt;&lt;json&gt;${jsonFromFormRepresentation}&lt;/json&gt;&lt;/form&gt;<br>
      * &lt;/listForms&gt;<br>
      * </code>
-     *
+     * 
      * @param responseText the XML response.
      * @return a list of FormRepresentation items.
      */
@@ -259,7 +250,7 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+    
     /**
      * Ment to parse an XML response with the following format:
      * <code>
@@ -280,7 +271,7 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;/menuGroup&gt;<br>
      * &lt;/menuGroups&gt;<br>
      * </code>
-     *
+     * 
      * @param responseText the XML response.
      * @return a map of lists of FBMenuItem instances.
      */
@@ -296,35 +287,33 @@ public class XmlParseHelper {
         }
         return menuItems;
     }
-
+    
     /**
      * Parses and returns a formId from an XML response of the following format:
      * <code>&lt;formId&gt;${response}&lt;/formId&gt;</code>
-     *
+     * 
      * @param responseText XML response to parse
      * @return a formId
      */
     public String getFormItemId(String responseText) {
         return textOfFirstNode(responseText, "formItemId");
     }
-
+    
     /**
-     * Parses and returns a formItemId from an XML response of the following
-     * format:
+     * Parses and returns a formItemId from an XML response of the following format:
      * <code>&lt;formItemId&gt;${response}&lt;/formItemId&gt;</code>
-     *
+     * 
      * @param responseText XML response to parse
      * @return a formItemId
      */
     public String getFormId(String responseText) {
         return textOfFirstNode(responseText, "formId");
     }
-
+    
     /**
-     * Parses and returns a file name from an XML response of the following
-     * format:
+     * Parses and returns a file name from an XML response of the following format:
      * <code>&lt;fileName&gt;${response}&lt;/fileName&gt;</code>
-     *
+     * 
      * @param responseText XML response to parse
      * @return a file name on the server
      */
@@ -333,9 +322,9 @@ public class XmlParseHelper {
     }
 
     /**
-     * Parses and returns a map of strings with string keys from an XML response
-     * of the following format:
-     *
+     * Parses and returns a map of strings with string keys from an XML response of the 
+     * following format:
+     * 
      * <code>
      * &lt;properties&gt;<br>
      * &nbsp;&nbsp;&lt;property key="${key[0]}" value="${value[0]}"/&gt;<br>
@@ -344,7 +333,6 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;property key="${key[n]}" value="${value[n]}"/&gt;<br>
      * &lt;/properties&gt;<br>
      * </code>
-     *
      * @param responseText XML response to parse
      * @return a map of the string values indexed by property name
      */
@@ -360,10 +348,9 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+    
     /**
-     * Method to output xml from a form preview and its group of test input
-     * variables with the following format:
+     * Method to output xml from a form preview and its group of test input variables with the following format:
      * <code>
      * &lt;formPreview&gt;<br>
      * &nbsp;&nbsp;&lt;representation&gt;${form.toJson()}&lt;/representation&gt;<br>
@@ -373,13 +360,11 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;input key="${inputs[n].key}" value="${inputs[n].value}"/&gt;<br>
      * &lt;/formPreview&gt;<br>
      * </code>
-     *
-     * @param form the form representation to transform on server side to a
-     * given language
+     * 
+     * @param form the form representation to transform on server side to a given language
      * @param inputs the data inputs of the form representation to test it
      * @return XML request body
-     * @throws FormEncodingException in case of error parsing the form
-     * representation
+     * @throws FormEncodingException in case of error parsing the form representation
      */
     public String asXml(FormRepresentation form, Map<String, Object> inputs) throws FormEncodingException {
         StringBuilder builder = new StringBuilder();
@@ -397,11 +382,11 @@ public class XmlParseHelper {
         builder.append("</formPreview>");
         return builder.toString();
     }
-
+    
     /**
-     * Parses and returns a validation dto list from an XML response of the
+     * Parses and returns a validation dto list from an XML response of the 
      * following format:
-     *
+     * 
      * <code>
      * &lt;validations&gt;<br>
      * &nbsp;&nbsp;&lt;validation className="${fbValidationItem[0].class.name}"&gt;<br>
@@ -419,7 +404,6 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;/validation&gt;<br>
      * &lt;/validations&gt;<br>
      * </code>
-     *
      * @param responseText XML response to parse
      * @return a list of validation items
      */
@@ -445,7 +429,7 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+    
     private Map<String, HasValue<String>> readValidationMap(NodeList properties) {
         Map<String, HasValue<String>> retval = new HashMap<String, HasValue<String>>();
         for (int index = 0; index < properties.getLength(); index++) {
@@ -458,7 +442,7 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+    
     private List<MainMenuOption> readMenuOptions(NodeList menuOptions) {
         List<MainMenuOption> options = new ArrayList<MainMenuOption>();
         for (int index = 0; index < menuOptions.getLength(); index++) {
@@ -474,7 +458,7 @@ public class XmlParseHelper {
                     if (obj instanceof BaseCommand) {
                         option.setCommand((BaseCommand) obj);
                     } else {
-                        option.setHtml(option.getHtml() + "(" + i18n.NotOfType(className, "BaseCommand") + ")");
+                        option.setHtml(option.getHtml()+ "(" + i18n.NotOfType(className, "BaseCommand") + ")");
                         option.setEnabled(false);
                     }
                 } catch (Exception e) {
@@ -511,10 +495,10 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+ 
     private List<FBMenuItem> readMenuItems(NodeList items, String groupName) {
         List<FBMenuItem> menuItems = new ArrayList<FBMenuItem>();
-        for (int index = 0; index < items.getLength(); index++) {
+        for (int index = 0; index < items.getLength(); index ++) {
             Node itemNode = items.item(index);
             String itemClassName = ((Element) itemNode).getAttribute("className");
             try {
@@ -547,7 +531,7 @@ public class XmlParseHelper {
         }
         return menuItems;
     }
-
+    
     private List<String> readAllowedEvents(NodeList allowedEvents) {
         List<String> retval = new ArrayList<String>();
         for (int index = 0; index < allowedEvents.getLength(); index++) {
@@ -556,7 +540,7 @@ public class XmlParseHelper {
         }
         return retval;
     }
-
+    
     private FormItemRepresentation makeRepresentation(Node itemNode) throws FormEncodingException {
         NodeList list = ((Element) itemNode).getElementsByTagName("itemJson");
         FormItemRepresentation rep = null;
@@ -568,7 +552,7 @@ public class XmlParseHelper {
         }
         return rep;
     }
-
+    
     private String getText(Node node) {
         NodeList list = node.getChildNodes();
         StringBuilder builder = new StringBuilder();
@@ -609,7 +593,7 @@ public class XmlParseHelper {
      * &nbsp;&nbsp;&lt;file&gt;${url}&lt;/file&gt;<br>
      * &lt;/files&gt;<br>
      * </code>
-     *
+     * 
      * @param responseText the XML response.
      * @return a list of Strings representing names of files.
      */
@@ -627,43 +611,11 @@ public class XmlParseHelper {
         return retval;
     }
 
-    public Settings readSettings(String responseText) {
-        System.out.println("We have the following response = " + responseText);
-        Document xml = XMLParser.parse(responseText);
-        Node settingsXML = xml.getElementsByTagName("settings").item(0);
-
-        NodeList childNodes = settingsXML.getChildNodes();
-        System.out.println("child nodes length =" + childNodes.getLength());
+    public Settings readSettings(String response) {
+        System.out.println("We have the following response = "+response);
         Settings settings = new Settings();
-        for (int i = 0; i < childNodes.getLength(); i++) {
-            if(childNodes.item(i).getNodeName().equals("id")){
-                settings.setId(Long.parseLong(getText(childNodes.item(i))));
-            } else if(childNodes.item(i).getNodeName().equals("userId")){
-                settings.setUserId(getText(childNodes.item(i)));
-            } else if(childNodes.item(i).getNodeName().equals("entries")){
-                NodeList entryNodes = childNodes.item(i).getChildNodes();
-                SettingsEntry entry = new SettingsEntry();
-                for (int j = 0; j < entryNodes.getLength(); j++) {
-                    
-                    if(entryNodes.item(j).getNodeName().equals("id")){
-                        entry.setId(Long.parseLong(getText(entryNodes.item(j))));
-                    } else if(entryNodes.item(j).getNodeName().equals("key")){
-                        entry.setKey(getText(entryNodes.item(j)));
-                    } else if(entryNodes.item(j).getNodeName().equals("value")){
-                        entry.setValue(getText(entryNodes.item(j)));
-                    }
-                    System.out.println("entry node = " + j + " - Name =" + entryNodes.item(j).getNodeName()
-                    + " - Value =" + getText(entryNodes.item(j)));
-                }
-                settings.addEntry(entry);
-            }
-            System.out.println("child node " + i + " - Name =" + childNodes.item(i).getNodeName()
-                    + " - Value =" + getText(childNodes.item(i)));
-        }
-        
-        
-        
-        
+        settings.addEntry(new SettingsEntry("storage", "guvnor"));
         return settings;
     }
+
 }

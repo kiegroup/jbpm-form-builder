@@ -25,12 +25,11 @@ public class FileUploadServlet extends UploadAction {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         WebApplicationContextUtils.getWebApplicationContext(config.getServletContext());
-        
+        fileService = ServiceFactory.getInstance().getFileService();
     }
     
     public String executeAction(HttpServletRequest request,
             List<FileItem> sessionFiles) throws UploadActionException {
-        fileService = ServiceFactory.getInstance().getFileService();
         String packageName = request.getParameter("packageName");
         for (FileItem item : getSessionFileItems(request)) {
             if (!item.isFormField()) {

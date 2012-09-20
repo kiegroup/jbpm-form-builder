@@ -84,12 +84,4 @@
     <bean id="fsMenuService" class="org.jbpm.formbuilder.server.menu.GuvnorMenuService">
     </bean>
     
-    <!-- Settings Service Configuraiton -->
-    
-    <bean id="SettingsService" class="org.jbpm.formbuilder.server.settings.DBSettingsService">
-    </bean>
-    <!-- JTA JBoss DBSettings Service
-    <bean id="SettingsService" class="org.jbpm.formbuilder.server.settings.JTADBSettingsService">
-    </bean>-->
-    
 </beans>

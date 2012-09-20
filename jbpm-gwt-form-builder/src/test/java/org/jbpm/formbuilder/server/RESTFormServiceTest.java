@@ -96,7 +96,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         
         EasyMock.expect(formService.getForms(EasyMock.same("somePackage"))).andReturn(retval).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context);
         Response resp = restService.getForms("somePackage", context);
@@ -120,7 +119,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         
         EasyMock.expect(formService.getForms(EasyMock.same("somePackage"))).andThrow(exception).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context);
         Response resp = restService.getForms("somePackage", context);
@@ -149,7 +147,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         
         EasyMock.expect(formService.getForms(EasyMock.same("somePackage"))).andReturn(forms).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context, encoder);
         Response resp = restService.getForms("somePackage", context);
@@ -168,7 +165,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         ServletContext context = EasyMock.createMock(ServletContext.class);
         EasyMock.expect(formService.getForm(EasyMock.same("somePackage"), EasyMock.same("myFormId"))).andReturn(form);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context);
         Response resp = restService.getForm("somePackage", "myFormId", context);
@@ -195,7 +191,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         
         EasyMock.expect(formService.getForm(EasyMock.same("somePackage"), EasyMock.same("myFormId"))).andThrow(exception).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context);
         Response resp = restService.getForm("somePackage", "myFormId", context);
@@ -222,7 +217,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         
         EasyMock.expect(formService.getForm(EasyMock.same("somePackage"), EasyMock.same("myFormId"))).andReturn(form).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context, encoder);
         Response resp = restService.getForm("somePackage", "myFormId", context);
@@ -240,7 +234,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         FormRepresentation form = RESTAbstractTest.createMockForm("formToBeSaved", "param1", "param2", "param3");
         EasyMock.expect(formService.saveForm(EasyMock.eq("somePackage"), EasyMock.eq(form))).andReturn("MY_FORM_ID").once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         ServletContext context = EasyMock.createMock(ServletContext.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
@@ -273,8 +266,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         FormServiceException exception = new FormServiceException("Something going wrong");
         EasyMock.expect(formService.saveForm(EasyMock.eq("somePackage"), EasyMock.eq(form))).andThrow(exception).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
@@ -321,8 +312,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         formService.deleteForm(EasyMock.eq("somePackage"), EasyMock.eq("myFormId"));
         EasyMock.expectLastCall().once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
@@ -345,8 +334,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         FormServiceException exception = new FormServiceException("Something going wrong");
         EasyMock.expectLastCall().andThrow(exception).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
@@ -369,7 +356,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expect(formService.getFormItems(EasyMock.eq("somePackage"))).andReturn(map).once();
         ServletContext context = EasyMock.createMock(ServletContext.class);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context);
         Response resp = restService.getFormItems("somePackage", context);
@@ -392,7 +378,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expect(formService.getFormItems(EasyMock.eq("somePackage"))).andThrow(exception).once();
         ServletContext context = EasyMock.createMock(ServletContext.class);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         
         EasyMock.replay(formService, context);
         Response resp = restService.getFormItems("somePackage", context);
@@ -413,8 +398,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expect(formService.getFormItems(EasyMock.eq("somePackage"))).andReturn(map).once();
         ServletContext context = EasyMock.createMock(ServletContext.class);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         FormEncodingFactory.register(encoder, FormEncodingServerFactory.getDecoder());
         
         EasyMock.replay(formService, context, encoder);
@@ -442,7 +425,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         FormItemRepresentation item = createMockForm("myForm", "param1").getFormItems().iterator().next();
         EasyMock.expect(formService.getFormItem(EasyMock.eq("somePackage"), EasyMock.eq("MY_FORM_ITEM_ID"))).andReturn(item).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(formService, context);
@@ -465,7 +447,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         FormServiceException exception = new FormServiceException("Something going wrong");
         EasyMock.expect(formService.getFormItem(EasyMock.eq("somePackage"), EasyMock.eq("MY_FORM_ITEM_ID"))).andThrow(exception).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         ServletContext context = EasyMock.createMock(ServletContext.class);
         
         EasyMock.replay(formService, context);
@@ -487,8 +468,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expect(formService.getFormItem(EasyMock.eq("somePackage"), EasyMock.eq("MY_ITEM_ID"))).andReturn(item).once();
         ServletContext context = EasyMock.createMock(ServletContext.class);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         FormEncodingFactory.register(encoder, FormEncodingServerFactory.getDecoder());
         
         EasyMock.replay(formService, context, encoder);
@@ -507,7 +486,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expect(formService.saveFormItem(EasyMock.eq("somePackage"), EasyMock.eq("MY_FORM_ITEM_ID"), EasyMock.eq(item))).
             andReturn("MY_FORM_ITEM_ID").once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
         ServletContext context = EasyMock.createMock(ServletContext.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
@@ -539,8 +517,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         FormServiceException exception = new FormServiceException("Something going wrong");
         EasyMock.expect(formService.saveFormItem(EasyMock.eq("somePackage"), EasyMock.eq("MY_FORM_ITEM_ID"), EasyMock.eq(item))).andThrow(exception).once();
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         ServletContext context = EasyMock.createMock(ServletContext.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
@@ -587,8 +563,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expectLastCall().once();
         ServletContext context = EasyMock.createMock(ServletContext.class);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         EasyMock.expect(request.getSession()).andReturn(session);
@@ -611,8 +585,6 @@ public class RESTFormServiceTest extends RESTAbstractTest {
         EasyMock.expectLastCall().andThrow(exception).once();
         ServletContext context = EasyMock.createMock(ServletContext.class);
         restService.setFormService(formService);
-        restService.setDynamicService(false);
-        
         HttpSession session = EasyMock.createMock(HttpSession.class);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         EasyMock.expect(request.getSession()).andReturn(session);

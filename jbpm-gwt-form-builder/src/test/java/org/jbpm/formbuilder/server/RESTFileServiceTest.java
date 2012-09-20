@@ -85,7 +85,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         EasyMock.expectLastCall().once();
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.deleteFile((HttpServletRequest) mocks[0], "somePackage", "myFile.tmp");
@@ -106,7 +105,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         EasyMock.expectLastCall().andThrow(exception).once();
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.deleteFile((HttpServletRequest) mocks[0], "somePackage", "myFile.tmp");
@@ -127,7 +125,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
             andReturn(retval);
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.getFiles((HttpServletRequest) mocks[0], "somePackage", new String[] {"tmp"}); 
@@ -154,7 +151,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
             andReturn(retval);
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.getFiles((HttpServletRequest) mocks[0], "somePackage", new String[] {"tmp"}); 
@@ -176,7 +172,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
             andThrow(exception);
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.getFiles((HttpServletRequest) mocks[0], "somePackage", new String[] {"tmp"}); 
@@ -195,7 +190,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
             andReturn(myContent);
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.getFile((HttpServletRequest) mocks[0], "somePackage", "myFile.tmp");
@@ -225,7 +219,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
             andThrow(exception);
         requestMocks.add(fileService);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         Object[] mocks = requestMocks.toArray();
         EasyMock.replay(mocks);
         Response resp = restService.getFile((HttpServletRequest) mocks[0], "somePackage", "myFile.tmp");
@@ -238,7 +231,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         RESTFileService restService = createSaveFileMockService(null, null, null, false);
         FileService fileService = EasyMock.createMock(FileService.class);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         EasyMock.expect(request.getSession()).andReturn(session).once();
@@ -262,7 +254,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         EasyMock.expect(fileService.storeFile(EasyMock.eq("somePackage"), EasyMock.eq("fileName"), EasyMock.same(bstream))).
             andReturn(url).once();
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         EasyMock.expect(request.getSession()).andReturn(session).once();
@@ -325,7 +316,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         EasyMock.expect(fileService.storeFile(EasyMock.eq("somePackage"), EasyMock.eq("fileName"), EasyMock.same(bstream))).
             andThrow(exception).once();
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         EasyMock.expect(request.getSession()).andReturn(session).once();
@@ -346,7 +336,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         RESTFileService restService = createSaveFileMockService(bstream, fileName, FileUploadException.class, true);
         FileService fileService = EasyMock.createMock(FileService.class);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         EasyMock.expect(request.getSession()).andReturn(session).once();
@@ -367,7 +356,6 @@ public class RESTFileServiceTest extends RESTAbstractTest {
         RESTFileService restService = createSaveFileMockService(bstream, fileName, IOException.class, true);
         FileService fileService = EasyMock.createMock(FileService.class);
         restService.setFileService(fileService);
-        restService.setDynamicService(false);
         HttpServletRequest request = EasyMock.createMock(HttpServletRequest.class);
         HttpSession session = EasyMock.createMock(HttpSession.class);
         EasyMock.expect(request.getSession()).andReturn(session).once();

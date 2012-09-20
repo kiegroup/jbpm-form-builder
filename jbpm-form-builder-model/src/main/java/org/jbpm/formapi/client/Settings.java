@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -38,7 +37,7 @@ public class Settings implements Serializable {
     @Id
     @GeneratedValue()
     private Long id;
-    @OneToMany(cascade= CascadeType.ALL, fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="settings", cascade= CascadeType.ALL)
     
     private List<SettingsEntry> entries = new ArrayList<SettingsEntry>();
 
