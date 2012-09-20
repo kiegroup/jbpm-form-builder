@@ -54,7 +54,6 @@
     <module>jbpm-gwt-form-exporter-gwt</module>
     <module>jbpm-gwt-form-builder</module>
     <module>jbpm-form-services</module>
-    <module>jbpm-form-builder-client-example</module>
   </modules>
 
   <build>
