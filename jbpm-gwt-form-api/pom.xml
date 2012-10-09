@@ -4,7 +4,7 @@
   <parent>
     <artifactId>jbpm-form-builder-parent</artifactId>
     <groupId>org.jbpm</groupId>
-    <version>5.4.2-SNAPSHOT</version>
+    <version>5.4.2.Beta1</version>
   </parent>
   
   <artifactId>jbpm-gwt-form-api</artifactId>
