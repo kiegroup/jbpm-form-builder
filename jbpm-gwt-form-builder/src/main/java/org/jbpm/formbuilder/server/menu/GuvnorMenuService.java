@@ -32,7 +32,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.vfs.AllFileSelector;
 import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.VFS;
-import org.drools.repository.utils.IOUtils;
+
 import org.jbpm.formapi.shared.form.FormEncodingException;
 import org.jbpm.formapi.shared.form.FormEncodingFactory;
 import org.jbpm.formapi.shared.form.FormRepresentationDecoder;
@@ -45,6 +45,7 @@ import org.jbpm.formbuilder.shared.menu.MenuServiceException;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.io.IOUtils;
 
 public class GuvnorMenuService extends AbstractBaseMenuService {
 
