@@ -4,7 +4,7 @@
 <\#if $locale??>
   <#assign $localeData=[
   #foreach ($entry in ${item.getI18n().entrySet()})
-    "${entry.getKey()}" => "${entry.getValue()}",
+    "${entry.getKey()}" = "${entry.getValue()}",
   #end
     "LAST_ELEMENT_KEY", "LAST_ELEMENT_VALUE"
   ] >
